@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import type { ProjectConfig, ProjectTone } from '@/lib/config';
 
 const PROJECT_COLORS: Record<string, { main: string; deep: string; soft: string; bright: string }> = {
@@ -910,20 +910,32 @@ export function ProjectCoverArt({
 }) {
   const scene = (SCENES as Record<string, ((props: SceneProps) => ReactNode) | undefined>)[project.id];
   const c = PROJECT_COLORS[project.id] ?? TONE_COLORS[project.tone];
-  const sceneStyle: CSSProperties | undefined = scene
-    ? undefined
-    : { display: 'none' };
 
   return (
     <div className={`project-cover ${coverClasses[project.tone]} ${className}`} aria-hidden="true">
-      <svg
-        className="project-cover-art"
-        viewBox="0 0 400 120"
-        preserveAspectRatio="xMidYMid slice"
-        style={sceneStyle}
-      >
-        {scene ? scene({ c }) : null}
-      </svg>
+      {scene ? (
+        <svg
+          className="project-cover-art"
+          viewBox="0 0 400 120"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          {scene({ c })}
+        </svg>
+      ) : project.screenshot ? (
+        <img
+          src={project.screenshot}
+          alt=""
+          className="project-cover-screenshot"
+          loading="lazy"
+        />
+      ) : (
+        <svg
+          className="project-cover-art"
+          viewBox="0 0 400 120"
+          preserveAspectRatio="xMidYMid slice"
+          style={{ display: 'none' }}
+        />
+      )}
     </div>
   );
 }
