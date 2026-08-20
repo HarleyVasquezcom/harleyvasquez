@@ -1,0 +1,172 @@
+{
+  "site": {
+    "name": "Harley Vásquez",
+    "title": "Software Engineer Portfolio",
+    "description": "Portfolio moderno y elegante que muestra proyectos y experiencia en ingeniería de software."
+  },
+  "nav": {
+    "label": "Navegación principal",
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "lang": "Idioma",
+    "theme": "Tema",
+    "themeLight": "Claro",
+    "themeDark": "Oscuro",
+    "themeSwitchLight": "Cambiar a modo claro",
+    "themeSwitchDark": "Cambiar a modo oscuro",
+    "openMenu": "Abrir menú",
+    "scrollProgress": "Progreso de scroll de la página"
+  },
+  "hero": {
+    "headline": "Construyendo software elegante con precisión metálica",
+    "subheadline": "Ingeniero de software creando experiencias web de vanguardia. Especializado en React, TypeScript y arquitecturas web modernas.",
+    "availabilityBadge": "Disponible para trabajo freelance",
+    "ctaPrimary": "Contáctame",
+    "ctaSecondary": "Acerca de mí",
+    "terminalHostname": "portfolio.local",
+    "terminalLines": [
+      "> init portfolio...",
+      "> cargando configuración...",
+      "> compilando assets...",
+      "> optimizando...",
+      "> listo ✓",
+      "> bienvenido a mi portfolio"
+    ],
+    "scrollHint": "Desplázate para explorar"
+  },
+  "about": {
+    "heading": "Acerca de",
+    "kicker": "01 · Quién soy",
+    "bio": [
+      "Soy un ingeniero de software apasionado por construir aplicaciones web elegantes y de alto rendimiento. Con un enfoque en arquitectura limpia y experiencias de usuario agradables, cierro la brecha entre diseño e ingeniería.",
+      "Cuando no estoy programando, encontrarás explorando nuevas tecnologías, contribuyendo a código abierto, o perfeccionando mi oficio a través de proyectos personales."
+    ],
+    "stackLabel": "Stack Tecnológico"
+  },
+  "projects": {
+    "heading": "Proyectos",
+    "kicker": "02 · Trabajo seleccionado",
+    "featuredLabel": "Destacado",
+    "seeMore": "Ver más proyectos",
+    "emptyState": "Aún no hay proyectos en esta categoría.",
+    "filterLabel": "Filtrar proyectos por categoría",
+    "labels": {
+      "liveDemo": "Demo en vivo",
+      "code": "Código",
+      "details": "Ver detalles",
+      "prev": "Proyectos anteriores",
+      "next": "Próximos proyectos",
+      "back": "Volver a proyectos",
+      "stack": "Tecnologías",
+      "backToListing": "Volver a proyectos",
+      "highlights": "Destacados"
+    },
+    "listingTitle": "Proyectos",
+    "listingSubtitle": "Una selección curada de mi trabajo en aplicaciones web, herramientas, programación creativa y extensiones de Chrome."
+  },
+  "categories": {
+    "all": "Todos",
+    "webApps": "Aplicaciones Web",
+    "tools": "Herramientas",
+    "creative": "Creativo",
+    "corporateSite": "Sitio Corporativo",
+    "ecommerce": "E-commerce",
+    "blog": "Blog",
+    "portfolio": "Portafolio",
+    "landingPage": "Landing Page",
+    "microsite": "Micrositio",
+    "webApp": "Aplicación Web",
+    "seguridad": "Bloqueadores/Seguridad",
+    "productividad": "Productividad/Escritura",
+    "gestionPestañas": "Gestión de Pestañas",
+    "personalizacion": "Utilidades/Personalización"
+  },
+  "experience": {
+    "heading": "Experiencia",
+    "kicker": "03 · Historia profesional",
+    "items": {
+      "exp-1": {
+        "role": "Ingeniero de Software Senior",
+        "company": "TechCorp Inc.",
+        "period": "2022 — Presente",
+        "location": "San Francisco, CA (Remoto)",
+        "description": [
+          "Lideré la arquitectura frontend del producto SaaS insignia con más de 100 mil usuarios",
+          "Migré la base de código heredada a Next.js 14 con App Router, mejorando el rendimiento en un 40%",
+          "Fui mentor de 5 ingenieros y establecí buenas prácticas de frontend"
+        ]
+      },
+      "exp-2": {
+        "role": "Ingeniero de Software",
+        "company": "StartupXYZ",
+        "period": "2020 — 2022",
+        "location": "Nueva York, NY",
+        "description": [
+          "Construí y mantuve aplicaciones web orientadas al cliente",
+          "Implementé un sistema de diseño que redujo el tiempo de desarrollo de UI en un 60%",
+          "Optimicé el tamaño de los bundles y las Core Web Vitals en todos los productos"
+        ]
+      },
+      "exp-3": {
+        "role": "Desarrollador Junior",
+        "company": "Digital Agency",
+        "period": "2018 — 2020",
+        "location": "Austin, TX",
+        "description": [
+          "Desarrollé sitios web responsivos y aplicaciones web para diversos clientes",
+          "Colaboré con diseñadores para implementar UIs pixel-perfect",
+          "Aprendí prácticas modernas de frontend y metodologías de testing"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "heading": "Contacto",
+    "kicker": "04 · Conectemos",
+    "form": {
+      "directLabel": "O contáctame directamente",
+      "emailChannelLabel": "Email",
+      "linkedinChannelLabel": "LinkedIn",
+      "githubChannelLabel": "GitHub",
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "emailLabel": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto o rol...",
+      "submitLabel": "Enviar mensaje",
+      "submittingLabel": "Enviando..."
+    },
+    "messages": {
+      "nameRequired": "Por favor ingresa tu nombre.",
+      "emailInvalid": "Por favor ingresa un email válido.",
+      "messageTooShort": "Tu mensaje debe tener al menos 10 caracteres.",
+      "invalidPayload": "La solicitud no pudo procesarse. Por favor intenta de nuevo.",
+      "success": "¡Gracias! Tu mensaje ha sido enviado.",
+      "serverError": "Algo salió mal de nuestro lado. Por favor intenta más tarde.",
+      "networkError": "No se pudo conectar al servidor. Por favor verifica tu conexión e intenta de nuevo."
+    }
+  },
+  "footer": {
+    "label": "Pie de página",
+    "navigate": "Navegar",
+    "connect": "Conectar",
+    "copyright": "Construido con precisión y cuidado.",
+    "backToTop": "Volver arriba",
+    "theme": "Tema",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o ha sido movida.",
+    "backHome": "Volver al inicio"
+  }
+}

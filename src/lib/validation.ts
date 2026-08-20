@@ -1,5 +1,3 @@
-import { siteConfig } from '@/lib/config';
-
 export interface ContactPayload {
   name: string;
   email: string;
@@ -8,9 +6,15 @@ export interface ContactPayload {
 
 export type ContactField = 'name' | 'email' | 'message';
 
+export type ContactErrorCode =
+  | 'nameRequired'
+  | 'emailInvalid'
+  | 'messageTooShort'
+  | 'invalidPayload';
+
 export interface ContactError {
   field: ContactField;
-  message: string;
+  code: ContactErrorCode;
 }
 
 export const EMAIL_PATTERN = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
@@ -22,18 +26,17 @@ export function validateContact(payload: ContactPayload): ContactError[] {
   const email = typeof payload.email === 'string' ? payload.email.trim() : '';
   const message = typeof payload.message === 'string' ? payload.message.trim() : '';
   const errors: ContactError[] = [];
-  const { messages } = siteConfig.contact;
 
   if (name.length === 0) {
-    errors.push({ field: 'name', message: messages.nameRequired });
+    errors.push({ field: 'name', code: 'nameRequired' });
   }
 
   if (!EMAIL_PATTERN.test(email)) {
-    errors.push({ field: 'email', message: messages.emailInvalid });
+    errors.push({ field: 'email', code: 'emailInvalid' });
   }
 
   if (message.length < MESSAGE_MIN_LENGTH) {
-    errors.push({ field: 'message', message: messages.messageTooShort });
+    errors.push({ field: 'message', code: 'messageTooShort' });
   }
 
   return errors;

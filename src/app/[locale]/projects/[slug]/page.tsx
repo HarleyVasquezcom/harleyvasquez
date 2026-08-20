@@ -1,45 +1,80 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowUpRight, Code, Tag } from 'lucide-react';
-import { siteConfig, type ProjectConfig } from '@/lib/config';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { siteConfig } from '@/lib/config';
+import { Link } from '@/i18n/navigation';
 import { ProjectCoverArt } from '@/components/project-cover-art';
+import { LOCALES } from '@/i18n/routing';
+import type { Locale } from '@/i18n/routing';
 
-function getProject(slug: string): ProjectConfig | undefined {
+function getProject(slug: string) {
   return siteConfig.projects.items.find((item) => item.slug === slug);
 }
 
 export function generateStaticParams() {
-  return siteConfig.projects.items.map((item) => ({ slug: item.slug }));
+  return siteConfig.projects.items.flatMap((item) =>
+    LOCALES.map((locale) => ({ locale, slug: item.slug }))
+  );
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const project = getProject(slug);
   if (!project) return {};
+
+  const t = await getTranslations({ locale: locale as Locale, namespace: 'projectCatalog' });
+  const site = await getTranslations({ locale: locale as Locale, namespace: 'site' });
+
+  const languages: Record<string, string> = {};
+  for (const l of LOCALES) {
+    languages[l] = `/${l}/projects/${project.slug}`;
+  }
+
   return {
-    title: project.title,
-    description: project.overview ?? project.description,
-    alternates: { canonical: `/projects/${project.slug}` },
+    title: t(`${slug}.title`),
+    description: t(`${slug}.description`),
+    alternates: {
+      canonical: `/${locale}/projects/${project.slug}`,
+      languages,
+    },
+    openGraph: {
+      title: `${t(`${slug}.title`)} | ${site('name')}`,
+      description: t(`${slug}.description`),
+    },
   };
 }
 
-function ProjectShell({ project }: { project: ProjectConfig }) {
-  const { labels, featuredLabel } = siteConfig.projects;
+async function ProjectShell({
+  project,
+  locale,
+}: {
+  project: NonNullable<ReturnType<typeof getProject>>;
+  locale: Locale;
+}) {
+  const t = await getTranslations({ locale, namespace: 'projectCatalog' });
+  const labels = await getTranslations({ locale, namespace: 'projects.labels' });
+  const featured = await getTranslations({ locale, namespace: 'projects' });
+  const cats = await getTranslations({ locale, namespace: 'categories' });
+
+  const title = t(`${project.slug}.title`);
+  const description = t(`${project.slug}.description`);
+  const overview = t.raw(`${project.slug}.overview`) as string | undefined;
+  const highlights = t.raw(`${project.slug}.highlights`) as string[] | undefined;
 
   return (
     <section className="px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="project-title">
       <div className="mx-auto max-w-4xl">
-<Link
-          href="/#projects"
+        <Link
+          href="/projects"
           className="inline-flex items-center gap-2 text-sm font-medium text-fg-muted transition-colors hover:text-accent"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-          {siteConfig.projects.labels.back ?? 'Back'}
+          {labels('backToListing') ?? labels('back')}
         </Link>
 
         <ProjectCoverArt project={project} className="mt-8 rounded-2xl" />
@@ -48,7 +83,7 @@ function ProjectShell({ project }: { project: ProjectConfig }) {
           <div className="flex flex-wrap items-center gap-3">
             {project.featured ? (
               <span className="inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
-                {featuredLabel}
+                {featured('featuredLabel')}
               </span>
             ) : null}
             {project.year ? (
@@ -56,16 +91,20 @@ function ProjectShell({ project }: { project: ProjectConfig }) {
                 {project.year}
               </span>
             ) : null}
-            <span className="inline-flex items-center gap-1 rounded-full border border-border bg-card px-2.5 py-0.5 text-xs text-fg-muted">
-              {project.category}
-            </span>
+            {project.category ? (
+              <span className="inline-flex items-center gap-1 rounded-full border border-border bg-card px-2.5 py-0.5 text-xs text-fg-muted">
+                {cats.has(project.category) ? cats(project.category) : project.category}
+              </span>
+            ) : null}
           </div>
 
           <h1 id="project-title" className="mt-4 gradient-text text-4xl sm:text-5xl font-bold tracking-tight">
-            {project.title}
+            {title}
           </h1>
 
-          <p className="mt-4 text-lg leading-relaxed text-fg-muted">{project.overview ?? project.description}</p>
+          <p className="mt-4 text-lg leading-relaxed text-fg-muted">
+            {overview ?? description}
+          </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a
@@ -74,7 +113,7 @@ function ProjectShell({ project }: { project: ProjectConfig }) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-accent px-4 py-2.5 text-sm font-semibold text-bg transition-all hover:glow-accent"
             >
-              {labels.liveDemo}
+              {labels('liveDemo')}
               <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </a>
             {project.github ? (
@@ -84,21 +123,21 @@ function ProjectShell({ project }: { project: ProjectConfig }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-medium text-fg transition-colors hover:border-border-hover hover:text-accent"
               >
-                {labels.code}
+                {labels('code')}
                 <Code className="h-4 w-4" aria-hidden="true" />
               </a>
             ) : null}
           </div>
         </div>
 
-        {project.highlights?.length ? (
+        {highlights?.length ? (
           <section className="mt-12" aria-label="Highlights">
             <h2 className="mb-4 font-mono text-sm font-medium uppercase tracking-wide text-fg-muted">
               <Tag className="mr-2 inline h-4 w-4" aria-hidden="true" />
-              Highlights
+              {labels('highlights')}
             </h2>
             <ul className="grid gap-3 sm:grid-cols-2">
-              {project.highlights.map((highlight) => (
+              {highlights.map((highlight) => (
                 <li
                   key={highlight}
                   className="rounded-2xl border border-border bg-card p-4 text-sm leading-relaxed text-fg-muted"
@@ -113,7 +152,7 @@ function ProjectShell({ project }: { project: ProjectConfig }) {
         <section className="mt-12" aria-label="Technologies">
           <h2 className="mb-4 font-mono text-sm font-medium uppercase tracking-wide text-fg-muted">
             <Code className="mr-2 inline h-4 w-4" aria-hidden="true" />
-            {siteConfig.projects.labels.stack}
+            {labels('stack')}
           </h2>
           <ul className="flex flex-wrap gap-2">
             {project.tags.map((tag) => (
@@ -134,11 +173,13 @@ function ProjectShell({ project }: { project: ProjectConfig }) {
 export default async function ProjectPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+
   const project = getProject(slug);
   if (!project) notFound();
 
-  return <ProjectShell project={project} />;
+  return <ProjectShell project={project} locale={locale as Locale} />;
 }

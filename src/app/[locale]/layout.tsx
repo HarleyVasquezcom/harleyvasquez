@@ -1,11 +1,15 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { MotionConfig } from 'framer-motion';
+import { getTranslations, getMessages, setRequestLocale } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { siteConfig } from '@/lib/config';
-import './globals.css';
+import { LOCALES, routing } from '@/i18n/routing';
+import type { Locale } from '@/i18n/routing';
+import '../globals.css';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -19,44 +23,66 @@ const geistMono = Geist_Mono({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.site.url),
-  title: {
-    default: siteConfig.site.title,
-    template: `%s | ${siteConfig.site.name}`,
-  },
-  description: siteConfig.site.description,
-  keywords: ['software engineer', 'portfolio', 'React', 'Next.js', 'TypeScript', 'web development'],
-  authors: [{ name: siteConfig.site.name }],
-  creator: siteConfig.site.name,
-  publisher: siteConfig.site.name,
-  robots: 'index, follow',
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: siteConfig.site.url,
-    siteName: siteConfig.site.name,
-    title: siteConfig.site.title,
-    description: siteConfig.site.description,
-    images: [
-      {
-        url: siteConfig.site.ogImage,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.site.name,
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.site.title,
-    description: siteConfig.site.description,
-    images: [siteConfig.site.ogImage],
-  },
-  verification: siteConfig.site.googleSiteVerification
-    ? { google: siteConfig.site.googleSiteVerification }
-    : undefined,
-};
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale: locale as Locale, namespace: 'site' });
+
+  const languages: Record<string, string> = {};
+  for (const l of LOCALES) {
+    languages[l] = `/${l}`;
+  }
+
+  return {
+    metadataBase: new URL(siteConfig.site.url),
+    title: {
+      default: t('title'),
+      template: `%s | ${t('name')}`,
+    },
+    description: t('description'),
+    keywords: ['software engineer', 'portfolio', 'React', 'Next.js', 'TypeScript', 'web development'],
+    authors: [{ name: t('name') }],
+    creator: t('name'),
+    publisher: t('name'),
+    robots: 'index, follow',
+    alternates: {
+      canonical: `/${locale}`,
+      languages,
+    },
+    openGraph: {
+      type: 'website',
+      locale,
+      url: `${siteConfig.site.url}/${locale}`,
+      siteName: t('name'),
+      title: t('title'),
+      description: t('description'),
+      images: [
+        {
+          url: siteConfig.site.ogImage,
+          width: 1200,
+          height: 630,
+          alt: t('name'),
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: [siteConfig.site.ogImage],
+    },
+    verification: siteConfig.site.googleSiteVerification
+      ? { google: siteConfig.site.googleSiteVerification }
+      : undefined,
+  };
+}
 
 export const viewport: Viewport = {
   themeColor: [
@@ -68,14 +94,20 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const messages = await getMessages();
+
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
@@ -103,17 +135,19 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="min-h-full flex flex-col bg-bg text-fg">
-        <ThemeProvider>
-          <MotionConfig reducedMotion="user">
-            <header>
-              <Navbar />
-            </header>
-            <main className="flex-1" id="main-content">
-              {children}
-            </main>
-            <Footer />
-          </MotionConfig>
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider>
+            <MotionConfig reducedMotion="user">
+              <header>
+                <Navbar />
+              </header>
+              <main className="flex-1" id="main-content">
+                {children}
+              </main>
+              <Footer />
+            </MotionConfig>
+          </ThemeProvider>
+        </NextIntlClientProvider>
         {/* Vanilla carousel controller — the marquee itself is pure CSS
             (keyframes marquee-scroll in globals.css); this handles the filter
             chips, the native mobile menu and the iPhone-gallery-like drag
@@ -144,23 +178,20 @@ export default function RootLayout({
     var chip = target.closest('[data-carousel-filter]');
     if (chip) {
       var track = getTrack(chip);
-      var val = chip.getAttribute('data-carousel-filter') || 'All';
+      var val = chip.getAttribute('data-carousel-filter') || 'all';
       var scopeName = chip.getAttribute('data-carousel-scope') || '';
       var chips = document.querySelectorAll('[data-carousel-filter][data-carousel-scope="' + scopeName + '"]');
       for (var c = 0; c < chips.length; c++) {
         chips[c].setAttribute('aria-pressed', String(chips[c] === chip));
       }
       if (track) {
-        // Per-card fade-out of the cards that don't match the filter. Both
-        // mirrored groups share the same data-carousel-cat attributes, so a
-        // single pass keeps the marquee seamless.
         var cards = track.querySelectorAll('[data-carousel-cat]');
         for (var i = 0; i < cards.length; i++) {
-          cards[i].classList.toggle('car-leaving', val !== 'All' && cards[i].getAttribute('data-carousel-cat') !== val);
+          cards[i].classList.toggle('car-leaving', val !== 'all' && cards[i].getAttribute('data-carousel-cat') !== val);
         }
         setTimeout(function () {
           for (var j = 0; j < cards.length; j++) {
-            cards[j].hidden = val !== 'All' && cards[j].getAttribute('data-carousel-cat') !== val;
+            cards[j].hidden = val !== 'all' && cards[j].getAttribute('data-carousel-cat') !== val;
             cards[j].classList.remove('car-leaving');
           }
         }, 170);

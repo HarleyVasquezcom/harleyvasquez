@@ -1,0 +1,172 @@
+{
+  "site": {
+    "name": "Harley Vásquez",
+    "title": "Software Engineer Portfolio",
+    "description": "Elegant, modern portfolio showcasing software engineering projects and experience."
+  },
+  "nav": {
+    "label": "Main navigation",
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "lang": "Language",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSwitchLight": "Switch to light mode",
+    "themeSwitchDark": "Switch to dark mode",
+    "openMenu": "Open menu",
+    "scrollProgress": "Page scroll progress"
+  },
+  "hero": {
+    "headline": "Building elegant software with metallic precision",
+    "subheadline": "Software engineer crafting cutting-edge web experiences. Specializing in React, TypeScript, and modern web architectures.",
+    "availabilityBadge": "Available for freelance",
+    "ctaPrimary": "Get in touch",
+    "ctaSecondary": "About me",
+    "terminalHostname": "portfolio.local",
+    "terminalLines": [
+      "> init portfolio...",
+      "> loading config...",
+      "> compiling assets...",
+      "> optimizing...",
+      "> ready ✓",
+      "> welcome to my portfolio"
+    ],
+    "scrollHint": "Scroll to explore"
+  },
+  "about": {
+    "heading": "About",
+    "kicker": "01 · Who I am",
+    "bio": [
+      "I'm a software engineer passionate about building elegant, performant web applications. With a focus on clean architecture and delightful user experiences, I bridge the gap between design and engineering.",
+      "When I'm not coding, you'll find me exploring new technologies, contributing to open source, or refining my craft through side projects."
+    ],
+    "stackLabel": "Tech Stack"
+  },
+  "projects": {
+    "heading": "Projects",
+    "kicker": "02 · Selected work",
+    "featuredLabel": "Featured",
+    "seeMore": "See More Projects",
+    "emptyState": "No projects match this category yet.",
+    "filterLabel": "Filter projects by category",
+    "labels": {
+      "liveDemo": "Live Demo",
+      "code": "Code",
+      "details": "View details",
+      "prev": "Previous projects",
+      "next": "Next projects",
+      "back": "Back to projects",
+      "stack": "Technologies",
+      "backToListing": "Back to projects",
+      "highlights": "Highlights"
+    },
+    "listingTitle": "Projects",
+    "listingSubtitle": "A curated selection of my work across web applications, tools, creative coding, and Chrome extensions."
+  },
+  "categories": {
+    "all": "All",
+    "webApps": "Web Apps",
+    "tools": "Tools",
+    "creative": "Creative",
+    "corporateSite": "Corporate Site",
+    "ecommerce": "E-commerce",
+    "blog": "Blog",
+    "portfolio": "Portfolio",
+    "landingPage": "Landing Page",
+    "microsite": "Microsite",
+    "webApp": "Web App",
+    "seguridad": "Security Tools",
+    "productividad": "Productivity & Writing",
+    "gestionPestañas": "Tab Management",
+    "personalizacion": "Utilities & Customization"
+  },
+  "experience": {
+    "heading": "Experience",
+    "kicker": "03 · Professional history",
+    "items": {
+      "exp-1": {
+        "role": "Senior Software Engineer",
+        "company": "TechCorp Inc.",
+        "period": "2022 — Present",
+        "location": "San Francisco, CA (Remote)",
+        "description": [
+          "Lead frontend architecture for flagship SaaS product serving 100k+ users",
+          "Migrated legacy codebase to Next.js 14 with App Router, improving performance by 40%",
+          "Mentored 5 engineers and established frontend best practices"
+        ]
+      },
+      "exp-2": {
+        "role": "Software Engineer",
+        "company": "StartupXYZ",
+        "period": "2020 — 2022",
+        "location": "New York, NY",
+        "description": [
+          "Built and maintained customer-facing web applications",
+          "Implemented design system reducing UI development time by 60%",
+          "Optimized bundle size and Core Web Vitals across all products"
+        ]
+      },
+      "exp-3": {
+        "role": "Junior Developer",
+        "company": "Digital Agency",
+        "period": "2018 — 2020",
+        "location": "Austin, TX",
+        "description": [
+          "Developed responsive websites and web applications for diverse clients",
+          "Collaborated with designers to implement pixel-perfect UIs",
+          "Learned modern frontend practices and testing methodologies"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "heading": "Contact",
+    "kicker": "04 · Let's connect",
+    "form": {
+      "directLabel": "Or reach me directly",
+      "emailChannelLabel": "Email",
+      "linkedinChannelLabel": "LinkedIn",
+      "githubChannelLabel": "GitHub",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell me about your project or role...",
+      "submitLabel": "Send message",
+      "submittingLabel": "Sending..."
+    },
+    "messages": {
+      "nameRequired": "Please enter your name.",
+      "emailInvalid": "Please enter a valid email address.",
+      "messageTooShort": "Your message must be at least 10 characters.",
+      "invalidPayload": "The request could not be processed. Please try again.",
+      "success": "Thanks! Your message has been sent.",
+      "serverError": "Something went wrong on our end. Please try again later.",
+      "networkError": "Could not reach the server. Please check your connection and try again."
+    }
+  },
+  "footer": {
+    "label": "Footer",
+    "navigate": "Navigate",
+    "connect": "Connect",
+    "copyright": "Built with precision and care.",
+    "backToTop": "Back to top",
+    "theme": "Theme",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "description": "The page you are looking for doesn't exist or has been moved.",
+    "backHome": "Back to home"
+  }
+}

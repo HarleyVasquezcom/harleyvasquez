@@ -3,12 +3,24 @@
 import { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring, useReducedMotion } from 'framer-motion';
 import { ArrowRight, MousePointer, Zap } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/lib/config';
 
 export function Hero() {
-  const { headline, subheadline, availabilityBadge, ctaPrimary, ctaSecondary, terminalLines, scrollHint } =
-    siteConfig.hero;
+  const t = useTranslations('hero');
   const reducedMotion = useReducedMotion();
+
+  const headline = t('headline');
+  const subheadline = t('subheadline');
+  const availabilityBadge = t('availabilityBadge');
+  const ctaPrimaryLabel = t('ctaPrimary');
+  const ctaSecondaryLabel = t('ctaSecondary');
+  const terminalHostname = t('terminalHostname');
+  const terminalLines = t.raw('terminalLines') as string[];
+  const scrollHint = t('scrollHint');
+
+  const ctaPrimaryHref = siteConfig.hero.ctaPrimary.href;
+  const ctaSecondaryHref = siteConfig.hero.ctaSecondary.href;
 
   // Spotlight driven by CSS variables, smoothed via springs
   const mouseX = useMotionValue(50);
@@ -145,16 +157,16 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animate-delay-400"
         >
           <a
-            href={ctaPrimary.href}
+            href={ctaPrimaryHref}
             className="btn-primary group flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById(ctaPrimary.href.replace(/^\/#/, ''))?.scrollIntoView({
+              document.getElementById(ctaPrimaryHref.replace(/^\/#/, ''))?.scrollIntoView({
                 behavior: 'smooth',
               });
             }}
           >
-            {ctaPrimary.label}
+            {ctaPrimaryLabel}
             <motion.span
               animate={reducedMotion ? { x: 0 } : { x: [0, 4, 0] }}
               transition={reducedMotion ? { duration: 0 } : { duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
@@ -163,16 +175,16 @@ export function Hero() {
             </motion.span>
           </a>
           <a
-            href={ctaSecondary.href}
+            href={ctaSecondaryHref}
             className="btn-secondary flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById(ctaSecondary.href.replace(/^\/#/, ''))?.scrollIntoView({
+              document.getElementById(ctaSecondaryHref.replace(/^\/#/, ''))?.scrollIntoView({
                 behavior: 'smooth',
               });
             }}
           >
-            {ctaSecondary.label}
+            {ctaSecondaryLabel}
           </a>
         </div>
 
@@ -180,7 +192,7 @@ export function Hero() {
         <div
           className="mt-16 glass rounded-xl p-6 max-w-2xl mx-auto text-left font-mono text-sm animate-fade-in-up animate-delay-500"
           role="region"
-          aria-label="Terminal demo"
+          aria-label={terminalHostname}
         >
           <div className="flex items-center gap-2 mb-4 text-fg-muted">
             <div className="flex gap-1.5">
@@ -188,7 +200,7 @@ export function Hero() {
               <div className="w-3 h-3 rounded-full bg-yellow-500" />
               <div className="w-3 h-3 rounded-full bg-green-500" />
             </div>
-            <span className="text-xs">portfolio.local</span>
+            <span className="text-xs">{terminalHostname}</span>
           </div>
           <div className="space-y-1 text-fg">
             {terminalLines.slice(0, -1).map((line, i) => (

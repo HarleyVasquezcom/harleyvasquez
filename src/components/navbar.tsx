@@ -1,11 +1,44 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Menu, Moon, Sun } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
 import { useTheme } from './theme-provider';
 import { siteConfig } from '@/lib/config';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { LOCALES } from '@/i18n/routing';
+import type { Locale } from '@/i18n/routing';
+
+const NAV_KEYS = ['about', 'projects', 'experience', 'contact'] as const;
+
+function LanguageSelect({
+  locale,
+  onChange,
+  compact = false,
+}: {
+  locale: Locale;
+  onChange: (next: Locale) => void;
+  compact?: boolean;
+}) {
+  const t = useTranslations('nav');
+  return (
+    <select
+      value={locale}
+      onChange={(e) => onChange(e.target.value as Locale)}
+      aria-label={t('lang')}
+      className={`cursor-pointer rounded-full glass text-sm font-medium text-fg-muted transition-colors hover:text-fg focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${
+        compact ? 'px-2.5 py-2' : 'w-full px-3 py-2'
+      }`}
+    >
+      {LOCALES.map((l) => (
+        <option key={l} value={l} className="bg-bg text-fg">
+          {l.toUpperCase()}
+        </option>
+      ))}
+    </select>
+  );
+}
 
 export function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -14,8 +47,14 @@ export function Navbar() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const sectionsRef = useRef<Map<string, HTMLElement>>(new Map());
 
-  const navLinks = siteConfig.site.navigation;
+  const t = useTranslations('nav');
+  const site = useTranslations('site');
+  const locale = useLocale() as Locale;
+  const pathname = usePathname();
+  const router = useRouter();
+
   const sectionId = (href: string) => href.replace(/^\/#/, '').replace('#', '');
+  const navLinks = siteConfig.site.navigation;
 
   // Register sections for active-section detection
   useEffect(() => {
@@ -90,17 +129,21 @@ export function Navbar() {
   };
 
   const onAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    const isHome = window.location.pathname === '/';
+    const isHome = pathname === '/';
     if (!isHome) return; // let the browser navigate to /#section
     e.preventDefault();
     scrollToSection(href);
   };
 
   const onMobileAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // Close the native panel before/after the default anchor jump
-    const host = (e.currentTarget.closest('details') as HTMLDetailsElement | null);
+    const host = e.currentTarget.closest('details') as HTMLDetailsElement | null;
     if (host) host.open = false;
     onAnchorClick(e, href);
+  };
+
+  const changeLocale = (next: Locale) => {
+    if (next === locale) return;
+    router.push(pathname, { locale: next });
   };
 
   return (
@@ -108,7 +151,7 @@ export function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'glass-strong' : 'glass'
       }`}
-      aria-label="Main navigation"
+      aria-label={t('label')}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -118,34 +161,38 @@ export function Navbar() {
             className="flex items-center gap-2 font-semibold text-lg text-fg focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg rounded-md px-2 py-1"
             onClick={(e) => onAnchorClick(e, '/#hero')}
           >
-            <span className="gradient-text">{siteConfig.site.name}</span>
+            <span className="gradient-text">{site('name')}</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {NAV_KEYS.map((key, index) => (
               <a
-                key={link.href}
-                href={link.href}
+                key={key}
+                href={navLinks[index]?.href ?? '#/'}
                 className={`relative py-2 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg rounded-md ${
-                  activeSection === link.href.replace(/^\/#/, '')
+                  activeSection === sectionId(navLinks[index]?.href ?? '')
                     ? 'text-accent'
                     : 'text-fg-muted hover:text-fg'
                 }`}
-                onClick={(e) => onAnchorClick(e, link.href)}
+                onClick={(e) => onAnchorClick(e, navLinks[index]?.href ?? '')}
               >
-                {link.label}
+                {t(key)}
               </a>
             ))}
           </div>
 
-          {/* Right side: Theme toggle + Mobile menu button */}
+          {/* Right side: Language + Theme toggle + Mobile menu button */}
           <div className="flex items-center gap-4">
+            <div className="hidden md:block">
+              <LanguageSelect locale={locale} onChange={changeLocale} compact />
+            </div>
+
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
               className="relative flex items-center justify-center w-10 h-10 rounded-full glass transition-all hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
-              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={theme === 'dark' ? t('themeSwitchLight') : t('themeSwitchDark')}
               aria-pressed={theme === 'dark'}
             >
               <motion.span
@@ -164,31 +211,31 @@ export function Navbar() {
             </button>
 
             {/* Mobile Menu Button */}
-            <details className="relative md:hidden" id="mobile-menu" aria-label="Mobile menu">
+            <details className="relative md:hidden" id="mobile-menu" aria-label={t('openMenu')}>
               <summary
                 className="p-2 rounded-lg glass transition-all hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg cursor-pointer"
-                aria-label="Open menu"
+                aria-label={t('openMenu')}
               >
                 <Menu className="h-6 w-6 text-fg" aria-hidden="true" />
               </summary>
               <div className="absolute right-0 mt-2 w-64 overflow-hidden rounded-xl glass-strong border border-border shadow-2xl">
                 <div className="px-4 py-6 space-y-4">
-                  {navLinks.map((link) => (
+                  {NAV_KEYS.map((key, index) => (
                     <a
-                      key={link.href}
-                      href={link.href}
+                      key={key}
+                      href={navLinks[index]?.href ?? '#/'}
                       className={`block py-3 px-2 text-base font-medium rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${
-                        activeSection === link.href.replace(/^\/#/, '')
+                        activeSection === sectionId(navLinks[index]?.href ?? '')
                           ? 'text-accent bg-card'
                           : 'text-fg-muted hover:text-fg hover:bg-card'
                       }`}
-                      onClick={(e) => onMobileAnchorClick(e, link.href)}
+                      onClick={(e) => onMobileAnchorClick(e, navLinks[index]?.href ?? '')}
                     >
-                      {link.label}
+                      {t(key)}
                     </a>
                   ))}
                   <div className="pt-4 border-t border-border flex items-center justify-between">
-                    <span className="text-sm text-fg-muted">Theme</span>
+                    <span className="text-sm text-fg-muted">{t('theme')}</span>
                     <button
                       onClick={() => {
                         toggleTheme();
@@ -196,20 +243,26 @@ export function Navbar() {
                         if (details) details.open = false;
                       }}
                       className="flex items-center gap-2 px-3 py-2 rounded-full glass transition-all hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-accent"
-                      aria-label="Theme"
+                      aria-label={t('theme')}
                     >
                       {theme === 'dark' ? (
                         <>
                           <Sun className="h-4 w-4 text-accent-glow" aria-hidden="true" />
-                          <span className="text-sm font-medium">Light</span>
+                          <span className="text-sm font-medium">{t('themeLight')}</span>
                         </>
                       ) : (
                         <>
                           <Moon className="h-4 w-4 text-accent-alt" aria-hidden="true" />
-                          <span className="text-sm font-medium">Dark</span>
+                          <span className="text-sm font-medium">{t('themeDark')}</span>
                         </>
                       )}
                     </button>
+                  </div>
+                  <div className="pt-1 flex items-center justify-between">
+                    <span className="text-sm text-fg-muted">{t('lang')}</span>
+                    <div className="w-28">
+                      <LanguageSelect locale={locale} onChange={changeLocale} />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -226,7 +279,7 @@ export function Navbar() {
         aria-valuenow={Math.round(scrollProgress * 100)}
         aria-valuemin={0}
         aria-valuemax={100}
-        aria-label="Page scroll progress"
+        aria-label={t('scrollProgress')}
       />
     </nav>
   );

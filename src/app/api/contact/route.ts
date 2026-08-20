@@ -1,4 +1,3 @@
-import { siteConfig } from '@/lib/config';
 import { validateContact } from '@/lib/validation';
 
 export async function POST(request: Request) {
@@ -10,7 +9,7 @@ export async function POST(request: Request) {
       return Response.json(
         {
           ok: false,
-          errors: [{ field: 'message', message: siteConfig.contact.messages.invalidPayload }],
+          errors: [{ field: 'message', code: 'invalidPayload' }],
         },
         { status: 400 }
       );
@@ -20,7 +19,7 @@ export async function POST(request: Request) {
       return Response.json(
         {
           ok: false,
-          errors: [{ field: 'message', message: siteConfig.contact.messages.invalidPayload }],
+          errors: [{ field: 'message', code: 'invalidPayload' }],
         },
         { status: 400 }
       );

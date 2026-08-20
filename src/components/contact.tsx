@@ -3,8 +3,9 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, AtSign, CircleAlert, CircleCheck, Send } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/lib/config';
-import { validateContact, type ContactError, type ContactField } from '@/lib/validation';
+import { validateContact, type ContactErrorCode, type ContactField } from '@/lib/validation';
 import { SectionHeading } from './section-heading';
 import { Github, Linkedin } from './icons';
 
@@ -23,13 +24,20 @@ const inputClasses = (hasError: boolean) =>
   }`;
 
 export function Contact() {
-  const { heading, kicker, email, linkedin, github, form, messages } = siteConfig.contact;
+  const t = useTranslations('contact');
+  const form = t.raw('form') as Record<string, string>;
+  const heading = t('heading');
+  const kicker = t('kicker');
+
+  const { email, linkedin, github } = siteConfig.contact;
 
   const [values, setValues] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<Status>('idle');
   const [serverError, setServerError] = useState<string | null>(null);
   const submittingRef = useRef(false);
+
+  const messageFor = (code: ContactErrorCode) => t(`messages.${code}`);
 
   const handleChange =
     (field: ContactField) =>
@@ -62,7 +70,7 @@ export function Contact() {
     if (validationErrors.length > 0) {
       const errorMap: FieldErrors = {};
       for (const err of validationErrors) {
-        errorMap[err.field] = err.message;
+        errorMap[err.field] = messageFor(err.code);
       }
       setErrors(errorMap);
       setStatus('idle');
@@ -83,7 +91,7 @@ export function Contact() {
 
       const data = (await response.json().catch(() => null)) as {
         ok?: boolean;
-        errors?: ContactError[];
+        errors?: Array<{ field: ContactField; code: ContactErrorCode }>;
       } | null;
 
       if (response.ok && data?.ok) {
@@ -92,18 +100,18 @@ export function Contact() {
       } else if (response.status === 400 && Array.isArray(data?.errors)) {
         const errorMap: FieldErrors = {};
         for (const err of data.errors) {
-          if (err?.field && err?.message) {
-            errorMap[err.field] = err.message;
+          if (err?.field && err?.code) {
+            errorMap[err.field] = messageFor(err.code);
           }
         }
         setErrors(errorMap);
         setStatus('idle');
       } else {
-        setServerError(messages.serverError);
+        setServerError(t('messages.serverError'));
         setStatus('idle');
       }
     } catch {
-      setServerError(messages.networkError);
+      setServerError(t('messages.networkError'));
       setStatus('idle');
     } finally {
       submittingRef.current = false;
@@ -216,7 +224,7 @@ export function Contact() {
                   className="flex items-start gap-2.5 rounded-lg border border-emerald/40 bg-emerald/10 px-4 py-3 text-sm text-emerald"
                 >
                   <CircleCheck className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
-                  {messages.success}
+                  {t('messages.success')}
                 </motion.div>
               ) : null}
 

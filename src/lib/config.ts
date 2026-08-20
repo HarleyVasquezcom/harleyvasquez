@@ -1,36 +1,3 @@
-export interface SiteConfig {
-  name: string;
-  title: string;
-  description: string;
-  url: string;
-  ogImage: string;
-  googleSiteVerification?: string;
-  navigation: Array<{ label: string; href: string }>;
-}
-
-export interface HeroConfig {
-  headline: string;
-  subheadline: string;
-  availabilityBadge: string;
-  ctaPrimary: {
-    label: string;
-    href: string;
-  };
-  ctaSecondary: {
-    label: string;
-    href: string;
-  };
-  terminalLines: string[];
-  scrollHint: string;
-}
-
-export interface AboutConfig {
-  heading: string;
-  kicker: string;
-  bio: string[];
-  stack: string[];
-}
-
 export type ProjectTone = 'emerald' | 'cyan' | 'metal';
 
 export interface ProjectConfig {
@@ -50,25 +17,6 @@ export interface ProjectConfig {
   year?: string;
 }
 
-export interface ProjectsConfig {
-  heading: string;
-  kicker: string;
-  featuredLabel: string;
-  emptyState: string;
-  filterLabel: string;
-  categories: string[];
-  items: ProjectConfig[];
-  labels: {
-    liveDemo: string;
-    code: string;
-    details: string;
-    prev: string;
-    next: string;
-    back: string;
-    stack: string;
-  };
-}
-
 export interface ExperienceItem {
   id: string;
   role: string;
@@ -79,60 +27,92 @@ export interface ExperienceItem {
   technologies: string[];
 }
 
-export interface ExperienceConfig {
-  heading: string;
-  kicker: string;
-  items: ExperienceItem[];
-}
-
-export interface ContactConfig {
-  heading: string;
-  kicker: string;
-  email: string;
-  linkedin: string;
-  github: string;
-  form: {
-    directLabel: string;
-    emailChannelLabel: string;
-    linkedinChannelLabel: string;
-    githubChannelLabel: string;
-    nameLabel: string;
-    namePlaceholder: string;
-    emailLabel: string;
-    emailPlaceholder: string;
-    messageLabel: string;
-    messagePlaceholder: string;
-    submitLabel: string;
-    submittingLabel: string;
+export interface SiteConfig {
+  site: {
+    name: string;
+    title: string;
+    description: string;
+    url: string;
+    ogImage: string;
+    googleSiteVerification?: string;
+    navigation: Array<{ label: string; href: string }>;
   };
-  messages: {
-    nameRequired: string;
-    emailInvalid: string;
-    messageTooShort: string;
-    invalidPayload: string;
-    success: string;
-    serverError: string;
-    networkError: string;
+  hero: {
+    headline: string;
+    subheadline: string;
+    availabilityBadge: string;
+    ctaPrimary: { label: string; href: string };
+    ctaSecondary: { label: string; href: string };
+    terminalLines: string[];
+    scrollHint: string;
+  };
+  about: {
+    heading: string;
+    kicker: string;
+    bio: string[];
+    stack: string[];
+  };
+  projects: {
+    heading: string;
+    kicker: string;
+    featuredLabel: string;
+    emptyState: string;
+    filterLabel: string;
+    categories: string[];
+    items: ProjectConfig[];
+    labels: {
+      liveDemo: string;
+      code: string;
+      details: string;
+      prev: string;
+      next: string;
+      back: string;
+      stack: string;
+    };
+  };
+  experience: {
+    heading: string;
+    kicker: string;
+    items: ExperienceItem[];
+  };
+  contact: {
+    heading: string;
+    kicker: string;
+    email: string;
+    linkedin: string;
+    github: string;
+    form: {
+      directLabel: string;
+      emailChannelLabel: string;
+      linkedinChannelLabel: string;
+      githubChannelLabel: string;
+      nameLabel: string;
+      namePlaceholder: string;
+      emailLabel: string;
+      emailPlaceholder: string;
+      messageLabel: string;
+      messagePlaceholder: string;
+      submitLabel: string;
+      submittingLabel: string;
+    };
+    messages: {
+      nameRequired: string;
+      emailInvalid: string;
+      messageTooShort: string;
+      invalidPayload: string;
+      success: string;
+      serverError: string;
+      networkError: string;
+    };
+  };
+  footer: {
+    navigation: Array<{ label: string; href: string }>;
+    social: Array<{ label: string; href: string; icon: string }>;
+    copyright: string;
   };
 }
 
-export interface FooterConfig {
-  navigation: Array<{ label: string; href: string }>;
-  social: Array<{ label: string; href: string; icon: string }>;
-  copyright: string;
-}
-
-export interface PortfolioConfig {
-  site: SiteConfig;
-  hero: HeroConfig;
-  about: AboutConfig;
-  projects: ProjectsConfig;
-  experience: ExperienceConfig;
-  contact: ContactConfig;
-  footer: FooterConfig;
-}
-
-export const siteConfig: PortfolioConfig = {
+export const siteConfig: SiteConfig = {
   site: {
     name: 'Portfolio',
     title: 'Software Engineer Portfolio',
@@ -194,7 +174,7 @@ export const siteConfig: PortfolioConfig = {
     featuredLabel: 'Featured',
     emptyState: 'No projects match this category yet.',
     filterLabel: 'Filter projects by category',
-    categories: ['All', 'Web Apps', 'Tools', 'Creative', 'Corporate Site', 'E-commerce', 'Blog', 'Portfolio', 'Landing Page', 'Microsite', 'Web App', 'Bloqueadores/Seguridad', 'Productividad/Escritura', 'Gestión de Pestañas', 'Utilidades/Personalización'],
+    categories: ['all', 'webApps', 'tools', 'creative', 'corporateSite', 'ecommerce', 'blog', 'portfolio', 'landingPage', 'microsite', 'webApp', 'seguridad', 'productividad', 'gestionPestañas', 'personalizacion'],
     labels: {
       liveDemo: 'Live Demo',
       code: 'Code',
@@ -212,7 +192,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Procedural aurora sky rendered on canvas with drifting light bands, stars and a subtle starfield parallax.',
         tone: 'emerald',
         tags: ['JavaScript', 'Canvas', 'Procedural'],
-        category: 'Creative',
+        category: 'creative',
         link: 'https://aurora-sky-nu.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: true,
@@ -232,7 +212,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Realtime cryptocurrency dashboard with live prices, sparkline charts and a sleek dark trading terminal.',
         tone: 'cyan',
         tags: ['JavaScript', 'Charting', 'Realtime', 'API'],
-        category: 'Web Apps',
+        category: 'webApps',
         link: 'https://crypto-dashboard-kappa-blond.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: true,
@@ -252,7 +232,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Paste, format, validate and minify JSON with live feedback and one-click copy.',
         tone: 'emerald',
         tags: ['JavaScript', 'Tool', 'Single-file'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://json-launder.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -272,7 +252,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Interactive neural-network-style particle field with glowing connections and mouse attraction.',
         tone: 'cyan',
         tags: ['JavaScript', 'Canvas', 'Simulation'],
-        category: 'Creative',
+        category: 'creative',
         link: 'https://neural-glow.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -292,7 +272,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Seeded color-palette generator with golden-angle harmony, per-swatch locking and click-to-copy hex.',
         tone: 'emerald',
         tags: ['JavaScript', 'Color', 'Utility'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://palette-loom.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -312,7 +292,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A warm, focused Pomodoro timer with ember glow, session rings and desktop notifications.',
         tone: 'metal',
         tags: ['JavaScript', 'Timer', 'PWA'],
-        category: 'Web Apps',
+        category: 'webApps',
         link: 'https://pomodoro-ember.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -332,7 +312,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A typing-speed test with live WPM, accuracy and highlighted ghost text over a metallic terminal UI.',
         tone: 'metal',
         tags: ['JavaScript', 'Game', 'Metrics'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://type-racer-indol.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: true,
@@ -352,7 +332,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A kanban board with drag-and-drop cards, tags, live filtering and a dark neon terminal look.',
         tone: 'metal',
         tags: ['JavaScript', 'Kanban', 'Drag & Drop'],
-        category: 'Web Apps',
+        category: 'webApps',
         link: 'https://kanban-board-lilac-gamma.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -372,7 +352,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A personal finance ledger with month navigation, per-category donut chart and budget hints.',
         tone: 'metal',
         tags: ['JavaScript', 'Finance', 'Charts'],
-        category: 'Web Apps',
+        category: 'webApps',
         link: 'https://ledger-app-self-five.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -392,7 +372,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A scientific-editorial notebook with a lightweight markdown renderer, pinning and export.',
         tone: 'metal',
         tags: ['JavaScript', 'Markdown', 'Editorial'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://notes-vault-two.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -412,7 +392,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A live Web Audio visualizer — bars, wave and orb modes from your mic or a demo tone.',
         tone: 'cyan',
         tags: ['JavaScript', 'Web Audio', 'Canvas'],
-        category: 'Creative',
+        category: 'creative',
         link: 'https://audio-spectrum-rho.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -432,7 +412,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A paper-styled chat client with threads, quoted replies and a global message search.',
         tone: 'metal',
         tags: ['JavaScript', 'Chat', 'Persistence'],
-        category: 'Web Apps',
+        category: 'webApps',
         link: 'https://message-threads.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -452,7 +432,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A rustic cozy cookbook with searchable recipes, ingredient checklists and scaling.',
         tone: 'emerald',
         tags: ['JavaScript', 'Recipe', 'CRUD'],
-        category: 'Web Apps',
+        category: 'webApps',
         link: 'https://recipe-book-one-swart.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -472,7 +452,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A brutalist trip planner with a timeline, pre-travel checklists and JSON export.',
         tone: 'metal',
         tags: ['JavaScript', 'Planner', 'CRUD'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://travel-planner-ten-rust.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -492,7 +472,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A full corporate website for an IT services firm — services, stats counters, testimonials and a validated contact form.',
         tone: 'cyan',
         tags: ['JavaScript', 'Corporate', 'Single-file'],
-        category: 'Corporate Site',
+        category: 'corporateSite',
         link: 'https://corporate-site-psi-nine.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: true,
@@ -512,7 +492,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A working e-commerce store — searchable catalog, cart drawer with free-shipping progress and a Luhn-validated checkout.',
         tone: 'emerald',
         tags: ['JavaScript', 'E-commerce', 'Checkout'],
-        category: 'E-commerce',
+        category: 'ecommerce',
         link: 'https://online-store-nu-fawn.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -532,7 +512,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A tech blog with SPA-style article reading, an inline markdown renderer, live search and category filtering.',
         tone: 'emerald',
         tags: ['JavaScript', 'Blog', 'Markdown'],
-        category: 'Blog',
+        category: 'blog',
         link: 'https://tech-blog-ten-omega.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -552,7 +532,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A photographer & designer portfolio with 16 generated SVG artworks, category filters and a full lightbox.',
         tone: 'metal',
         tags: ['JavaScript', 'Portfolio', 'Lightbox'],
-        category: 'Portfolio',
+        category: 'portfolio',
         link: 'https://artist-portfolio-tawny-rho.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -572,7 +552,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A product launch landing page — pricing toggle, FAQ accordion and validated lead-capture forms.',
         tone: 'cyan',
         tags: ['JavaScript', 'Landing Page', 'Conversion'],
-        category: 'Landing Page',
+        category: 'landingPage',
         link: 'https://landing-page-rust-gamma-60.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -592,7 +572,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A conference microsite — live countdown, tabbed agenda, speaker cards, venue map and a ticket flow.',
         tone: 'metal',
         tags: ['JavaScript', 'Microsite', 'Event'],
-        category: 'Microsite',
+        category: 'microsite',
         link: 'https://microsite-nine-rho.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -612,7 +592,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A terminal-styled project manager — projects, boards, columns and tasks with full CRUD, drag & drop and search.',
         tone: 'cyan',
         tags: ['JavaScript', 'Web App', 'CRUD'],
-        category: 'Web App',
+        category: 'webApp',
         link: 'https://web-app-psi-rouge-61.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -632,7 +612,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Sitio corporativo de una empresa de cámaras de seguridad — venta, instalación, soporte, reparación, asesoría y monitoreo.',
         tone: 'cyan',
         tags: ['JavaScript', 'Corporate', 'Seguridad'],
-        category: 'Corporate Site',
+        category: 'corporateSite',
         link: 'https://sentinel-systems-three.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: true,
@@ -652,7 +632,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Tienda virtual de cámaras de seguridad — 14 productos con arte SVG, carrito con envío gratis y checkout validado con Luhn.',
         tone: 'emerald',
         tags: ['JavaScript', 'E-commerce', 'Checkout'],
-        category: 'E-commerce',
+        category: 'ecommerce',
         link: 'https://vigil-store.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -672,7 +652,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Blog en español del nicho videovigilancia — 10 artículos, lector SPA con markdown, búsqueda en vivo y categorías.',
         tone: 'emerald',
         tags: ['JavaScript', 'Blog', 'Markdown'],
-        category: 'Blog',
+        category: 'blog',
         link: 'https://cctv-blog-seven.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -692,7 +672,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Portafolio de instalaciones de videovigilancia — 16 obras SVG procedimentales, lightbox con foco y filtros por categoría.',
         tone: 'metal',
         tags: ['JavaScript', 'Portfolio', 'Lightbox'],
-        category: 'Portfolio',
+        category: 'portfolio',
         link: 'https://cams-portfolio.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -712,7 +692,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Landing page en español para captar leads — evaluación de seguridad gratis, paquetes con toggle y countdown de urgencia.',
         tone: 'cyan',
         tags: ['JavaScript', 'Landing Page', 'Leads'],
-        category: 'Landing Page',
+        category: 'landingPage',
         link: 'https://security-audit-delta.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -732,7 +712,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Micrositio del evento "Semana de la Cámara 2026" — countdown, agenda de 7 días reservable, mapa con .ics y registro.',
         tone: 'metal',
         tags: ['JavaScript', 'Microsite', 'Evento'],
-        category: 'Microsite',
+        category: 'microsite',
         link: 'https://cam-launch.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -752,7 +732,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Sala de monitoreo en el navegador — feeds animados SVG, control PTZ, snapshots, log de eventos y HUD de estado.',
         tone: 'cyan',
         tags: ['JavaScript', 'Web App', 'Monitoreo'],
-        category: 'Web App',
+        category: 'webApp',
         link: 'https://cam-command.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -772,7 +752,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Sitio corporativo de gabinetes RTA modernos — catálogo Kitchen/Bath/Closet, 14 tipos de gabinete, ofertas por volumen y specs Blum Movento, con el sistema de diseño ámbar/navy del sitio local de referencia.',
         tone: 'metal',
         tags: ['HTML', 'CSS', 'JavaScript', 'E-commerce'],
-        category: 'Corporate Site',
+        category: 'corporateSite',
         link: 'https://barker-modern.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -792,7 +772,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'Sitio corporativo de cocinas de diseño a medida en Bogotá — 20 proyectos reales de cocina, contract para constructoras, proceso de 4 fases y formulario de cita, con el sistema de diseño zinc/cian del demo corporate-site.',
         tone: 'metal',
         tags: ['HTML', 'CSS', 'JavaScript', 'E-commerce'],
-        category: 'Corporate Site',
+        category: 'corporateSite',
         link: 'https://vettaz.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -812,7 +792,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'An offline hacker-terminal URL shortener with a local history table, regenerable 6-char codes and click stats.',
         tone: 'emerald',
         tags: ['JavaScript', 'Tool', 'Single-file'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://url-shortener-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -832,7 +812,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A retro-arcade password generator using crypto-secure randomness, with strength meter, entropy and history.',
         tone: 'metal',
         tags: ['JavaScript', 'Security', 'Tool'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://password-generator-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -852,7 +832,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'An instrument-console internet speed test with live ping and download gauges, history chart and JSON export.',
         tone: 'cyan',
         tags: ['JavaScript', 'Network', 'Metrics'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://speed-tester-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -872,7 +852,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A warm creative-studio image editor: crop, rotate, flip, color filters and PNG/JPEG export with undo/redo.',
         tone: 'emerald',
         tags: ['JavaScript', 'Canvas', 'Imaging'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://image-editor-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -892,7 +872,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A Swiss-brutalist QR generator for text, Wi-Fi and vCard contacts, with color options and history.',
         tone: 'metal',
         tags: ['JavaScript', 'QR', 'Tool'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://qr-generator-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -912,7 +892,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A Swiss-minimal format converter: JSON ↔ CSV ↔ XML ↔ YAML-subset, fully offline with live error feedback.',
         tone: 'cyan',
         tags: ['JavaScript', 'Data', 'Tool'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://format-converter-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -932,7 +912,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A split-flap style stopwatch and countdown timer with laps, milestones and a canvas progress ring.',
         tone: 'metal',
         tags: ['JavaScript', 'Timer', 'PWA'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://stopwatch-timer-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -952,7 +932,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A classic bank-ledger mortgage calculator: monthly payments, amortization table, LTV and stacked charts.',
         tone: 'metal',
         tags: ['JavaScript', 'Finance', 'Charts'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://mortgage-calculator-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -972,7 +952,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A card-table task board: drag cards across Backlog, Doing and Done with suits, due dates and search.',
         tone: 'emerald',
         tags: ['JavaScript', 'Kanban', 'Drag & Drop'],
-        category: 'Web Apps',
+        category: 'webApps',
         link: 'https://todo-list-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -992,7 +972,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'An editorial newspaper-style synonym finder powered by the Datamuse API with history and word of the day.',
         tone: 'metal',
         tags: ['JavaScript', 'API', 'Reference'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://synonym-finder-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -1012,7 +992,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A broadsheet-style RSS/OPML reader: paste any feed XML and browse, star, search and export items.',
         tone: 'metal',
         tags: ['JavaScript', 'RSS', 'Reader'],
-        category: 'Web Apps',
+        category: 'webApps',
         link: 'https://rss-reader-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -1032,7 +1012,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A vintage-stamp currency converter: 40+ currencies, favorites, a 14-day sparkline and offline cache.',
         tone: 'cyan',
         tags: ['JavaScript', 'Finance', 'API'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://currency-converter-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -1052,7 +1032,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A whiteboard-style deterministic name generator with vibe chips, a seed slider and favorites.',
         tone: 'emerald',
         tags: ['JavaScript', 'Utility', 'Creative'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://name-generator-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -1072,7 +1052,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A glassmorphism weather console: current conditions, 24h chart, 7-day forecast and an OpenStreetMap map.',
         tone: 'cyan',
         tags: ['JavaScript', 'Weather', 'API', 'Map'],
-        category: 'Web Apps',
+        category: 'webApps',
         link: 'https://weather-map-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -1092,7 +1072,7 @@ export const siteConfig: PortfolioConfig = {
         description: 'A library-card word counter: words, characters, sentences, reading time and keyword charts with TXT export.',
         tone: 'metal',
         tags: ['JavaScript', 'Text', 'Metrics'],
-        category: 'Tools',
+        category: 'tools',
         link: 'https://word-counter-harley-vasquez.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/portfolio-demos',
         featured: false,
@@ -1114,7 +1094,7 @@ export const siteConfig: PortfolioConfig = {
           'Manifest V3 ad & tracker blocker with a hand-curated local ruleset, live counters and 6-language i18n. Privacy-first.',
         tone: 'emerald',
         tags: ['Chrome Extension', 'MV3', 'Privacy', 'i18n'],
-        category: 'Bloqueadores/Seguridad',
+        category: 'seguridad',
         link: 'https://shieldblock.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/ShieldBlock',
         screenshot: '/extensions/shieldblock.png',
@@ -1137,7 +1117,7 @@ export const siteConfig: PortfolioConfig = {
           'Per-site ad blocker with allowlist, blocklist and a global pause, with a live counter. Privacy-first: everything stays local.',
         tone: 'emerald',
         tags: ['Chrome Extension', 'MV3', 'Ad Blocker', 'Privacy'],
-        category: 'Bloqueadores/Seguridad',
+        category: 'seguridad',
         link: 'https://adpause-gamma.vercel.app',
         screenshot: '/extensions/adpause.png',
         featured: false,
@@ -1159,7 +1139,7 @@ export const siteConfig: PortfolioConfig = {
           'Local encrypted password manager using WebCrypto (PBKDF2 + AES-GCM): generator, autofill, master key never leaves the browser.',
         tone: 'metal',
         tags: ['Chrome Extension', 'MV3', 'Passwords', 'WebCrypto'],
-        category: 'Bloqueadores/Seguridad',
+        category: 'seguridad',
         link: 'https://keyvault-ebon.vercel.app',
         screenshot: '/extensions/keyvault.png',
         featured: false,
@@ -1181,7 +1161,7 @@ export const siteConfig: PortfolioConfig = {
           'Open, portable password vault: encrypted locally with WebCrypto, import/export as encrypted JSON. No accounts, no sync.',
         tone: 'metal',
         tags: ['Chrome Extension', 'MV3', 'Passwords', 'WebCrypto'],
-        category: 'Bloqueadores/Seguridad',
+        category: 'seguridad',
         link: 'https://openvault-xi.vercel.app',
         screenshot: '/extensions/openvault.png',
         featured: false,
@@ -1203,7 +1183,7 @@ export const siteConfig: PortfolioConfig = {
           'Simulated VPN console: toggles a fake protected tunnel, swaps demo location, and paints a status banner. Demo only — no real routing.',
         tone: 'cyan',
         tags: ['Chrome Extension', 'MV3', 'VPN', 'Demo'],
-        category: 'Bloqueadores/Seguridad',
+        category: 'seguridad',
         link: 'https://tapvpn.vercel.app',
         screenshot: '/extensions/tapvpn.png',
         featured: false,
@@ -1225,7 +1205,7 @@ export const siteConfig: PortfolioConfig = {
           'Dark mode for whitelisted sites using a real WebKit CSS filter (invert, hue-rotate, sepia, brightness).',
         tone: 'metal',
         tags: ['Chrome Extension', 'MV3', 'Dark Mode', 'CSS'],
-        category: 'Utilidades/Personalización',
+        category: 'personalizacion',
         link: 'https://darkveil-two.vercel.app',
         screenshot: '/extensions/darkveil.png',
         featured: false,
@@ -1247,7 +1227,7 @@ export const siteConfig: PortfolioConfig = {
           'Local spell-checker: underlines misspellings in-page, offers one-click fixes, and supports a personal dictionary. EN/ES.',
         tone: 'emerald',
         tags: ['Chrome Extension', 'MV3', 'Spell Check', 'Dictionary'],
-        category: 'Productividad/Escritura',
+        category: 'productividad',
         link: 'https://spellwise-one.vercel.app',
         screenshot: '/extensions/spellwise.png',
         featured: false,
@@ -1269,7 +1249,7 @@ export const siteConfig: PortfolioConfig = {
           'Records clicks and typed values on a page into a step-by-step sheet with mini captures, exported as Markdown or HTML.',
         tone: 'cyan',
         tags: ['Chrome Extension', 'MV3', 'Recording', 'Markdown'],
-        category: 'Productividad/Escritura',
+        category: 'productividad',
         link: 'https://stepscribe.vercel.app',
         screenshot: '/extensions/stepscribe.png',
         featured: false,
@@ -1291,7 +1271,7 @@ export const siteConfig: PortfolioConfig = {
           'Screen recorder (MV3): getDisplayMedia + MediaRecorder with a red REC indicator, stopwatch, and clip cards with thumbnails.',
         tone: 'cyan',
         tags: ['Chrome Extension', 'MV3', 'Recording', 'MediaRecorder'],
-        category: 'Productividad/Escritura',
+        category: 'productividad',
         link: 'https://screenloom-nine.vercel.app',
         screenshot: '/extensions/screenloom.png',
         featured: false,
@@ -1313,7 +1293,7 @@ export const siteConfig: PortfolioConfig = {
           'Captures the page — title, URL, main text and main image — into a searchable, taggable deck of cards. Export as Markdown or JSON.',
         tone: 'cyan',
         tags: ['Chrome Extension', 'MV3', 'Clipping', 'Productivity'],
-        category: 'Productividad/Escritura',
+        category: 'productividad',
         link: 'https://clipdeck-woad.vercel.app',
         screenshot: '/extensions/clipdeck.png',
         featured: false,
@@ -1335,7 +1315,7 @@ export const siteConfig: PortfolioConfig = {
           'Save the current page with its readable text into a private stack — search, archive, 200-item cap, JSON export.',
         tone: 'emerald',
         tags: ['Chrome Extension', 'MV3', 'Reading', 'Storage'],
-        category: 'Productividad/Escritura',
+        category: 'productividad',
         link: 'https://readstack-flax.vercel.app',
         screenshot: '/extensions/readstack.png',
         featured: false,
@@ -1357,7 +1337,7 @@ export const siteConfig: PortfolioConfig = {
           'Clip a note to anything: save the current page with a personal note, stored privately with search and JSON/Markdown export.',
         tone: 'emerald',
         tags: ['Chrome Extension', 'MV3', 'Notes', 'Clipping'],
-        category: 'Productividad/Escritura',
+        category: 'productividad',
         link: 'https://clipnotes-jade.vercel.app',
         screenshot: '/extensions/clipnotes.png',
         featured: false,
@@ -1379,7 +1359,7 @@ export const siteConfig: PortfolioConfig = {
           'Tiny local page assistant: deterministic offline NLU — summary, keywords, entities, conversation history.',
         tone: 'cyan',
         tags: ['Chrome Extension', 'MV3', 'AI', 'Offline'],
-        category: 'Utilidades/Personalización',
+        category: 'personalizacion',
         link: 'https://assistai-gamma.vercel.app',
         screenshot: '/extensions/assistai.png',
         featured: false,
@@ -1401,7 +1381,7 @@ export const siteConfig: PortfolioConfig = {
           'Window session manager: save snapshots of open tabs and groups, search, restore, auto-save on interval.',
         tone: 'cyan',
         tags: ['Chrome Extension', 'MV3', 'Sessions', 'Tabs'],
-        category: 'Gestión de Pestañas',
+        category: 'gestionPestañas',
         link: 'https://sessionsaver.vercel.app',
         screenshot: '/extensions/sessionsaver.png',
         featured: false,
@@ -1423,7 +1403,7 @@ export const siteConfig: PortfolioConfig = {
           'Hive the window, keep the pages: close every tab into a named nest with estimated memory savings, restore anytime.',
         tone: 'emerald',
         tags: ['Chrome Extension', 'MV3', 'Tabs', 'Groups'],
-        category: 'Gestión de Pestañas',
+        category: 'gestionPestañas',
         link: 'https://tabnest-jade.vercel.app',
         screenshot: '/extensions/tabnest.png',
         featured: false,
@@ -1445,7 +1425,7 @@ export const siteConfig: PortfolioConfig = {
           'Background tabs automatically discarded after a configurable idle time — Chrome frees memory, with per-domain exceptions.',
         tone: 'metal',
         tags: ['Chrome Extension', 'MV3', 'Tabs', 'Memory'],
-        category: 'Gestión de Pestañas',
+        category: 'gestionPestañas',
         link: 'https://tabsnooze.vercel.app',
         screenshot: '/extensions/tabsnooze.png',
         featured: false,
@@ -1467,7 +1447,7 @@ export const siteConfig: PortfolioConfig = {
           'Phrase-to-phrase translator: built-in EN-ES-FR dictionary, word-under-cursor, popup phrases, page translation.',
         tone: 'emerald',
         tags: ['Chrome Extension', 'MV3', 'Translation', 'Dictionary'],
-        category: 'Utilidades/Personalización',
+        category: 'personalizacion',
         link: 'https://langbridge-alpha.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/LangBridge',
         screenshot: '/extensions/langbridge.png',
@@ -1490,7 +1470,7 @@ export const siteConfig: PortfolioConfig = {
           'Local color inspector: pick colors from page elements, convert HEX/RGB/HSL, keep history, copy and export your palette.',
         tone: 'emerald',
         tags: ['Chrome Extension', 'MV3', 'Color', 'Inspector'],
-        category: 'Utilidades/Personalización',
+        category: 'personalizacion',
         link: 'https://huelens-drab.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/HueLens',
         screenshot: '/extensions/huelens.png',
@@ -1513,7 +1493,7 @@ export const siteConfig: PortfolioConfig = {
           'Local on-page SEO check: title, meta, headings, alt text, broken links, text/HTML ratio, keyword density — traffic light scoring.',
         tone: 'cyan',
         tags: ['Chrome Extension', 'MV3', 'SEO', 'Analysis'],
-        category: 'Utilidades/Personalización',
+        category: 'personalizacion',
         link: 'https://seopulse-topaz.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/SeoPulse',
         screenshot: '/extensions/seopulse.png',
@@ -1536,7 +1516,7 @@ export const siteConfig: PortfolioConfig = {
           'Local tech detector: meta generator, script srcs, inline JS, data-* attributes with confidence scoring and JSON export.',
         tone: 'emerald',
         tags: ['Chrome Extension', 'MV3', 'Detection', 'Analysis'],
-        category: 'Utilidades/Personalización',
+        category: 'personalizacion',
         link: 'https://stackscope-five.vercel.app',
         github: 'https://github.com/HarleyVasquezcom/StackScope',
         screenshot: '/extensions/stackscope.png',
