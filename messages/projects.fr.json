@@ -1,67 +1,881 @@
 {
-  "aurora-sky": { "title": "Aurora Sky", "description": "Ciel d'aurore procédural dessiné sur canvas, avec bandes de lumière flottantes, étoiles et un subtil parallaxe de champ stellaire.", "overview": "Aurora Sky est un paysage procédural piloté par canvas qui rend une aurore boréale convaincante — bandes de lumière en couches, champ stellaire scintillant et parallaxe lente. Tout s'exécute côté client, sans aucune dépendance externe.", "highlights": ["Bandes d'aurore entièrement procédurales animées par un déplacement basé sur le bruit", "Fusion de lumière multicouche pour des dégradés de couleurs irisés", "Champ stellaire animé avec profondeur et scintillement"] },
-  "crypto-dashboard": { "title": "Crypto Dashboard", "description": "Tableau de bord crypto en temps réel avec cours en direct, graphiques en sparkline et un terminal de trading sombre et élégant.", "overview": "Un tableau de bord crypto en temps réel qui suit les principales devises, affiche des sparklines en flux continu et présente les soldes dans une esthétique de terminal sombre et soignée.", "highlights": ["Cours en direct mis à jour avec un minimum de changements d'état", "Sparklines et graphiques en aires dessinés sur mesure en canvas", "Liste de suivi en grille avec tri et favoris"] },
-  "json-launder": { "title": "JSON Launder", "description": "Collez, formatez, validez et minifiez du JSON avec un retour en direct et une copie en un clic.", "overview": "Un petit outil de nettoyage JSON, mais soigné : collez n'importe quel JSON pour obtenir une mise en forme (2 ou 4 espaces), une minification et des erreurs de validation claires en temps réel.", "highlights": ["Validation en direct avec des erreurs d'analyse descriptives", "Mise en forme à 2 ou 4 espaces et minification sur une ligne", "Copie du résultat dans le presse-papiers"] },
-  "neural-glow": { "title": "Neural Glow", "description": "Champ de particules interactif façon réseau neuronal avec connexions lumineuses et attraction de la souris.", "overview": "Neural Glow simule des centaines de particules en guise de nœuds reliés par des liens lumineux selon la proximité — le curseur joue le rôle d'attracteur pour un champ interactif organique et ludique.", "highlights": ["Liens lumineux basés sur la proximité avec élimination selon la distance", "Attraction du pointeur avec un lissage progressif", "Rendu adapté au ratio de pixels pour des écrans haute densité nets"] },
-  "palette-loom": { "title": "Palette Loom", "description": "Générateur de palettes de couleurs à base de graine, harmonie par angle d'or, verrouillage par nuance et hexadécimal copiable en un clic.", "overview": "Palette Loom tisse des palettes de couleurs déterministes à partir d'une graine numérique. Un mode harmonique par angle d'or choisit des teintes agréables, les nuances peuvent être verrouillées pendant la régénération et un clic copie n'importe quel hex.", "highlights": ["Palettes déterministes à partir d'une graine numérique", "Mode d'harmonie par angle d'or", "Verrouillage par nuance et copie de l'hex en un clic"] },
-  "pomodoro-ember": { "title": "Pomodoro Ember", "description": "Un minuteur Pomodoro chaleureux et focalisé avec lueur de braise, anneaux de session et notifications de bureau.", "overview": "Pomodoro Ember est un minuteur de concentration sans distraction avec un anneau de session à lueur de braise, des intervalles de travail et de pause configurables et des notifications de bureau au moment de changer d'activité.", "highlights": ["Anneau de progression à lueur de braise", "Intervalles de travail et de pause configurables", "Notifications de bureau au changement de session"] },
-  "type-racer": { "title": "Type Racer", "description": "Un test de vitesse de frappe avec PMM en direct, précision et texte fantôme surligné sur une interface de terminal métallisée.", "overview": "Type Racer mesure la vitesse et la précision de frappe avec un surlignage caractère par caractère, des statistiques de PMM et de précision en direct, et un panneau final de métriques à la fin de la phrase.", "highlights": ["Texte fantôme correct/actuel/incorrect surligné caractère par caractère", "PMM et précision en direct pendant l'exercice", "Métriques finales : PMM, précision, caractères, temps, CPS, brut"] },
-  "kanban-board": { "title": "Kanban Board", "description": "Un tableau kanban avec cartes glisser-déposer, étiquettes, filtrage en direct et look terminal néon sombre.", "overview": "Un tableau kanban complet dans un seul fichier : ajoutez, renommez et supprimez des colonnes, gérez des cartes avec titres, descriptions et plusieurs étiquettes, déplacez les cartes par glisser-déposer natif ou au clavier, et filtrez par texte. Tout l'état persiste dans le localStorage.", "highlights": ["Glisser-déposer natif entre colonnes avec repli clavier", "Renommage des colonnes en ligne et cartes à étiquettes modifiables dans une fenêtre modale", "Statistiques HUD (ouvert/terminé) et recherche qui masque les colonnes vides"] },
-  "ledger-app": { "title": "Ledger", "description": "Un registre de finances personnelles avec navigation mensuelle, graphique en anneau par catégorie et conseils budgétaires.", "overview": "Ledger est un suivi financier façon Stripe : enregistrez revenus et dépenses, parcourez les mois, visualisez les dépenses dans un anneau piloté par CSS avec légende et conseils budgétaires par catégorie, et exportez en CSV.", "highlights": ["Sélecteur de mois avec solde, revenus, dépenses et indicateurs nets", "Graphique en anneau des dépenses par catégorie avec alertes de dépassement de budget", "Export CSV et persistance dans le localStorage"] },
-  "notes-vault": { "title": "Notes Vault", "description": "Un carnet de notes éditorial et scientifique avec un rendu markdown léger, épinglage et export.", "overview": "Notes Vault est un carnet au style papier qui rend une syntaxe proche du markdown (titres, puces, listes de tâches, code en ligne) sans aucune dépendance, enregistre automatiquement avec un anti-rebond et exporte les notes en .md ou l'intégralité du carnet en JSON.", "highlights": ["Rendu personnalisé proche du markdown avec onglets Écrire/Aperçu", "Enregistrement automatique avec anti-rebond et épinglage des favoris", "Export d'une note (.md) ou du carnet (.json) et import par glisser-déposer"] },
-  "audio-spectrum": { "title": "Audio Spectrum", "description": "Un visualiseur Web Audio en direct — modes barres, onde et orbe depuis votre micro ou un son de démonstration.", "overview": "Audio Spectrum capture votre microphone et peint en temps réel des barres FFT, une onde d'oscilloscope ou un orbe radial sur canvas — avec un son de démonstration intégré pour fonctionner sans autorisation, plus un curseur de sensibilité.", "highlights": ["Trois modes canvas : BARRES, ONDE, ORBE (anneau radial)", "Capture du microphone avec repli sur le son de démonstration", "Curseur de sensibilité pré-gain et indicateurs RMS/CRÊTE"] },
-  "message-threads": { "title": "Message Threads", "description": "Un client de discussion au style papier avec fils de conversation, réponses citées et recherche globale de messages.", "overview": "Message Threads est un client de conversation sur fond de papier chaud : créez des fils, envoyez des messages avec auteurs et horodatages, répondez en citant, et sautez vers les fils correspondants depuis une recherche globale. Tout persiste dans le localStorage.", "highlights": ["Liste de fils avec avatars, compteurs et extraits en direct", "Markdown léger (gras, italique, code) et réponses citées", "Recherche globale de messages qui surligne et ouvre le fil"] },
-  "recipe-book": { "title": "Recipe Book", "description": "Un livre de recettes rustique et chaleureux avec recettes recherchables, listes d'ingrédients et ajustement des quantités.", "overview": "Recipe Book stocke vos recettes avec ingrédients et étapes, propose une grille de cartes cosy avec recherche en direct et filtrage par étiquettes, des listes d'ingrédients cochables dans la vue détaillée, et ajuste les quantités d'ingrédients pendant la cuisson.", "highlights": ["CRUD complet des recettes avec temps, difficulté, étiquettes et favoris", "Fenêtre de détail avec ingrédients et étapes interactifs cochables", "Recherche + filtre par étiquettes avec recettes de démonstration préchargées"] },
-  "travel-planner": { "title": "Travel Planner", "description": "Un planificateur de voyage brutaliste avec frise chronologique, listes de contrôle avant départ et export JSON.", "overview": "Travel Planner enregistre les voyages, construit et recherche des destinations, les compare sur une frise chronologique et suit les listes Documents/Préparation/Réservation avant le départ.", "highlights": ["CRUD des voyages triés par date de début avec filtres par pays", "Vue chronologique comparant les voyages", "Listes de préparation et export/import JSON"] },
-  "corporate-site": { "title": "Nexora Solutions", "description": "Un site vitrine complet pour une société de services informatiques — services, compteurs de statistiques, témoignages et formulaire de contact validé.", "overview": "Nexora Solutions est un site vitrine pour une société de services et de conseil informatiques : navigation scrollspy persistante, compteurs de statistiques animés, grille de services, carrousel de témoignages et formulaire de contact entièrement validé — le tout dans un fichier autonome.", "highlights": ["Navigation scrollspy et compteurs de statistiques animés", "Grille de services avec sections de détail façon modale", "Formulaire de contact validé avec états de succès/erreur"] },
-  "online-store": { "title": "Voltgear", "description": "Une boutique e-commerce fonctionnelle — catalogue recherchable, panier coulissant avec progression de livraison gratuite et paiement validé par la méthode de Luhn.", "overview": "Voltgear est une boutique d'électronique complète dans un seul fichier : 10 produits avec recherche et filtrage par catégorie, fenêtre de détail produit, panier coulissant avec gestion des quantités et barre de progression vers la livraison gratuite, et un paiement simulé qui valide la carte avec Luhn.", "highlights": ["Catalogue avec recherche et filtrage par catégorie, fenêtre de détail incluse", "Panier coulissant avec barre de progression vers la livraison gratuite (seuil de 150 $)", "Paiement avec validation de carte par Luhn et écran de succès avec numéro de commande"] },
-  "tech-blog": { "title": "Byte Post", "description": "Un blog tech avec lecture d'articles façon SPA, rendu markdown intégré, recherche en direct et filtrage par catégorie.", "overview": "Byte Post est un blog tech éditorial : 10 articles intégrés dans une grille recherchable et filtrable qui s'ouvrent dans une vue de lecture SPA — avec barre de progression de lecture, rendu markdown fait maison, articles liés et formulaire de newsletter validé.", "highlights": ["Vue d'article SPA avec barre de progression de lecture et articles liés", "Rendu markdown intégré (blocs de code, listes, citations)", "Recherche en direct anti-rebond + filtres par catégorie avec état vide"] },
-  "artist-portfolio": { "title": "Lens & Line", "description": "Un portfolio de photographe et designer avec 16 œuvres SVG générées, filtres par catégorie et lightbox complète.", "overview": "Lens & Line est un site portfolio pour un photographe et designer fictif : 16 œuvres SVG générées procéduralement en photographie, design et 3D, avec galerie filtrable, lightbox navigable aux flèches du clavier, barres de compétences animées et formulaire de contact validé.", "highlights": ["16 œuvres SVG procédurales avec filtres par catégorie", "Lightbox avec navigation clavier, précédent/suivant et bouclage", "Compteurs et barres de compétences déclenchés au défilement"] },
-  "landing-page": { "title": "LaunchKit", "description": "Une page de lancement produit — bascule de tarifs, accordéon FAQ et formulaires validés de capture de prospects.", "overview": "LaunchKit est une page d'atterrissage orientée conversion pour lancer des produits en quelques minutes : hero percutant, grille de fonctionnalités, bascule de tarifs mensuel/annuel, accordéon FAQ et formulaires de capture de prospects avec validation en ligne et états de succès.", "highlights": ["Bascule de tarifs mensuel/annuel avec prix animés", "Accordéon FAQ et grille de fonctionnalités", "Formulaires de prospects validés avec retour de succès/erreur"] },
-  "microsite": { "title": "CodeFest 2026", "description": "Un microsite de conférence — compte à rebours en direct, programme par onglets, fiches intervenants, plan du lieu et parcours de billetterie.", "overview": "CodeFest 2026 est un microsite de conférence à vocation unique : hero avec compte à rebours en direct vers l'événement, programme sur 2 jours par onglets, grille d'intervenants, plan animé du lieu avec téléchargement .ics réel, et parcours de billetterie à 3 niveaux avec formulaire validé et écran de succès pour un code promo fictif.", "highlights": ["Compte à rebours en direct avec états à venir/en cours", "Programme par onglets, fiches intervenants et plan du lieu avec export .ics", "Fenêtre de billetterie à plusieurs niveaux avec validation et écran de succès"] },
-  "web-app": { "title": "TaskFlow", "description": "Un gestionnaire de projet façon terminal — projets, tableaux, colonnes et tâches avec CRUD complet, glisser-déposer et recherche.", "overview": "TaskFlow est un gestionnaire de projet en terminal sombre : organisez le travail des projets aux tableaux, colonnes et tâches avec un CRUD complet, glisser-déposer natif plus déplacements au clavier, recherche en direct avec raccourci slash, pastilles de priorité et indicateurs HUD — le tout persisté dans le localStorage.", "highlights": ["CRUD hiérarchique (projets, tableaux, colonnes, tâches)", "Glisser-déposer natif avec repli clavier", "Recherche en direct, pastilles de priorité et indicateurs HUD"] },
-  "sentinel-systems": { "title": "Sentinel Systems", "description": "Site vitrine pour une société de caméras de sécurité — vente, installation, support, réparation, conseil et surveillance.", "overview": "Sentinel Systems est un site vitrine complet pour une société de vidéosurveillance : hero avec panneau de flux en direct simulé (REC, lignes de balayage, horloge UTC), 6 services (vente, installation, support, réparation, conseil, surveillance), compteurs animés, garanties SLA de 4 h, témoignages et formulaire de contact validé — le tout dans un seul fichier.", "highlights": ["Panneau de flux en direct simulé avec horloge UTC et lignes de balayage", "6 cartes de services en espagnol + compteurs animés", "Formulaire de contact validé avec notifications de succès/erreur"] },
-  "vigil-store": { "title": "VigilStore", "description": "Boutique en ligne de caméras de sécurité — 14 produits avec illustrations SVG, panier avec livraison gratuite et paiement validé par Luhn.", "overview": "VigilStore est une boutique de vidéosurveillance mono-fichier : 14 produits (caméras, enregistreurs, accessoires) avec illustrations SVG intégrées uniques, filtre par catégorie (Caméras/Enregistreurs/Accessoires) + recherche en direct, fenêtre de détail avec spécifications adaptées au type, panier avec barre de progression vers la livraison gratuite (200 $) et paiement validé par Luhn.", "highlights": ["14 produits avec illustrations SVG intégrées uniques et spécifications adaptées au type", "Panier avec barre de progression vers la livraison gratuite et persistance dans le localStorage", "Paiement avec validation Luhn et écran de succès"] },
-  "cctv-blog": { "title": "CCTV Insights", "description": "Blog de niche sécurité en espagnol — 10 articles, lecteur SPA avec markdown, recherche en direct et catégories.", "overview": "CCTV Insights est un blog éditorial de vidéosurveillance : 10 articles en espagnol (installation, équipement, sécurité, maintenance, juridique) avec couvertures SVG par catégorie, recherche anti-rebond, et lecteur SPA avec barre de progression, rendu markdown sur mesure et articles liés.", "highlights": ["Lecteur SPA avec barre de progression et rendu markdown sur mesure", "Recherche en direct + filtres par catégorie avec état vide", "Newsletter validée avec états de succès/erreur"] },
-  "cams-portfolio": { "title": "CamCraft Installs", "description": "Portfolio d'installations de vidéosurveillance — 16 scènes SVG procédurales, lightbox avec gestion du focus et filtres par catégorie.", "overview": "CamCraft Installs est le portfolio d'un installateur professionnel : 16 scènes SVG générées procéduralement (résidentiel, commercial, industriel, extérieur), galerie filtrable, lightbox avec piège de focus et navigation clavier, compteurs de statistiques et formulaire de contact validé.", "highlights": ["16 scènes d'installation SVG procédurales uniques en 4 catégories", "Lightbox avec piège de focus, navigation clavier et description du projet", "Compteurs animés + bandeau de services"] },
-  "security-audit": { "title": "Guardia360", "description": "Page d'atterrissage espagnole de capture de prospects — audit de sécurité gratuit, bascules de packs et compte à rebours d'urgence.", "overview": "Guardia360 est une page d'atterrissage orientée conversion pour une offre concrète : audit de sécurité gratuit pour maison ou entreprise. Formulaire de prospects validé dans le hero, 6 cartes de points de douleur, processus en 4 étapes, 3 packs de caméras avec bascule (Équipement seul / Kit complet), FAQ et compte à rebours d'urgence vers la fin du mois.", "highlights": ["Formulaire de prospects validé avec confirmation", "Bascule de pack : Équipement seul / Kit complet", "Urgence : compte à rebours de fin de mois + places restantes"] },
-  "cam-launch": { "title": "Semana de la Cámara", "description": "Microsite pour la « Semaine de la Caméra 2026 » — compte à rebours, agenda réservable sur 7 jours, plan avec .ics et inscription.", "overview": "Semana de la Cámara est le microsite d'un salon de vidéosurveillance : compte à rebours en direct jusqu'au 7 septembre 2026, agenda sur 7 jours par onglets avec sessions réservables, 6 temps forts, plan SVG zoomable avec téléchargement .ics réel, et inscription validée avec code de confirmation fictif.", "highlights": ["Compte à rebours en direct avec états à venir/en cours/terminé", "Agenda sur 7 jours avec réservations par ligne", "Plan SVG zoomable + téléchargement .ics réel"] },
-  "cam-command": { "title": "CamCommand", "description": "Salle de surveillance dans le navigateur — flux SVG animés, commandes PTZ, captures d'écran, journal d'événements et indicateurs d'état.", "overview": "CamCommand est une salle de contrôle de surveillance : grille de caméras avec flux de scènes SVG animées, vue focalisée avec commandes PTZ fonctionnelles qui déplacent la scène, capture de vignettes horodatées, journal d'alertes d'événements réglable et indicateurs d'état — le tout persisté dans le localStorage.", "highlights": ["Flux simulés avec scènes SVG animées et états en ligne/hors ligne", "Commandes PTZ fonctionnelles (panoramique/inclinaison/zoom sur la scène)", "Journal d'événements, captures d'écran et indicateurs d'état persistants"] },
-  "barker-modern": { "title": "Barker Modern", "description": "Site vitrine pour les armoires RTA — catalogue, 14 types d'armoires, offres de volume et spécifications Blum Movento, système de design ambre/navy.", "overview": "Barker Modern est un site vitrine monopage pour une vraie marque d'armoires RTA fabriquée aux États-Unis : hero avec curseur en fondu enchaîné et compteurs animés, catalogue Cuisine/Salle de bain/Garde-robe, 14 types d'armoires, offres de volume (livraison gratuite au-delà de 4 000 $ et remises par paliers jusqu'à 10 %), galerie de projets en défilement, témoignages, guides de design/d'assemblage/d'échantillons et bande de CTA — reproduisant le système de design ambre/navy (Sora + Inter, coins carrés) du site local de référence.", "highlights": ["Système de design ambre/navy reproduit à partir du site de référence", "Curseur en fondu enchaîné du hero + titres rotatifs + compteurs de statistiques", "Catalogue complet avec 14 types d'armoires et de vraies offres"] },
-  "vettaz": { "title": "VETTAZ", "description": "Site vitrine pour cuisines sur mesure à Bogotá — 20 projets de cuisine réels, contrat pour les constructeurs, processus en 4 phases et formulaire de réservation, système de design zinc/cyan.", "overview": "VETTAZ est un site vitrine monopage pour une marque de cuisines sur mesure à Bogotá : hero plein écran avec halos et grille animés, galerie de 20 projets de cuisine réels (grille 3x3 + carrousel), 6 projets sous contrat avec comptes d'unités pour les constructeurs, historique depuis 1984 avec ISO 9001 et compteurs de statistiques, processus en 4 phases, blog, témoignages et formulaire de réservation validé avec notifications — reproduisant le système de design zinc sombre + accent cyan (typographie monospace, bordures arrondies) de la démo de site vitrine.", "highlights": ["Système de design zinc/cyan reproduit à partir de la démo de site vitrine", "20 projets de cuisine avec de vraies descriptions adaptées à la Colombie", "Hero avec halos animés, compteurs de statistiques et formulaire validé avec notifications"] },
-  "url-shortener": { "title": "TinyLink", "description": "Raccourcisseur d'URL en terminal de hacker hors ligne, avec historique local, codes à 6 caractères régénérables et statistiques de clics.", "overview": "TinyLink est un raccourcisseur d'URL entièrement hors ligne dans une esthétique de terminal vert phosphore : collez n'importe quel lien pour créer un code à 6 caractères, conservez chaque lien court dans un tableau d'historique local avec date de création et compteur de clics, copiez ou ouvrez les codes, exportez l'historique en JSON.", "highlights": ["Codes à 6 caractères issus d'un jeu de caractères personnalisé, générés localement", "Tableau d'historique avec statistiques de clics et export JSON", "Zéro dépendance réseau — fonctionne entièrement hors ligne"] },
-  "password-generator": { "title": "PassForge", "description": "Générateur de mots de passe rétro-arcade avec aléa cryptographiquement sûr, jauge de robustesse, entropie et historique.", "overview": "PassForge forge des mots de passe avec crypto.getRandomValues sur une grille CRT néon : curseur de longueur de 8 à 64, bascules majuscules/minuscules/chiffres/symboles, exclusion des caractères ambigus, jauge de robustesse en direct avec bits d'entropie, génération par cinq et historique copiable.", "highlights": ["Génération cryptographiquement sûre via Web Crypto", "Jauge de robustesse avec compteur de bits d'entropie", "Historique des 15 derniers mots de passe avec copie en un clic et suppression"] },
-  "speed-tester": { "title": "SpeedPulse", "description": "Test de débit Internet façon console d'instruments avec jauges de ping et de téléchargement en direct, graphique d'historique et export JSON.", "overview": "SpeedPulse mesure votre connexion sur des jauges d'instruments dessinées en canvas : une moyenne de ping sur 3 essais, des tests de téléchargement à 5/20/50 Mo contre un endpoint CDN compatible CORS avec progression en direct, et une sparkline d'historique des 10 derniers résultats avec export JSON.", "highlights": ["Moyenne de ping et Mbit/s en direct pendant les tests de téléchargement", "Jauges à arc en canvas et graphique d'historique en lignes", "Export des résultats en JSON pour votre propre journalisation"] },
-  "image-editor": { "title": "PixelKit", "description": "Éditeur d'image de studio créatif chaleureux : recadrage, rotation, retournement, filtres de couleurs et export PNG/JPEG avec annuler/rétablir.", "overview": "PixelKit est un éditeur d'image basé sur canvas dans une esthétique de studio douce : déposez n'importe quelle image, recadrez avec des ratios libres ou prédéfinis (16:9, 4:3, 1:1, 3:4, 9:16), faites pivoter et retourner, ajustez luminosité/contraste/saturation/sépia, annulez et rétablissez les 10 dernières étapes, et exportez en PNG ou JPEG avec un curseur de qualité.", "highlights": ["Superposition de recadrage déplaçable avec ratios prédéfinis", "Pile annuler/rétablir et aperçu avant/après", "Export PNG/JPEG avec contrôle de qualité JPEG"] },
-  "qr-generator": { "title": "Qrafter", "description": "Générateur de QR suisse-brutaliste pour texte, Wi-Fi et contacts vCard, avec options de couleurs et historique.", "overview": "Qrafter fabrique des codes QR dans une esthétique d'impression en gras : choisissez des entrées Texte/URL, Wi-Fi (avec options de chiffrement et de réseau masqué) ou contact vCard, ajustez la taille et les couleurs de premier plan/arrière-plan, prévisualisez en direct et téléchargez le PNG tandis qu'un historique local conserve vos 10 derniers codes.", "highlights": ["Modes d'entrée Texte, Wi-Fi et vCard avec validation", "Options de taille et de couleurs personnalisées avec aperçu en direct", "Téléchargement PNG et historique de 10 éléments dans le localStorage"] },
-  "format-converter": { "title": "FormatZen", "description": "Convertisseur de formats minimaliste suisse : JSON vers CSV vers XML vers sous-ensemble YAML, entièrement hors ligne avec retour d'erreur en direct.", "overview": "FormatZen convertit des données entre JSON, CSV, XML et un sous-ensemble YAML entièrement dans le navigateur : JSON vers CSV, CSV vers JSON avec choix du délimiteur, XML vers JSON, JSON vers XML et JSON vers YAML, avec exemples d'entrée, embellissement, permutation, copie, téléchargement et un historique de conversion sur 10 étapes.", "highlights": ["Cinq sens de conversion avec options de délimiteur", "Erreurs d'analyse bilingues au lieu d'échecs silencieux", "Historique de conversion avec rechargement dans le panneau d'entrée"] },
-  "stopwatch-timer": { "title": "Tempo", "description": "Chronomètre et minuteur de compte à rebours façon tableaux à palettes, avec tours, jalons et anneau de progression en canvas.", "overview": "Tempo est un minuteur de tableau de départs à palettes : un chronomètre avec listes de tours, mise en avant du meilleur/pire tour et export CSV, plus un compte à rebours avec préréglages, saisie mm:ss personnalisée, anneau de progression en canvas et carillons WebAudio avec jalons par minute optionnels.", "highlights": ["Affichage à palettes avec précision au centième", "Suivi des tours avec meilleur/pire et export CSV", "Anneau de compte à rebours avec carillons WebAudio"] },
-  "mortgage-calculator": { "title": "MortgageSim", "description": "Calculateur de prêt immobilier façon registre bancaire : mensualités, tableau d'amortissement, LTV et graphiques empilés.", "overview": "MortgageSim modélise un prêt immobilier sur du papier à registre réglé : prix, apport en % ou montant, taux d'intérêt, durée, taxe foncière et assurance optionnelles alimentent un graphique en barres empilées de la répartition mensuelle, un tableau d'amortissement complet avec recherche par mois, et une carte LTV — en USD, EUR ou COP.", "highlights": ["Calendrier d'amortissement complet avec recherche par mois", "Répartition empilée capital/intérêts/taxe/assurance dessinée en canvas", "Formatage USD / EUR / COP via Intl.NumberFormat"] },
-  "todo-list": { "title": "DoneDeck", "description": "Tableau de tâches façon table de cartes : glissez les cartes entre À faire, En cours et Terminé avec enseignes, échéances et recherche.", "overview": "DoneDeck gère les tâches sur une table de cartes à feutrine verte : les cartes vivent dans À faire, En cours et Terminé, se déplacent via des boutons fléchés ou par glisser-déposer du pointeur, et portent des enseignes de priorité (pique/cœur/trèfle), des notes et des échéances avec badges de retard — avec recherche, tri, statistiques et persistance complète.", "highlights": ["Glisser-déposer au pointeur plus boutons de repli", "Enseignes de priorité, échéances et badges de retard", "Barre de statistiques avec compteurs par colonne et pourcentage d'avancement"] },
-  "synonym-finder": { "title": "WordWeave", "description": "Chercheur de synonymes façon journal éditorial avec API Datamuse, historique et mot du jour.", "overview": "WordWeave est un thésaurus façon journal : tapez un mot et des requêtes Datamuse parallèles renvoient synonymes, antonymes et mots associés sous forme de pastilles cliquables (un clic copie, un double-clic relance la recherche), avec un mot du jour choisi, une saisie anti-rebond et un historique de 12 entrées.", "highlights": ["Synonymes, antonymes et mots liés par le sens renvoyés en parallèle", "Pastilles copiées en un clic et recherchées en double-clic", "Saisie anti-rebond avec cache en mémoire"] },
-  "rss-reader": { "title": "FeedFetch", "description": "Lecteur RSS/OPML façon grand quotidien : collez n'importe quel flux XML et parcourez, mettez en favori, recherchez et exportez les articles.", "overview": "FeedFetch lit les flux RSS et OPML collés en XML et les rend comme un grand quotidien : filtres non lus et favoris, recherche plein texte, export des articles en JSON ou OPML, et trois flux d'exemple intégrés pour fonctionner dès le chargement.", "highlights": ["Analyse RSS/OPML côté client avec DOMParser", "Filtres non lus, favoris et recherche avec compteurs", "Export des articles analysés en JSON ou OPML"] },
-  "currency-converter": { "title": "CoinVoyage", "description": "Convertisseur de devises façon timbre-poste vintage : plus de 40 devises, favoris, sparkline sur 14 jours et cache hors ligne.", "overview": "CoinVoyage convertit entre plus de 40 devises avec un habillage de timbres-poste : des taux en direct rafraîchis toutes les 10 minutes depuis une API publique sans clé, des paires favorites épinglées dans une rangée d'accès rapide, un taux inverse consultable, et une sparkline canvas des taux historiques échantillonnés.", "highlights": ["Plus de 40 devises avec sélecteur recherchable et inversion", "Rangée de paires favorites persistée localement", "Sparkline sur 14 jours à partir d'échantillons historiques"] },
-  "name-generator": { "title": "NameForge", "description": "Générateur de noms déterministe façon tableau blanc avec pastilles d'ambiance, curseur de graine et favoris.", "overview": "NameForge griffonne des noms de développeurs, de projets et de produits sur un tableau blanc à craie : choisissez une ambiance (Web, IA, CLI, Jeu, Données, Cloud, Minimal ou Espagnol), faites glisser une graine numérique pour que la même graine produise toujours les mêmes noms, créez-en 10 d'un coup et conservez les favoris localement.", "highlights": ["Noms déterministes pilotés par une graine numérique", "Pastilles d'ambiance avec un répertoire de mots espagnols", "Génération en lots de 10 noms avec favoris copiés en un clic"] },
-  "weather-map": { "title": "Nowcast", "description": "Console météo en verre dépoli : conditions actuelles, graphique sur 24 h, prévisions à 7 jours et carte OpenStreetMap.", "overview": "Nowcast est une console météo bleu ciel : la géolocalisation (ou la recherche de ville) pilote les conditions actuelles d'Open-Meteo — température, ressenti, humidité, vent, pression et codes WMO avec descriptions bilingues — plus un graphique en barres sur 24 heures, des cartes à 7 jours avec lever/coucher du soleil, et une carte OpenStreetMap panoramique centrée sur l'épingle.", "highlights": ["Prévisions Open-Meteo sans clé avec codes de conditions bilingues", "Graphique température/précipitations sur 24 h en canvas", "Carte OSM interactive avec attribution"] },
-  "word-counter": { "title": "WordScale", "description": "Compteur de mots façon fiche de bibliothèque : mots, caractères, phrases, temps de lecture et graphiques de mots-clés avec export TXT.", "overview": "WordScale pèse votre texte sur un habillage de fiches cartonnées : mots en direct, caractères avec et sans espaces, phrases, paragraphes, mots uniques, syllabes estimées, temps de lecture et d'expression, score de lisibilité approximatif, barres des mots-clés principaux et graphique de longueur des phrases — le tout exportable en TXT.", "highlights": ["Dix métriques en direct, dont temps de lecture et d'expression", "Graphiques de fréquence des mots-clés et de longueur des phrases", "Export récapitulatif TXT et détection automatique du collage"] },
-  "shieldblock": { "title": "ShieldBlock", "description": "Bloqueur de publicités et de traqueurs Manifest V3 avec liste de règles locales triée sur le volet, compteurs en direct et i18n en 6 langues. Confidentialité d'abord.", "overview": "ShieldBlock est une extension Chrome Manifest V3 qui bloque publicités et traqueurs grâce au moteur declarativeNetRequest de Chrome avec une liste de règles locales triée sur le volet (~84 règles). Tout s'exécute dans votre navigateur — pas de serveurs, pas de comptes, pas de télémétrie.", "highlights": ["84+ règles declarativeNetRequest triées sur le volet pour les domaines de publicité et de traqueurs connus", "Compteurs de requêtes bloquées persistés dans chrome.storage.local", "Bascule pause marche/arrêt avec i18n dans 6 langues (EN, ES, FR, PT, IT, DE)", "Aucune permission d'hôte — aucune donnée ne quitte le navigateur"] },
-  "adpause": { "title": "AdPause", "description": "Bloqueur de publicités par site avec liste blanche, liste noire et pause globale, avec compteur en direct. Confidentialité d'abord : tout reste local.", "overview": "AdPause bloque les publicités site par site avec listes blanches et noires, une bascule de pause globale et un compteur en direct — tout est local dans le navigateur, sans télémétrie.", "highlights": ["Règles de liste blanche et noire par site", "Bascule pause/reprise globale persistée entre les redémarrages", "Compteur de requêtes bloquées en direct dans la popup", "Aucune permission d'hôte — aucune donnée ne quitte le navigateur"] },
-  "keyvault": { "title": "KeyVault", "description": "Gestionnaire de mots de passe chiffrés local via WebCrypto (PBKDF2 + AES-GCM) : générateur, saisie automatique, clé maîtresse qui ne quitte jamais le navigateur.", "overview": "KeyVault conserve les mots de passe chiffrés localement avec WebCrypto (PBKDF2 + AES-GCM) : un générateur personnalisable, une saisie automatique qui rejette les mauvaises clés maîtresses, et aucun compte ni synchronisation — votre clé maîtresse ne quitte jamais le navigateur.", "highlights": ["Chiffrement PBKDF2 + AES-GCM entièrement dans le navigateur", "Générateur de mots de passe avec jeu de caractères et longueur personnalisables", "La saisie automatique rejette les tentatives de mauvaise clé maîtresse", "Pas de comptes, pas de synchronisation, pas de télémétrie"] },
-  "openvault": { "title": "OpenVault", "description": "Coffre-fort de mots de passe ouvert et portable : chiffré localement avec WebCrypto, import/export en JSON chiffré. Pas de comptes, pas de synchronisation.", "overview": "OpenVault est le coffre-fort ouvert et portable : les mots de passe sont chiffrés localement avec WebCrypto (PBKDF2 + AES-GCM), avec import/export sous forme d'objet JSON chiffré. Pas de comptes, pas de synchronisation — votre coffre vous accompagne comme un fichier.", "highlights": ["Coffre-fort JSON chiffré avec aller-retour import/export", "Chiffrement côté client PBKDF2 + AES-GCM", "Le coffre-fort voyage comme un fichier unique", "Pas de comptes, pas de synchronisation"] },
-  "tapvpn": { "title": "TapVpn", "description": "Console VPN simulée : bascule un tunnel protégé fictif, change la position de démonstration et peint une bannière d'état. Démo uniquement — aucun routage réel.", "overview": "TapVpn est une console VPN simulée : elle bascule un tunnel protégé fictif, change votre position de démonstration et peint une bannière d'état sur la page active. Démo uniquement — elle ne route, ne proxifie et ne chiffre aucun trafic.", "highlights": ["Bascule de tunnel protégé simulée avec bannière d'état", "Changement de position de démonstration (bannière géographique sur la page active)", "Persistance de l'état connexion/déconnexion", "Aucun routage réel du trafic — démo uniquement"] },
-  "darkveil": { "title": "DarkVeil", "description": "Mode sombre pour les sites de votre liste blanche à l'aide d'un vrai filtre CSS WebKit (invert, hue-rotate, sepia, brightness).", "overview": "DarkVeil assombrit les pages avec un vrai filtre CSS WebKit (réglages invert + hue-rotate + sepia + brightness), appliqué uniquement aux sites de votre liste blanche. Ni flashs agressifs pour les yeux, ni mode sombre forcé sur toutes les pages.", "highlights": ["Filtre CSS WebKit : réglages invert, hue-rotate, sepia, brightness", "Contrôle de liste blanche par site — choisissez où il s'applique", "Pas de mode sombre forcé sur chaque page", "Vrai filtre CSS, pas une superposition de feuille de style"] },
-  "spellwise": { "title": "SpellWise", "description": "Correcteur orthographique local : souligne les fautes dans la page, propose des corrections en un clic et prend en charge un dictionnaire personnel. EN/ES.", "overview": "SpellWise relit le texte des pages que vous visitez : un dictionnaire local EN/ES souligne les fautes probables avec un stylo bleu, la popup propose des corrections en un clic et vos propres mots peuvent être ajoutés au dictionnaire personnel.", "highlights": ["Dictionnaire local EN/ES avec soulignement des fautes dans la page", "Suggestions de correction en un clic dans la popup", "Dictionnaire personnel avec vos mots ajoutés", "Aucun appel réseau — rien ne quitte le navigateur"] },
-  "stepscribe": { "title": "StepScribe", "description": "Enregistre les clics et les valeurs saisies sur une page dans une fiche étape par étape avec mini-captures, exportée en Markdown ou HTML.", "overview": "StepScribe enregistre vos clics et valeurs saisies sur une page dans une fiche d'instructions étape par étape avec de minuscules captures d'éléments, puis l'exporte en Markdown ou HTML. Tout est local, sans comptes.", "highlights": ["Enregistre les clics et les valeurs saisies avec des sélecteurs DOM par étape", "Mini-captures d'éléments via des vignettes drawImage", "Export Markdown ou HTML autonome avec captures intégrées", "Stockage local, pas de comptes"] },
-  "screenloom": { "title": "ScreenLoom", "description": "Enregistreur d'écran (MV3) : getDisplayMedia + MediaRecorder avec indicateur REC rouge, chronomètre et cartes de clips avec vignettes.", "overview": "ScreenLoom enregistre votre écran en clips (MV3) : getDisplayMedia + MediaRecorder avec un indicateur REC rouge sur chaque page, un chronomètre dans la popup et des cartes de clips avec vignettes, durée et format. Téléchargement .webm en local.", "highlights": ["Enregistrement getDisplayMedia + MediaRecorder en .webm", "Indicateur REC rouge sur chaque page pendant l'enregistrement", "Cartes de clips avec métadonnées de vignette, de durée et de format", "Téléchargements en local — jamais téléversés"] },
-  "clipdeck": { "title": "ClipDeck", "description": "Capture la page — titre, URL, texte principal et image principale — dans un jeu de cartes recherchable et étiquetable. Export en Markdown ou JSON.", "overview": "ClipDeck capture la page que vous lisez — titre, URL, texte principal et image principale — dans un jeu de cartes local que vous pouvez rechercher, étiqueter et exporter en Markdown ou JSON. Tout reste dans chrome.storage.local.", "highlights": ["Extrait le titre, l'URL, le texte principal et l'image principale avec une heuristique locale", "Cartes recherchables et étiquetables dans un jeu local", "Export du jeu en Markdown ou JSON", "Stockage entièrement local — pas de comptes, pas de serveurs"] },
-  "readstack": { "title": "ReadStack", "description": "Enregistrez la page courante avec son texte lisible dans une pile privée — recherche, archivage, limite de 200 éléments, export JSON.", "overview": "ReadStack empile ce que vous lisez : enregistrez la page courante (titre, URL et son texte lisible) dans une pile personnelle dans chrome.storage, avec suivi lu/non lu, recherche, archivage et export JSON. Le texte de la page n'est lu que lorsque vous cliquez sur la popup.", "highlights": ["Enregistre le titre, l'URL et le texte lisible dans chrome.storage.local", "Filtres Tout/Non lu/Archivé avec recherche en direct", "Limite de 200 éléments avec élagage automatique des plus anciens éléments lus", "Export JSON de la pile entière"] },
-  "clipnotes": { "title": "ClipNotes", "description": "Épinglez une note à n'importe quoi : enregistrez la page courante avec une note personnelle, stockée en privé avec recherche et export JSON/Markdown.", "overview": "ClipNotes épingle une note à n'importe quoi : enregistrez la page courante (titre, URL, texte lisible) et ajoutez votre propre note, le tout stocké en privé dans chrome.storage, avec recherche et export JSON/Markdown.", "highlights": ["Enregistre le titre, l'URL et le texte lisible de la page plus votre note personnelle", "Recherche dans toutes les notes épinglées", "Export JSON et Markdown", "Aucune permission d'hôte — le contenu de la page n'est lu qu'au clic"] },
-  "assistai": { "title": "AssistAI", "description": "Mini assistant de page local : NLU hors ligne déterministe — résumé, mots-clés, entités, historique de conversation.", "overview": "assistai est un mini assistant de page local (MV3) : NLU déterministe et hors ligne sur la page que vous lisez — résumé par densité de mots, mots-clés avec compteurs, entités via expressions régulières — plus un historique de conversation persistant.", "highlights": ["Résumé par densité de mots sur le DOM de la page", "Mots-clés avec compteurs et entités via expressions régulières", "Historique de conversation persistant dans le stockage de l'extension", "Aucun appel réseau, aucune clé API, aucun modèle dans le cloud"] },
-  "sessionsaver": { "title": "SessionSaver", "description": "Gestionnaire de sessions de fenêtres : enregistrez des instantanés d'onglets et de groupes ouverts, recherchez, restaurez, enregistrement automatique à intervalle.", "overview": "SessionSaver est un gestionnaire de sessions de fenêtres : enregistrez un instantané de vos onglets et groupes ouverts, recherchez-les, restaurez-les plus tard, et activez l'enregistrement automatique à un intervalle configurable. Tout reste dans le stockage local de l'extension.", "highlights": ["Capture les onglets et groupes d'onglets de la fenêtre", "Recherche dans les sessions enregistrées par titre ou URL", "Enregistrement automatique à intervalle configurable", "Restaurez une fenêtre ou toutes à la fois"] },
-  "tabnest": { "title": "TabNest", "description": "Regroupez la fenêtre en gardant les pages : fermez chaque onglet dans un nid nommé avec économie de mémoire estimée, restaurez à tout moment.", "overview": "TabNest regroupe la fenêtre en conservant les pages : fermez chaque onglet d'une fenêtre dans un nid nommé (avec une économie de mémoire estimée), puis restaurez un nid ou tous quand vous voulez. Inclut l'i18n en 6 langues.", "highlights": ["Nids nommés avec économies de mémoire estimées", "Restaurez un nid ou tous les nids à tout moment", "i18n en 6 langues (EN, ES, FR, PT, IT, DE)", "Stockage local uniquement"] },
-  "tabsnooze": { "title": "TabSnooze", "description": "Les onglets en arrière-plan sont automatiquement libérés après un temps d'inactivité configurable — Chrome libère la mémoire, avec des exceptions par domaine.", "overview": "TabSnooze laisse la fenêtre faire une sieste : les onglets en arrière-plan sont automatiquement libérés après un temps d'inactivité configurable (Chrome libère leur mémoire), avec des exceptions par domaine. Cliquez sur un onglet endormi pour le réveiller instantanément.", "highlights": ["Libération automatique des onglets inactifs via la libération native de Chrome", "Liste blanche par domaine (onglets épinglés et onglet actif exemptés)", "Délai d'inactivité configurable (1–60 min, 10 par défaut)", "Réveillez les onglets endormis instantanément en un clic"] },
-  "langbridge": { "title": "LangBridge", "description": "Traducteur phrase à phrase : dictionnaire EN-ES-FR intégré, mot sous le curseur, phrases dans la popup, traduction de page.", "overview": "LangBridge est un traducteur phrase à phrase : un petit dictionnaire intégré EN-ES-FR (~200 termes) qui traduit les mots sous votre curseur, des phrases entières dans la popup et les mots connus directement sur la page. Tout s'exécute localement dans chrome.storage.local.", "highlights": ["Dictionnaire intégré EN-ES-FR d'environ 200 termes", "Infobulle du mot sous le curseur avec bouton de copie", "Traduction de phrases dans la popup avec EN-ES et EN-FR", "Traduction de toute la page avec restauration en un clic"] },
-  "huelens": { "title": "HueLens", "description": "Inspecteur de couleurs local : prélevez des couleurs des éléments de page, convertissez HEX/RGB/HSL, gardez un historique, copiez et exportez votre palette.", "overview": "HueLens est un inspecteur de couleurs local : prélevez la couleur de n'importe quel élément d'une page servie depuis http://127.0.0.1 (approximation par styles calculés), convertissez HEX/RGB/HSL, gardez un historique, copiez dans le presse-papiers et exportez votre palette. Tout s'exécute localement.", "highlights": ["Échantillonnage de couleurs par styles calculés depuis n'importe quel élément de page", "Conversions HEX, RGB et HSL calculées localement", "Historique de 50 couleurs avec copie et export de palette", "i18n en 6 langues (EN, ES, FR, PT, IT, DE)"] },
-  "seopulse": { "title": "SeoPulse", "description": "Contrôle SEO sur page local : titre, méta, titres, textes alternatifs, liens cassés, ratio texte/HTML, densité de mots-clés — score en feu tricolore.", "overview": "SeoPulse est un contrôle SEO sur page pour les pages servies depuis http://127.0.0.1 : titre, méta description, hiérarchie des titres, textes alternatifs des images, liens cassés, ratio texte/HTML et densité de mots-clés, avec un score et un feu tricolore.", "highlights": ["Vérifications du titre, des méta, de la hiérarchie des titres et des textes alternatifs", "Liens internes cassés (50 premiers) et ratio texte/HTML", "Densité de mots-clés avec score en feu tricolore (vert/jaune/rouge)", "Export du rapport en JSON ou Markdown"] },
-  "stackscope": { "title": "StackScope", "description": "Détecteur de technologies local : générateur meta, sources de scripts, JS intégré, attributs data-* avec score de confiance et export JSON.", "overview": "StackScope est un détecteur de technologies local pour les pages servies depuis http://127.0.0.1 : générateur meta, sources de scripts connues et marqueurs intégrés, plus les attributs data-* — avec confiance de correspondance et export JSON. Tout s'exécute localement sur le DOM de la page.", "highlights": ["Détecte le générateur meta, les sources de scripts, le JS intégré et les attributs data-*", "Score de confiance par signature détectée", "Export JSON dans le presse-papiers", "i18n en 6 langues (EN, ES, FR, PT, IT, DE)"] }
+    "aurora-sky":  {
+                       "title":  "Aurora Sky",
+                       "description":  "Ciel d\u0027aurore procédural dessiné sur canvas, avec bandes de lumière flottantes, étoiles et un subtil parallaxe de champ stellaire.",
+                       "overview":  "Aurora Sky est un paysage procédural piloté par canvas qui rend une aurore boréale convaincante — bandes de lumière en couches, champ stellaire scintillant et parallaxe lente. Tout s\u0027exécute côté client, sans aucune dépendance externe.",
+                       "highlights":  [
+                                          "Bandes d\u0027aurore entièrement procédurales animées par un déplacement basé sur le bruit",
+                                          "Fusion de lumière multicouche pour des dégradés de couleurs irisés",
+                                          "Champ stellaire animé avec profondeur et scintillement"
+                                      ]
+                   },
+    "crypto-dashboard":  {
+                             "title":  "Crypto Dashboard",
+                             "description":  "Tableau de bord crypto en temps réel avec cours en direct, graphiques en sparkline et un terminal de trading sombre et élégant.",
+                             "overview":  "Un tableau de bord crypto en temps réel qui suit les principales devises, affiche des sparklines en flux continu et présente les soldes dans une esthétique de terminal sombre et soignée.",
+                             "highlights":  [
+                                                "Cours en direct mis à jour avec un minimum de changements d\u0027état",
+                                                "Sparklines et graphiques en aires dessinés sur mesure en canvas",
+                                                "Liste de suivi en grille avec tri et favoris"
+                                            ]
+                         },
+    "json-launder":  {
+                         "title":  "JSON Launder",
+                         "description":  "Collez, formatez, validez et minifiez du JSON avec un retour en direct et une copie en un clic.",
+                         "overview":  "Un petit outil de nettoyage JSON, mais soigné : collez n\u0027importe quel JSON pour obtenir une mise en forme (2 ou 4 espaces), une minification et des erreurs de validation claires en temps réel.",
+                         "highlights":  [
+                                            "Validation en direct avec des erreurs d\u0027analyse descriptives",
+                                            "Mise en forme à 2 ou 4 espaces et minification sur une ligne",
+                                            "Copie du résultat dans le presse-papiers"
+                                        ]
+                     },
+    "neural-glow":  {
+                        "title":  "Neural Glow",
+                        "description":  "Champ de particules interactif façon réseau neuronal avec connexions lumineuses et attraction de la souris.",
+                        "overview":  "Neural Glow simule des centaines de particules en guise de nœuds reliés par des liens lumineux selon la proximité — le curseur joue le rôle d\u0027attracteur pour un champ interactif organique et ludique.",
+                        "highlights":  [
+                                           "Liens lumineux basés sur la proximité avec élimination selon la distance",
+                                           "Attraction du pointeur avec un lissage progressif",
+                                           "Rendu adapté au ratio de pixels pour des écrans haute densité nets"
+                                       ]
+                    },
+    "palette-loom":  {
+                         "title":  "Palette Loom",
+                         "description":  "Générateur de palettes de couleurs à base de graine, harmonie par angle d\u0027or, verrouillage par nuance et hexadécimal copiable en un clic.",
+                         "overview":  "Palette Loom tisse des palettes de couleurs déterministes à partir d\u0027une graine numérique. Un mode harmonique par angle d\u0027or choisit des teintes agréables, les nuances peuvent être verrouillées pendant la régénération et un clic copie n\u0027importe quel hex.",
+                         "highlights":  [
+                                            "Palettes déterministes à partir d\u0027une graine numérique",
+                                            "Mode d\u0027harmonie par angle d\u0027or",
+                                            "Verrouillage par nuance et copie de l\u0027hex en un clic"
+                                        ]
+                     },
+    "pomodoro-ember":  {
+                           "title":  "Pomodoro Ember",
+                           "description":  "Un minuteur Pomodoro chaleureux et focalisé avec lueur de braise, anneaux de session et notifications de bureau.",
+                           "overview":  "Pomodoro Ember est un minuteur de concentration sans distraction avec un anneau de session à lueur de braise, des intervalles de travail et de pause configurables et des notifications de bureau au moment de changer d\u0027activité.",
+                           "highlights":  [
+                                              "Anneau de progression à lueur de braise",
+                                              "Intervalles de travail et de pause configurables",
+                                              "Notifications de bureau au changement de session"
+                                          ]
+                       },
+    "type-racer":  {
+                       "title":  "Type Racer",
+                       "description":  "Un test de vitesse de frappe avec PMM en direct, précision et texte fantôme surligné sur une interface de terminal métallisée.",
+                       "overview":  "Type Racer mesure la vitesse et la précision de frappe avec un surlignage caractère par caractère, des statistiques de PMM et de précision en direct, et un panneau final de métriques à la fin de la phrase.",
+                       "highlights":  [
+                                          "Texte fantôme correct/actuel/incorrect surligné caractère par caractère",
+                                          "PMM et précision en direct pendant l\u0027exercice",
+                                          "Métriques finales : PMM, précision, caractères, temps, CPS, brut"
+                                      ]
+                   },
+    "kanban-board":  {
+                         "title":  "Kanban Board",
+                         "description":  "Un tableau kanban avec cartes glisser-déposer, étiquettes, filtrage en direct et look terminal néon sombre.",
+                         "overview":  "Un tableau kanban complet dans un seul fichier : ajoutez, renommez et supprimez des colonnes, gérez des cartes avec titres, descriptions et plusieurs étiquettes, déplacez les cartes par glisser-déposer natif ou au clavier, et filtrez par texte. Tout l\u0027état persiste dans le localStorage.",
+                         "highlights":  [
+                                            "Glisser-déposer natif entre colonnes avec repli clavier",
+                                            "Renommage des colonnes en ligne et cartes à étiquettes modifiables dans une fenêtre modale",
+                                            "Statistiques HUD (ouvert/terminé) et recherche qui masque les colonnes vides"
+                                        ]
+                     },
+    "ledger-app":  {
+                       "title":  "Ledger",
+                       "description":  "Un registre de finances personnelles avec navigation mensuelle, graphique en anneau par catégorie et conseils budgétaires.",
+                       "overview":  "Ledger est un suivi financier façon Stripe : enregistrez revenus et dépenses, parcourez les mois, visualisez les dépenses dans un anneau piloté par CSS avec légende et conseils budgétaires par catégorie, et exportez en CSV.",
+                       "highlights":  [
+                                          "Sélecteur de mois avec solde, revenus, dépenses et indicateurs nets",
+                                          "Graphique en anneau des dépenses par catégorie avec alertes de dépassement de budget",
+                                          "Export CSV et persistance dans le localStorage"
+                                      ]
+                   },
+    "notes-vault":  {
+                        "title":  "Notes Vault",
+                        "description":  "Un carnet de notes éditorial et scientifique avec un rendu markdown léger, épinglage et export.",
+                        "overview":  "Notes Vault est un carnet au style papier qui rend une syntaxe proche du markdown (titres, puces, listes de tâches, code en ligne) sans aucune dépendance, enregistre automatiquement avec un anti-rebond et exporte les notes en .md ou l\u0027intégralité du carnet en JSON.",
+                        "highlights":  [
+                                           "Rendu personnalisé proche du markdown avec onglets Écrire/Aperçu",
+                                           "Enregistrement automatique avec anti-rebond et épinglage des favoris",
+                                           "Export d\u0027une note (.md) ou du carnet (.json) et import par glisser-déposer"
+                                       ]
+                    },
+    "audio-spectrum":  {
+                           "title":  "Audio Spectrum",
+                           "description":  "Un visualiseur Web Audio en direct — modes barres, onde et orbe depuis votre micro ou un son de démonstration.",
+                           "overview":  "Audio Spectrum capture votre microphone et peint en temps réel des barres FFT, une onde d\u0027oscilloscope ou un orbe radial sur canvas — avec un son de démonstration intégré pour fonctionner sans autorisation, plus un curseur de sensibilité.",
+                           "highlights":  [
+                                              "Trois modes canvas : BARRES, ONDE, ORBE (anneau radial)",
+                                              "Capture du microphone avec repli sur le son de démonstration",
+                                              "Curseur de sensibilité pré-gain et indicateurs RMS/CRÊTE"
+                                          ]
+                       },
+    "message-threads":  {
+                            "title":  "Message Threads",
+                            "description":  "Un client de discussion au style papier avec fils de conversation, réponses citées et recherche globale de messages.",
+                            "overview":  "Message Threads est un client de conversation sur fond de papier chaud : créez des fils, envoyez des messages avec auteurs et horodatages, répondez en citant, et sautez vers les fils correspondants depuis une recherche globale. Tout persiste dans le localStorage.",
+                            "highlights":  [
+                                               "Liste de fils avec avatars, compteurs et extraits en direct",
+                                               "Markdown léger (gras, italique, code) et réponses citées",
+                                               "Recherche globale de messages qui surligne et ouvre le fil"
+                                           ]
+                        },
+    "recipe-book":  {
+                        "title":  "Recipe Book",
+                        "description":  "Un livre de recettes rustique et chaleureux avec recettes recherchables, listes d\u0027ingrédients et ajustement des quantités.",
+                        "overview":  "Recipe Book stocke vos recettes avec ingrédients et étapes, propose une grille de cartes cosy avec recherche en direct et filtrage par étiquettes, des listes d\u0027ingrédients cochables dans la vue détaillée, et ajuste les quantités d\u0027ingrédients pendant la cuisson.",
+                        "highlights":  [
+                                           "CRUD complet des recettes avec temps, difficulté, étiquettes et favoris",
+                                           "Fenêtre de détail avec ingrédients et étapes interactifs cochables",
+                                           "Recherche + filtre par étiquettes avec recettes de démonstration préchargées"
+                                       ]
+                    },
+    "travel-planner":  {
+                           "title":  "Travel Planner",
+                           "description":  "Un planificateur de voyage brutaliste avec frise chronologique, listes de contrôle avant départ et export JSON.",
+                           "overview":  "Travel Planner enregistre les voyages, construit et recherche des destinations, les compare sur une frise chronologique et suit les listes Documents/Préparation/Réservation avant le départ.",
+                           "highlights":  [
+                                              "CRUD des voyages triés par date de début avec filtres par pays",
+                                              "Vue chronologique comparant les voyages",
+                                              "Listes de préparation et export/import JSON"
+                                          ]
+                       },
+    "corporate-site":  {
+                           "title":  "Nexora Solutions",
+                           "description":  "Un site vitrine complet pour une société de services informatiques — services, compteurs de statistiques, témoignages et formulaire de contact validé.",
+                           "overview":  "Nexora Solutions est un site vitrine pour une société de services et de conseil informatiques : navigation scrollspy persistante, compteurs de statistiques animés, grille de services, carrousel de témoignages et formulaire de contact entièrement validé — le tout dans un fichier autonome.",
+                           "highlights":  [
+                                              "Navigation scrollspy et compteurs de statistiques animés",
+                                              "Grille de services avec sections de détail façon modale",
+                                              "Formulaire de contact validé avec états de succès/erreur"
+                                          ]
+                       },
+    "online-store":  {
+                         "title":  "Voltgear",
+                         "description":  "Une boutique e-commerce fonctionnelle — catalogue recherchable, panier coulissant avec progression de livraison gratuite et paiement validé par la méthode de Luhn.",
+                         "overview":  "Voltgear est une boutique d\u0027électronique complète dans un seul fichier : 10 produits avec recherche et filtrage par catégorie, fenêtre de détail produit, panier coulissant avec gestion des quantités et barre de progression vers la livraison gratuite, et un paiement simulé qui valide la carte avec Luhn.",
+                         "highlights":  [
+                                            "Catalogue avec recherche et filtrage par catégorie, fenêtre de détail incluse",
+                                            "Panier coulissant avec barre de progression vers la livraison gratuite (seuil de 150 $)",
+                                            "Paiement avec validation de carte par Luhn et écran de succès avec numéro de commande"
+                                        ]
+                     },
+    "tech-blog":  {
+                      "title":  "Byte Post",
+                      "description":  "Un blog tech avec lecture d\u0027articles façon SPA, rendu markdown intégré, recherche en direct et filtrage par catégorie.",
+                      "overview":  "Byte Post est un blog tech éditorial : 10 articles intégrés dans une grille recherchable et filtrable qui s\u0027ouvrent dans une vue de lecture SPA — avec barre de progression de lecture, rendu markdown fait maison, articles liés et formulaire de newsletter validé.",
+                      "highlights":  [
+                                         "Vue d\u0027article SPA avec barre de progression de lecture et articles liés",
+                                         "Rendu markdown intégré (blocs de code, listes, citations)",
+                                         "Recherche en direct anti-rebond + filtres par catégorie avec état vide"
+                                     ]
+                  },
+    "artist-portfolio":  {
+                             "title":  "Lens \u0026 Line",
+                             "description":  "Un portfolio de photographe et designer avec 16 œuvres SVG générées, filtres par catégorie et lightbox complète.",
+                             "overview":  "Lens \u0026 Line est un site portfolio pour un photographe et designer fictif : 16 œuvres SVG générées procéduralement en photographie, design et 3D, avec galerie filtrable, lightbox navigable aux flèches du clavier, barres de compétences animées et formulaire de contact validé.",
+                             "highlights":  [
+                                                "16 œuvres SVG procédurales avec filtres par catégorie",
+                                                "Lightbox avec navigation clavier, précédent/suivant et bouclage",
+                                                "Compteurs et barres de compétences déclenchés au défilement"
+                                            ]
+                         },
+    "landing-page":  {
+                         "title":  "LaunchKit",
+                         "description":  "Une page de lancement produit — bascule de tarifs, accordéon FAQ et formulaires validés de capture de prospects.",
+                         "overview":  "LaunchKit est une page d\u0027atterrissage orientée conversion pour lancer des produits en quelques minutes : hero percutant, grille de fonctionnalités, bascule de tarifs mensuel/annuel, accordéon FAQ et formulaires de capture de prospects avec validation en ligne et états de succès.",
+                         "highlights":  [
+                                            "Bascule de tarifs mensuel/annuel avec prix animés",
+                                            "Accordéon FAQ et grille de fonctionnalités",
+                                            "Formulaires de prospects validés avec retour de succès/erreur"
+                                        ]
+                     },
+    "microsite":  {
+                      "title":  "CodeFest 2026",
+                      "description":  "Un microsite de conférence — compte à rebours en direct, programme par onglets, fiches intervenants, plan du lieu et parcours de billetterie.",
+                      "overview":  "CodeFest 2026 est un microsite de conférence à vocation unique : hero avec compte à rebours en direct vers l\u0027événement, programme sur 2 jours par onglets, grille d\u0027intervenants, plan animé du lieu avec téléchargement .ics réel, et parcours de billetterie à 3 niveaux avec formulaire validé et écran de succès pour un code promo fictif.",
+                      "highlights":  [
+                                         "Compte à rebours en direct avec états à venir/en cours",
+                                         "Programme par onglets, fiches intervenants et plan du lieu avec export .ics",
+                                         "Fenêtre de billetterie à plusieurs niveaux avec validation et écran de succès"
+                                     ]
+                  },
+    "web-app":  {
+                    "title":  "TaskFlow",
+                    "description":  "Un gestionnaire de projet façon terminal — projets, tableaux, colonnes et tâches avec CRUD complet, glisser-déposer et recherche.",
+                    "overview":  "TaskFlow est un gestionnaire de projet en terminal sombre : organisez le travail des projets aux tableaux, colonnes et tâches avec un CRUD complet, glisser-déposer natif plus déplacements au clavier, recherche en direct avec raccourci slash, pastilles de priorité et indicateurs HUD — le tout persisté dans le localStorage.",
+                    "highlights":  [
+                                       "CRUD hiérarchique (projets, tableaux, colonnes, tâches)",
+                                       "Glisser-déposer natif avec repli clavier",
+                                       "Recherche en direct, pastilles de priorité et indicateurs HUD"
+                                   ]
+                },
+    "sentinel-systems":  {
+                             "title":  "Sentinel Systems",
+                             "description":  "Site vitrine pour une société de caméras de sécurité — vente, installation, support, réparation, conseil et surveillance.",
+                             "overview":  "Sentinel Systems est un site vitrine complet pour une société de vidéosurveillance : hero avec panneau de flux en direct simulé (REC, lignes de balayage, horloge UTC), 6 services (vente, installation, support, réparation, conseil, surveillance), compteurs animés, garanties SLA de 4 h, témoignages et formulaire de contact validé — le tout dans un seul fichier.",
+                             "highlights":  [
+                                                "Panneau de flux en direct simulé avec horloge UTC et lignes de balayage",
+                                                "6 cartes de services en espagnol + compteurs animés",
+                                                "Formulaire de contact validé avec notifications de succès/erreur"
+                                            ]
+                         },
+    "vigil-store":  {
+                        "title":  "VigilStore",
+                        "description":  "Boutique en ligne de caméras de sécurité — 14 produits avec illustrations SVG, panier avec livraison gratuite et paiement validé par Luhn.",
+                        "overview":  "VigilStore est une boutique de vidéosurveillance mono-fichier : 14 produits (caméras, enregistreurs, accessoires) avec illustrations SVG intégrées uniques, filtre par catégorie (Caméras/Enregistreurs/Accessoires) + recherche en direct, fenêtre de détail avec spécifications adaptées au type, panier avec barre de progression vers la livraison gratuite (200 $) et paiement validé par Luhn.",
+                        "highlights":  [
+                                           "14 produits avec illustrations SVG intégrées uniques et spécifications adaptées au type",
+                                           "Panier avec barre de progression vers la livraison gratuite et persistance dans le localStorage",
+                                           "Paiement avec validation Luhn et écran de succès"
+                                       ]
+                    },
+    "cctv-blog":  {
+                      "title":  "CCTV Insights",
+                      "description":  "Blog de niche sécurité en espagnol — 10 articles, lecteur SPA avec markdown, recherche en direct et catégories.",
+                      "overview":  "CCTV Insights est un blog éditorial de vidéosurveillance : 10 articles en espagnol (installation, équipement, sécurité, maintenance, juridique) avec couvertures SVG par catégorie, recherche anti-rebond, et lecteur SPA avec barre de progression, rendu markdown sur mesure et articles liés.",
+                      "highlights":  [
+                                         "Lecteur SPA avec barre de progression et rendu markdown sur mesure",
+                                         "Recherche en direct + filtres par catégorie avec état vide",
+                                         "Newsletter validée avec états de succès/erreur"
+                                     ]
+                  },
+    "cams-portfolio":  {
+                           "title":  "CamCraft Installs",
+                           "description":  "Portfolio d\u0027installations de vidéosurveillance — 16 scènes SVG procédurales, lightbox avec gestion du focus et filtres par catégorie.",
+                           "overview":  "CamCraft Installs est le portfolio d\u0027un installateur professionnel : 16 scènes SVG générées procéduralement (résidentiel, commercial, industriel, extérieur), galerie filtrable, lightbox avec piège de focus et navigation clavier, compteurs de statistiques et formulaire de contact validé.",
+                           "highlights":  [
+                                              "16 scènes d\u0027installation SVG procédurales uniques en 4 catégories",
+                                              "Lightbox avec piège de focus, navigation clavier et description du projet",
+                                              "Compteurs animés + bandeau de services"
+                                          ]
+                       },
+    "security-audit":  {
+                           "title":  "Guardia360",
+                           "description":  "Page d\u0027atterrissage espagnole de capture de prospects — audit de sécurité gratuit, bascules de packs et compte à rebours d\u0027urgence.",
+                           "overview":  "Guardia360 est une page d\u0027atterrissage orientée conversion pour une offre concrète : audit de sécurité gratuit pour maison ou entreprise. Formulaire de prospects validé dans le hero, 6 cartes de points de douleur, processus en 4 étapes, 3 packs de caméras avec bascule (Équipement seul / Kit complet), FAQ et compte à rebours d\u0027urgence vers la fin du mois.",
+                           "highlights":  [
+                                              "Formulaire de prospects validé avec confirmation",
+                                              "Bascule de pack : Équipement seul / Kit complet",
+                                              "Urgence : compte à rebours de fin de mois + places restantes"
+                                          ]
+                       },
+    "cam-launch":  {
+                       "title":  "Semana de la Cámara",
+                       "description":  "Microsite pour la « Semaine de la Caméra 2026 » — compte à rebours, agenda réservable sur 7 jours, plan avec .ics et inscription.",
+                       "overview":  "Semana de la Cámara est le microsite d\u0027un salon de vidéosurveillance : compte à rebours en direct jusqu\u0027au 7 septembre 2026, agenda sur 7 jours par onglets avec sessions réservables, 6 temps forts, plan SVG zoomable avec téléchargement .ics réel, et inscription validée avec code de confirmation fictif.",
+                       "highlights":  [
+                                          "Compte à rebours en direct avec états à venir/en cours/terminé",
+                                          "Agenda sur 7 jours avec réservations par ligne",
+                                          "Plan SVG zoomable + téléchargement .ics réel"
+                                      ]
+                   },
+    "cam-command":  {
+                        "title":  "CamCommand",
+                        "description":  "Salle de surveillance dans le navigateur — flux SVG animés, commandes PTZ, captures d\u0027écran, journal d\u0027événements et indicateurs d\u0027état.",
+                        "overview":  "CamCommand est une salle de contrôle de surveillance : grille de caméras avec flux de scènes SVG animées, vue focalisée avec commandes PTZ fonctionnelles qui déplacent la scène, capture de vignettes horodatées, journal d\u0027alertes d\u0027événements réglable et indicateurs d\u0027état — le tout persisté dans le localStorage.",
+                        "highlights":  [
+                                           "Flux simulés avec scènes SVG animées et états en ligne/hors ligne",
+                                           "Commandes PTZ fonctionnelles (panoramique/inclinaison/zoom sur la scène)",
+                                           "Journal d\u0027événements, captures d\u0027écran et indicateurs d\u0027état persistants"
+                                       ]
+                    },
+    "barker-modern":  {
+                          "title":  "Barker Modern",
+                          "description":  "Site vitrine pour les armoires RTA — catalogue, 14 types d\u0027armoires, offres de volume et spécifications Blum Movento, système de design ambre/navy.",
+                          "overview":  "Barker Modern est un site vitrine monopage pour une vraie marque d\u0027armoires RTA fabriquée aux États-Unis : hero avec curseur en fondu enchaîné et compteurs animés, catalogue Cuisine/Salle de bain/Garde-robe, 14 types d\u0027armoires, offres de volume (livraison gratuite au-delà de 4 000 $ et remises par paliers jusqu\u0027à 10 %), galerie de projets en défilement, témoignages, guides de design/d\u0027assemblage/d\u0027échantillons et bande de CTA — reproduisant le système de design ambre/navy (Sora + Inter, coins carrés) du site local de référence.",
+                          "highlights":  [
+                                             "Système de design ambre/navy reproduit à partir du site de référence",
+                                             "Curseur en fondu enchaîné du hero + titres rotatifs + compteurs de statistiques",
+                                             "Catalogue complet avec 14 types d\u0027armoires et de vraies offres"
+                                         ]
+                      },
+    "vettaz":  {
+                   "title":  "VETTAZ",
+                   "description":  "Site vitrine pour cuisines sur mesure à Bogotá — 20 projets de cuisine réels, contrat pour les constructeurs, processus en 4 phases et formulaire de réservation, système de design zinc/cyan.",
+                   "overview":  "VETTAZ est un site vitrine monopage pour une marque de cuisines sur mesure à Bogotá : hero plein écran avec halos et grille animés, galerie de 20 projets de cuisine réels (grille 3x3 + carrousel), 6 projets sous contrat avec comptes d\u0027unités pour les constructeurs, historique depuis 1984 avec ISO 9001 et compteurs de statistiques, processus en 4 phases, blog, témoignages et formulaire de réservation validé avec notifications — reproduisant le système de design zinc sombre + accent cyan (typographie monospace, bordures arrondies) de la démo de site vitrine.",
+                   "highlights":  [
+                                      "Système de design zinc/cyan reproduit à partir de la démo de site vitrine",
+                                      "20 projets de cuisine avec de vraies descriptions adaptées à la Colombie",
+                                      "Hero avec halos animés, compteurs de statistiques et formulaire validé avec notifications"
+                                  ]
+               },
+    "url-shortener":  {
+                          "title":  "TinyLink",
+                          "description":  "Raccourcisseur d\u0027URL en terminal de hacker hors ligne, avec historique local, codes à 6 caractères régénérables et statistiques de clics.",
+                          "overview":  "TinyLink est un raccourcisseur d\u0027URL entièrement hors ligne dans une esthétique de terminal vert phosphore : collez n\u0027importe quel lien pour créer un code à 6 caractères, conservez chaque lien court dans un tableau d\u0027historique local avec date de création et compteur de clics, copiez ou ouvrez les codes, exportez l\u0027historique en JSON.",
+                          "highlights":  [
+                                             "Codes à 6 caractères issus d\u0027un jeu de caractères personnalisé, générés localement",
+                                             "Tableau d\u0027historique avec statistiques de clics et export JSON",
+                                             "Zéro dépendance réseau — fonctionne entièrement hors ligne"
+                                         ]
+                      },
+    "password-generator":  {
+                               "title":  "PassForge",
+                               "description":  "Générateur de mots de passe rétro-arcade avec aléa cryptographiquement sûr, jauge de robustesse, entropie et historique.",
+                               "overview":  "PassForge forge des mots de passe avec crypto.getRandomValues sur une grille CRT néon : curseur de longueur de 8 à 64, bascules majuscules/minuscules/chiffres/symboles, exclusion des caractères ambigus, jauge de robustesse en direct avec bits d\u0027entropie, génération par cinq et historique copiable.",
+                               "highlights":  [
+                                                  "Génération cryptographiquement sûre via Web Crypto",
+                                                  "Jauge de robustesse avec compteur de bits d\u0027entropie",
+                                                  "Historique des 15 derniers mots de passe avec copie en un clic et suppression"
+                                              ]
+                           },
+    "speed-tester":  {
+                         "title":  "SpeedPulse",
+                         "description":  "Test de débit Internet façon console d\u0027instruments avec jauges de ping et de téléchargement en direct, graphique d\u0027historique et export JSON.",
+                         "overview":  "SpeedPulse mesure votre connexion sur des jauges d\u0027instruments dessinées en canvas : une moyenne de ping sur 3 essais, des tests de téléchargement à 5/20/50 Mo contre un endpoint CDN compatible CORS avec progression en direct, et une sparkline d\u0027historique des 10 derniers résultats avec export JSON.",
+                         "highlights":  [
+                                            "Moyenne de ping et Mbit/s en direct pendant les tests de téléchargement",
+                                            "Jauges à arc en canvas et graphique d\u0027historique en lignes",
+                                            "Export des résultats en JSON pour votre propre journalisation"
+                                        ]
+                     },
+    "image-editor":  {
+                         "title":  "PixelKit",
+                         "description":  "Éditeur d\u0027image de studio créatif chaleureux : recadrage, rotation, retournement, filtres de couleurs et export PNG/JPEG avec annuler/rétablir.",
+                         "overview":  "PixelKit est un éditeur d\u0027image basé sur canvas dans une esthétique de studio douce : déposez n\u0027importe quelle image, recadrez avec des ratios libres ou prédéfinis (16:9, 4:3, 1:1, 3:4, 9:16), faites pivoter et retourner, ajustez luminosité/contraste/saturation/sépia, annulez et rétablissez les 10 dernières étapes, et exportez en PNG ou JPEG avec un curseur de qualité.",
+                         "highlights":  [
+                                            "Superposition de recadrage déplaçable avec ratios prédéfinis",
+                                            "Pile annuler/rétablir et aperçu avant/après",
+                                            "Export PNG/JPEG avec contrôle de qualité JPEG"
+                                        ]
+                     },
+    "qr-generator":  {
+                         "title":  "Qrafter",
+                         "description":  "Générateur de QR suisse-brutaliste pour texte, Wi-Fi et contacts vCard, avec options de couleurs et historique.",
+                         "overview":  "Qrafter fabrique des codes QR dans une esthétique d\u0027impression en gras : choisissez des entrées Texte/URL, Wi-Fi (avec options de chiffrement et de réseau masqué) ou contact vCard, ajustez la taille et les couleurs de premier plan/arrière-plan, prévisualisez en direct et téléchargez le PNG tandis qu\u0027un historique local conserve vos 10 derniers codes.",
+                         "highlights":  [
+                                            "Modes d\u0027entrée Texte, Wi-Fi et vCard avec validation",
+                                            "Options de taille et de couleurs personnalisées avec aperçu en direct",
+                                            "Téléchargement PNG et historique de 10 éléments dans le localStorage"
+                                        ]
+                     },
+    "format-converter":  {
+                             "title":  "FormatZen",
+                             "description":  "Convertisseur de formats minimaliste suisse : JSON vers CSV vers XML vers sous-ensemble YAML, entièrement hors ligne avec retour d\u0027erreur en direct.",
+                             "overview":  "FormatZen convertit des données entre JSON, CSV, XML et un sous-ensemble YAML entièrement dans le navigateur : JSON vers CSV, CSV vers JSON avec choix du délimiteur, XML vers JSON, JSON vers XML et JSON vers YAML, avec exemples d\u0027entrée, embellissement, permutation, copie, téléchargement et un historique de conversion sur 10 étapes.",
+                             "highlights":  [
+                                                "Cinq sens de conversion avec options de délimiteur",
+                                                "Erreurs d\u0027analyse bilingues au lieu d\u0027échecs silencieux",
+                                                "Historique de conversion avec rechargement dans le panneau d\u0027entrée"
+                                            ]
+                         },
+    "stopwatch-timer":  {
+                            "title":  "Tempo",
+                            "description":  "Chronomètre et minuteur de compte à rebours façon tableaux à palettes, avec tours, jalons et anneau de progression en canvas.",
+                            "overview":  "Tempo est un minuteur de tableau de départs à palettes : un chronomètre avec listes de tours, mise en avant du meilleur/pire tour et export CSV, plus un compte à rebours avec préréglages, saisie mm:ss personnalisée, anneau de progression en canvas et carillons WebAudio avec jalons par minute optionnels.",
+                            "highlights":  [
+                                               "Affichage à palettes avec précision au centième",
+                                               "Suivi des tours avec meilleur/pire et export CSV",
+                                               "Anneau de compte à rebours avec carillons WebAudio"
+                                           ]
+                        },
+    "mortgage-calculator":  {
+                                "title":  "MortgageSim",
+                                "description":  "Calculateur de prêt immobilier façon registre bancaire : mensualités, tableau d\u0027amortissement, LTV et graphiques empilés.",
+                                "overview":  "MortgageSim modélise un prêt immobilier sur du papier à registre réglé : prix, apport en % ou montant, taux d\u0027intérêt, durée, taxe foncière et assurance optionnelles alimentent un graphique en barres empilées de la répartition mensuelle, un tableau d\u0027amortissement complet avec recherche par mois, et une carte LTV — en USD, EUR ou COP.",
+                                "highlights":  [
+                                                   "Calendrier d\u0027amortissement complet avec recherche par mois",
+                                                   "Répartition empilée capital/intérêts/taxe/assurance dessinée en canvas",
+                                                   "Formatage USD / EUR / COP via Intl.NumberFormat"
+                                               ]
+                            },
+    "todo-list":  {
+                      "title":  "DoneDeck",
+                      "description":  "Tableau de tâches façon table de cartes : glissez les cartes entre À faire, En cours et Terminé avec enseignes, échéances et recherche.",
+                      "overview":  "DoneDeck gère les tâches sur une table de cartes à feutrine verte : les cartes vivent dans À faire, En cours et Terminé, se déplacent via des boutons fléchés ou par glisser-déposer du pointeur, et portent des enseignes de priorité (pique/cœur/trèfle), des notes et des échéances avec badges de retard — avec recherche, tri, statistiques et persistance complète.",
+                      "highlights":  [
+                                         "Glisser-déposer au pointeur plus boutons de repli",
+                                         "Enseignes de priorité, échéances et badges de retard",
+                                         "Barre de statistiques avec compteurs par colonne et pourcentage d\u0027avancement"
+                                     ]
+                  },
+    "synonym-finder":  {
+                           "title":  "WordWeave",
+                           "description":  "Chercheur de synonymes façon journal éditorial avec API Datamuse, historique et mot du jour.",
+                           "overview":  "WordWeave est un thésaurus façon journal : tapez un mot et des requêtes Datamuse parallèles renvoient synonymes, antonymes et mots associés sous forme de pastilles cliquables (un clic copie, un double-clic relance la recherche), avec un mot du jour choisi, une saisie anti-rebond et un historique de 12 entrées.",
+                           "highlights":  [
+                                              "Synonymes, antonymes et mots liés par le sens renvoyés en parallèle",
+                                              "Pastilles copiées en un clic et recherchées en double-clic",
+                                              "Saisie anti-rebond avec cache en mémoire"
+                                          ]
+                       },
+    "rss-reader":  {
+                       "title":  "FeedFetch",
+                       "description":  "Lecteur RSS/OPML façon grand quotidien : collez n\u0027importe quel flux XML et parcourez, mettez en favori, recherchez et exportez les articles.",
+                       "overview":  "FeedFetch lit les flux RSS et OPML collés en XML et les rend comme un grand quotidien : filtres non lus et favoris, recherche plein texte, export des articles en JSON ou OPML, et trois flux d\u0027exemple intégrés pour fonctionner dès le chargement.",
+                       "highlights":  [
+                                          "Analyse RSS/OPML côté client avec DOMParser",
+                                          "Filtres non lus, favoris et recherche avec compteurs",
+                                          "Export des articles analysés en JSON ou OPML"
+                                      ]
+                   },
+    "currency-converter":  {
+                               "title":  "CoinVoyage",
+                               "description":  "Convertisseur de devises façon timbre-poste vintage : plus de 40 devises, favoris, sparkline sur 14 jours et cache hors ligne.",
+                               "overview":  "CoinVoyage convertit entre plus de 40 devises avec un habillage de timbres-poste : des taux en direct rafraîchis toutes les 10 minutes depuis une API publique sans clé, des paires favorites épinglées dans une rangée d\u0027accès rapide, un taux inverse consultable, et une sparkline canvas des taux historiques échantillonnés.",
+                               "highlights":  [
+                                                  "Plus de 40 devises avec sélecteur recherchable et inversion",
+                                                  "Rangée de paires favorites persistée localement",
+                                                  "Sparkline sur 14 jours à partir d\u0027échantillons historiques"
+                                              ]
+                           },
+    "name-generator":  {
+                           "title":  "NameForge",
+                           "description":  "Générateur de noms déterministe façon tableau blanc avec pastilles d\u0027ambiance, curseur de graine et favoris.",
+                           "overview":  "NameForge griffonne des noms de développeurs, de projets et de produits sur un tableau blanc à craie : choisissez une ambiance (Web, IA, CLI, Jeu, Données, Cloud, Minimal ou Espagnol), faites glisser une graine numérique pour que la même graine produise toujours les mêmes noms, créez-en 10 d\u0027un coup et conservez les favoris localement.",
+                           "highlights":  [
+                                              "Noms déterministes pilotés par une graine numérique",
+                                              "Pastilles d\u0027ambiance avec un répertoire de mots espagnols",
+                                              "Génération en lots de 10 noms avec favoris copiés en un clic"
+                                          ]
+                       },
+    "weather-map":  {
+                        "title":  "Nowcast",
+                        "description":  "Console météo en verre dépoli : conditions actuelles, graphique sur 24 h, prévisions à 7 jours et carte OpenStreetMap.",
+                        "overview":  "Nowcast est une console météo bleu ciel : la géolocalisation (ou la recherche de ville) pilote les conditions actuelles d\u0027Open-Meteo — température, ressenti, humidité, vent, pression et codes WMO avec descriptions bilingues — plus un graphique en barres sur 24 heures, des cartes à 7 jours avec lever/coucher du soleil, et une carte OpenStreetMap panoramique centrée sur l\u0027épingle.",
+                        "highlights":  [
+                                           "Prévisions Open-Meteo sans clé avec codes de conditions bilingues",
+                                           "Graphique température/précipitations sur 24 h en canvas",
+                                           "Carte OSM interactive avec attribution"
+                                       ]
+                    },
+    "word-counter":  {
+                         "title":  "WordScale",
+                         "description":  "Compteur de mots façon fiche de bibliothèque : mots, caractères, phrases, temps de lecture et graphiques de mots-clés avec export TXT.",
+                         "overview":  "WordScale pèse votre texte sur un habillage de fiches cartonnées : mots en direct, caractères avec et sans espaces, phrases, paragraphes, mots uniques, syllabes estimées, temps de lecture et d\u0027expression, score de lisibilité approximatif, barres des mots-clés principaux et graphique de longueur des phrases — le tout exportable en TXT.",
+                         "highlights":  [
+                                            "Dix métriques en direct, dont temps de lecture et d\u0027expression",
+                                            "Graphiques de fréquence des mots-clés et de longueur des phrases",
+                                            "Export récapitulatif TXT et détection automatique du collage"
+                                        ]
+                     },
+    "shieldblock":  {
+                        "title":  "ShieldBlock",
+                        "description":  "Bloqueur de publicités et de traqueurs Manifest V3 avec liste de règles locales triée sur le volet, compteurs en direct et i18n en 6 langues. Confidentialité d\u0027abord.",
+                        "overview":  "ShieldBlock est une extension Chrome Manifest V3 qui bloque publicités et traqueurs grâce au moteur declarativeNetRequest de Chrome avec une liste de règles locales triée sur le volet (~84 règles). Tout s\u0027exécute dans votre navigateur — pas de serveurs, pas de comptes, pas de télémétrie.",
+                        "highlights":  [
+                                           "84+ règles declarativeNetRequest triées sur le volet pour les domaines de publicité et de traqueurs connus",
+                                           "Compteurs de requêtes bloquées persistés dans chrome.storage.local",
+                                           "Bascule pause marche/arrêt avec i18n dans 6 langues (EN, ES, FR, PT, IT, DE)",
+                                           "Aucune permission d\u0027hôte — aucune donnée ne quitte le navigateur"
+                                       ]
+                    },
+    "adpause":  {
+                    "title":  "AdPause",
+                    "description":  "Bloqueur de publicités par site avec liste blanche, liste noire et pause globale, avec compteur en direct. Confidentialité d\u0027abord : tout reste local.",
+                    "overview":  "AdPause bloque les publicités site par site avec listes blanches et noires, une bascule de pause globale et un compteur en direct — tout est local dans le navigateur, sans télémétrie.",
+                    "highlights":  [
+                                       "Règles de liste blanche et noire par site",
+                                       "Bascule pause/reprise globale persistée entre les redémarrages",
+                                       "Compteur de requêtes bloquées en direct dans la popup",
+                                       "Aucune permission d\u0027hôte — aucune donnée ne quitte le navigateur"
+                                   ]
+                },
+    "keyvault":  {
+                     "title":  "KeyVault",
+                     "description":  "Gestionnaire de mots de passe chiffrés local via WebCrypto (PBKDF2 + AES-GCM) : générateur, saisie automatique, clé maîtresse qui ne quitte jamais le navigateur.",
+                     "overview":  "KeyVault conserve les mots de passe chiffrés localement avec WebCrypto (PBKDF2 + AES-GCM) : un générateur personnalisable, une saisie automatique qui rejette les mauvaises clés maîtresses, et aucun compte ni synchronisation — votre clé maîtresse ne quitte jamais le navigateur.",
+                     "highlights":  [
+                                        "Chiffrement PBKDF2 + AES-GCM entièrement dans le navigateur",
+                                        "Générateur de mots de passe avec jeu de caractères et longueur personnalisables",
+                                        "La saisie automatique rejette les tentatives de mauvaise clé maîtresse",
+                                        "Pas de comptes, pas de synchronisation, pas de télémétrie"
+                                    ]
+                 },
+    "openvault":  {
+                      "title":  "OpenVault",
+                      "description":  "Coffre-fort de mots de passe ouvert et portable : chiffré localement avec WebCrypto, import/export en JSON chiffré. Pas de comptes, pas de synchronisation.",
+                      "overview":  "OpenVault est le coffre-fort ouvert et portable : les mots de passe sont chiffrés localement avec WebCrypto (PBKDF2 + AES-GCM), avec import/export sous forme d\u0027objet JSON chiffré. Pas de comptes, pas de synchronisation — votre coffre vous accompagne comme un fichier.",
+                      "highlights":  [
+                                         "Coffre-fort JSON chiffré avec aller-retour import/export",
+                                         "Chiffrement côté client PBKDF2 + AES-GCM",
+                                         "Le coffre-fort voyage comme un fichier unique",
+                                         "Pas de comptes, pas de synchronisation"
+                                     ]
+                  },
+    "tapvpn":  {
+                   "title":  "TapVpn",
+                   "description":  "Console VPN simulée : bascule un tunnel protégé fictif, change la position de démonstration et peint une bannière d\u0027état. Démo uniquement — aucun routage réel.",
+                   "overview":  "TapVpn est une console VPN simulée : elle bascule un tunnel protégé fictif, change votre position de démonstration et peint une bannière d\u0027état sur la page active. Démo uniquement — elle ne route, ne proxifie et ne chiffre aucun trafic.",
+                   "highlights":  [
+                                      "Bascule de tunnel protégé simulée avec bannière d\u0027état",
+                                      "Changement de position de démonstration (bannière géographique sur la page active)",
+                                      "Persistance de l\u0027état connexion/déconnexion",
+                                      "Aucun routage réel du trafic — démo uniquement"
+                                  ]
+               },
+    "darkveil":  {
+                     "title":  "DarkVeil",
+                     "description":  "Mode sombre pour les sites de votre liste blanche à l\u0027aide d\u0027un vrai filtre CSS WebKit (invert, hue-rotate, sepia, brightness).",
+                     "overview":  "DarkVeil assombrit les pages avec un vrai filtre CSS WebKit (réglages invert + hue-rotate + sepia + brightness), appliqué uniquement aux sites de votre liste blanche. Ni flashs agressifs pour les yeux, ni mode sombre forcé sur toutes les pages.",
+                     "highlights":  [
+                                        "Filtre CSS WebKit : réglages invert, hue-rotate, sepia, brightness",
+                                        "Contrôle de liste blanche par site — choisissez où il s\u0027applique",
+                                        "Pas de mode sombre forcé sur chaque page",
+                                        "Vrai filtre CSS, pas une superposition de feuille de style"
+                                    ]
+                 },
+    "spellwise":  {
+                      "title":  "SpellWise",
+                      "description":  "Correcteur orthographique local : souligne les fautes dans la page, propose des corrections en un clic et prend en charge un dictionnaire personnel. EN/ES.",
+                      "overview":  "SpellWise relit le texte des pages que vous visitez : un dictionnaire local EN/ES souligne les fautes probables avec un stylo bleu, la popup propose des corrections en un clic et vos propres mots peuvent être ajoutés au dictionnaire personnel.",
+                      "highlights":  [
+                                         "Dictionnaire local EN/ES avec soulignement des fautes dans la page",
+                                         "Suggestions de correction en un clic dans la popup",
+                                         "Dictionnaire personnel avec vos mots ajoutés",
+                                         "Aucun appel réseau — rien ne quitte le navigateur"
+                                     ]
+                  },
+    "stepscribe":  {
+                       "title":  "StepScribe",
+                       "description":  "Enregistre les clics et les valeurs saisies sur une page dans une fiche étape par étape avec mini-captures, exportée en Markdown ou HTML.",
+                       "overview":  "StepScribe enregistre vos clics et valeurs saisies sur une page dans une fiche d\u0027instructions étape par étape avec de minuscules captures d\u0027éléments, puis l\u0027exporte en Markdown ou HTML. Tout est local, sans comptes.",
+                       "highlights":  [
+                                          "Enregistre les clics et les valeurs saisies avec des sélecteurs DOM par étape",
+                                          "Mini-captures d\u0027éléments via des vignettes drawImage",
+                                          "Export Markdown ou HTML autonome avec captures intégrées",
+                                          "Stockage local, pas de comptes"
+                                      ]
+                   },
+    "screenloom":  {
+                       "title":  "ScreenLoom",
+                       "description":  "Enregistreur d\u0027écran (MV3) : getDisplayMedia + MediaRecorder avec indicateur REC rouge, chronomètre et cartes de clips avec vignettes.",
+                       "overview":  "ScreenLoom enregistre votre écran en clips (MV3) : getDisplayMedia + MediaRecorder avec un indicateur REC rouge sur chaque page, un chronomètre dans la popup et des cartes de clips avec vignettes, durée et format. Téléchargement .webm en local.",
+                       "highlights":  [
+                                          "Enregistrement getDisplayMedia + MediaRecorder en .webm",
+                                          "Indicateur REC rouge sur chaque page pendant l\u0027enregistrement",
+                                          "Cartes de clips avec métadonnées de vignette, de durée et de format",
+                                          "Téléchargements en local — jamais téléversés"
+                                      ]
+                   },
+    "clipdeck":  {
+                     "title":  "ClipDeck",
+                     "description":  "Capture la page — titre, URL, texte principal et image principale — dans un jeu de cartes recherchable et étiquetable. Export en Markdown ou JSON.",
+                     "overview":  "ClipDeck capture la page que vous lisez — titre, URL, texte principal et image principale — dans un jeu de cartes local que vous pouvez rechercher, étiqueter et exporter en Markdown ou JSON. Tout reste dans chrome.storage.local.",
+                     "highlights":  [
+                                        "Extrait le titre, l\u0027URL, le texte principal et l\u0027image principale avec une heuristique locale",
+                                        "Cartes recherchables et étiquetables dans un jeu local",
+                                        "Export du jeu en Markdown ou JSON",
+                                        "Stockage entièrement local — pas de comptes, pas de serveurs"
+                                    ]
+                 },
+    "readstack":  {
+                      "title":  "ReadStack",
+                      "description":  "Enregistrez la page courante avec son texte lisible dans une pile privée — recherche, archivage, limite de 200 éléments, export JSON.",
+                      "overview":  "ReadStack empile ce que vous lisez : enregistrez la page courante (titre, URL et son texte lisible) dans une pile personnelle dans chrome.storage, avec suivi lu/non lu, recherche, archivage et export JSON. Le texte de la page n\u0027est lu que lorsque vous cliquez sur la popup.",
+                      "highlights":  [
+                                         "Enregistre le titre, l\u0027URL et le texte lisible dans chrome.storage.local",
+                                         "Filtres Tout/Non lu/Archivé avec recherche en direct",
+                                         "Limite de 200 éléments avec élagage automatique des plus anciens éléments lus",
+                                         "Export JSON de la pile entière"
+                                     ]
+                  },
+    "clipnotes":  {
+                      "title":  "ClipNotes",
+                      "description":  "Épinglez une note à n\u0027importe quoi : enregistrez la page courante avec une note personnelle, stockée en privé avec recherche et export JSON/Markdown.",
+                      "overview":  "ClipNotes épingle une note à n\u0027importe quoi : enregistrez la page courante (titre, URL, texte lisible) et ajoutez votre propre note, le tout stocké en privé dans chrome.storage, avec recherche et export JSON/Markdown.",
+                      "highlights":  [
+                                         "Enregistre le titre, l\u0027URL et le texte lisible de la page plus votre note personnelle",
+                                         "Recherche dans toutes les notes épinglées",
+                                         "Export JSON et Markdown",
+                                         "Aucune permission d\u0027hôte — le contenu de la page n\u0027est lu qu\u0027au clic"
+                                     ]
+                  },
+    "assistai":  {
+                     "title":  "AssistAI",
+                     "description":  "Mini assistant de page local : NLU hors ligne déterministe — résumé, mots-clés, entités, historique de conversation.",
+                     "overview":  "assistai est un mini assistant de page local (MV3) : NLU déterministe et hors ligne sur la page que vous lisez — résumé par densité de mots, mots-clés avec compteurs, entités via expressions régulières — plus un historique de conversation persistant.",
+                     "highlights":  [
+                                        "Résumé par densité de mots sur le DOM de la page",
+                                        "Mots-clés avec compteurs et entités via expressions régulières",
+                                        "Historique de conversation persistant dans le stockage de l\u0027extension",
+                                        "Aucun appel réseau, aucune clé API, aucun modèle dans le cloud"
+                                    ]
+                 },
+    "sessionsaver":  {
+                         "title":  "SessionSaver",
+                         "description":  "Gestionnaire de sessions de fenêtres : enregistrez des instantanés d\u0027onglets et de groupes ouverts, recherchez, restaurez, enregistrement automatique à intervalle.",
+                         "overview":  "SessionSaver est un gestionnaire de sessions de fenêtres : enregistrez un instantané de vos onglets et groupes ouverts, recherchez-les, restaurez-les plus tard, et activez l\u0027enregistrement automatique à un intervalle configurable. Tout reste dans le stockage local de l\u0027extension.",
+                         "highlights":  [
+                                            "Capture les onglets et groupes d\u0027onglets de la fenêtre",
+                                            "Recherche dans les sessions enregistrées par titre ou URL",
+                                            "Enregistrement automatique à intervalle configurable",
+                                            "Restaurez une fenêtre ou toutes à la fois"
+                                        ]
+                     },
+    "tabnest":  {
+                    "title":  "TabNest",
+                    "description":  "Regroupez la fenêtre en gardant les pages : fermez chaque onglet dans un nid nommé avec économie de mémoire estimée, restaurez à tout moment.",
+                    "overview":  "TabNest regroupe la fenêtre en conservant les pages : fermez chaque onglet d\u0027une fenêtre dans un nid nommé (avec une économie de mémoire estimée), puis restaurez un nid ou tous quand vous voulez. Inclut l\u0027i18n en 6 langues.",
+                    "highlights":  [
+                                       "Nids nommés avec économies de mémoire estimées",
+                                       "Restaurez un nid ou tous les nids à tout moment",
+                                       "i18n en 6 langues (EN, ES, FR, PT, IT, DE)",
+                                       "Stockage local uniquement"
+                                   ]
+                },
+    "tabsnooze":  {
+                      "title":  "TabSnooze",
+                      "description":  "Les onglets en arrière-plan sont automatiquement libérés après un temps d\u0027inactivité configurable — Chrome libère la mémoire, avec des exceptions par domaine.",
+                      "overview":  "TabSnooze laisse la fenêtre faire une sieste : les onglets en arrière-plan sont automatiquement libérés après un temps d\u0027inactivité configurable (Chrome libère leur mémoire), avec des exceptions par domaine. Cliquez sur un onglet endormi pour le réveiller instantanément.",
+                      "highlights":  [
+                                         "Libération automatique des onglets inactifs via la libération native de Chrome",
+                                         "Liste blanche par domaine (onglets épinglés et onglet actif exemptés)",
+                                         "Délai d\u0027inactivité configurable (1–60 min, 10 par défaut)",
+                                         "Réveillez les onglets endormis instantanément en un clic"
+                                     ]
+                  },
+    "langbridge":  {
+                       "title":  "LangBridge",
+                       "description":  "Traducteur phrase à phrase : dictionnaire EN-ES-FR intégré, mot sous le curseur, phrases dans la popup, traduction de page.",
+                       "overview":  "LangBridge est un traducteur phrase à phrase : un petit dictionnaire intégré EN-ES-FR (~200 termes) qui traduit les mots sous votre curseur, des phrases entières dans la popup et les mots connus directement sur la page. Tout s\u0027exécute localement dans chrome.storage.local.",
+                       "highlights":  [
+                                          "Dictionnaire intégré EN-ES-FR d\u0027environ 200 termes",
+                                          "Infobulle du mot sous le curseur avec bouton de copie",
+                                          "Traduction de phrases dans la popup avec EN-ES et EN-FR",
+                                          "Traduction de toute la page avec restauration en un clic"
+                                      ]
+                   },
+    "huelens":  {
+                    "title":  "HueLens",
+                    "description":  "Inspecteur de couleurs local : prélevez des couleurs des éléments de page, convertissez HEX/RGB/HSL, gardez un historique, copiez et exportez votre palette.",
+                    "overview":  "HueLens est un inspecteur de couleurs local : prélevez la couleur de n\u0027importe quel élément d\u0027une page servie depuis http://127.0.0.1 (approximation par styles calculés), convertissez HEX/RGB/HSL, gardez un historique, copiez dans le presse-papiers et exportez votre palette. Tout s\u0027exécute localement.",
+                    "highlights":  [
+                                       "Échantillonnage de couleurs par styles calculés depuis n\u0027importe quel élément de page",
+                                       "Conversions HEX, RGB et HSL calculées localement",
+                                       "Historique de 50 couleurs avec copie et export de palette",
+                                       "i18n en 6 langues (EN, ES, FR, PT, IT, DE)"
+                                   ]
+                },
+    "seopulse":  {
+                     "title":  "SeoPulse",
+                     "description":  "Contrôle SEO sur page local : titre, méta, titres, textes alternatifs, liens cassés, ratio texte/HTML, densité de mots-clés — score en feu tricolore.",
+                     "overview":  "SeoPulse est un contrôle SEO sur page pour les pages servies depuis http://127.0.0.1 : titre, méta description, hiérarchie des titres, textes alternatifs des images, liens cassés, ratio texte/HTML et densité de mots-clés, avec un score et un feu tricolore.",
+                     "highlights":  [
+                                        "Vérifications du titre, des méta, de la hiérarchie des titres et des textes alternatifs",
+                                        "Liens internes cassés (50 premiers) et ratio texte/HTML",
+                                        "Densité de mots-clés avec score en feu tricolore (vert/jaune/rouge)",
+                                        "Export du rapport en JSON ou Markdown"
+                                    ]
+                 },
+    "stackscope":  {
+                       "title":  "StackScope",
+                       "description":  "Détecteur de technologies local : générateur meta, sources de scripts, JS intégré, attributs data-* avec score de confiance et export JSON.",
+                       "overview":  "StackScope est un détecteur de technologies local pour les pages servies depuis http://127.0.0.1 : générateur meta, sources de scripts connues et marqueurs intégrés, plus les attributs data-* — avec confiance de correspondance et export JSON. Tout s\u0027exécute localement sur le DOM de la page.",
+                       "highlights":  [
+                                          "Détecte le générateur meta, les sources de scripts, le JS intégré et les attributs data-*",
+                                          "Score de confiance par signature détectée",
+                                          "Export JSON dans le presse-papiers",
+                                          "i18n en 6 langues (EN, ES, FR, PT, IT, DE)"
+                                      ]
+                   },
+    "ui-button":  {
+                      "title":  "Button Components",
+                      "description":  "10 distinct button designs: glass aero, neumorph, brutalist, terminal, gradient mesh, outline, skeuomorphic 3D, pill, editorial, and glow dark.",
+                      "overview":  "A collection of 10 self-contained, zero-dependency button components showcasing glass, neumorphism, brutalist, terminal, gradient, editorial, and other distinct visual styles — all fully interactive with hover, focus-visible, and responsive design.",
+                      "highlights":  [
+                                         "10 visually distinct styles per component",
+                                         "Zero external dependencies (pure HTML/CSS/JS)",
+                                         "Focus-visible, ARIA labels, responsive 360px/1280px",
+                                         "560 total designs across 56 UI components"
+                                     ]
+                  },
+    "ui-text-field":  {
+                          "title":  "Text Field Components",
+                          "description":  "10 text field designs with floating labels, validation states, terminal prompts, and glass inputs.",
+                          "overview":  "Self-contained text field components featuring floating labels, real-time validation, terminal-style prompts, and glass morphism — each with distinct visual identity and full keyboard accessibility.",
+                          "highlights":  [
+                                             "Floating label animation on focus",
+                                             "Real-time email/required validation",
+                                             "Terminal and glass morphism variants",
+                                             "ARIA attributes and focus-visible states"
+                                         ]
+                      },
+    "ui-dropdown":  {
+                        "title":  "Dropdown Components",
+                        "description":  "10 dropdown designs: native select, custom listbox, pill menu, searchable, and animated variants.",
+                        "overview":  "Dropdown components ranging from native select emulation to fully custom listbox implementations with keyboard navigation, search filtering, and smooth open/close animations.",
+                        "highlights":  [
+                                           "Native and custom listbox patterns",
+                                           "Keyboard navigation (Arrow/Enter/Escape)",
+                                           "Searchable and sectioned variants",
+                                           "aria-expanded and aria-activedescendant"
+                                       ]
+                    },
+    "ui-navbar":  {
+                      "title":  "Navbar Components",
+                      "description":  "10 navbar designs with sticky scroll, mega menus, glass blur, and responsive hamburger collapse.",
+                      "overview":  "Navigation bar components featuring sticky scroll behavior, mega menu dropdowns, glass morphism blur, and responsive hamburger collapse — all with active state management and keyboard support.",
+                      "highlights":  [
+                                         "Sticky scroll with background transition",
+                                         "Mega menu and glass morphism variants",
+                                         "Responsive hamburger collapse at 768px",
+                                         "Active link state and skip-to-content link"
+                                     ]
+                  },
+    "ui-tabs":  {
+                    "title":  "Tabs Components",
+                    "description":  "10 tab designs: underline, pills, cards, vertical, animated indicator, and terminal-style.",
+                    "overview":  "Tab components with underline, pill, card, vertical, and animated indicator styles — each switching visible panels on click with proper aria-selected and role=\"tablist\" semantics.",
+                    "highlights":  [
+                                       "Underline, pill, card, and vertical layouts",
+                                       "Animated active indicator",
+                                       "aria-selected and role=\"tablist\"",
+                                       "Keyboard navigation between tabs"
+                                   ]
+                },
+    "ui-card":  {
+                    "title":  "Card Components",
+                    "description":  "10 card designs: glass, gradient, minimal, hover-lift, media, pricing, profile, kanban, stat, and editorial.",
+                    "overview":  "Card components spanning glass morphism, gradient backgrounds, hover-lift effects, media layouts, pricing tables, and editorial styles — each with dynamic content and interactive states.",
+                    "highlights":  [
+                                       "10 distinct visual treatments",
+                                       "Hover lift and glass morphism effects",
+                                       "Dynamic content and stat counters",
+                                       "Responsive grid layout at 360px"
+                                   ]
+                },
+    "ui-table":  {
+                     "title":  "Table Components",
+                     "description":  "10 table designs: striped, compact, bordered, sortable columns, selectable rows, and responsive scroll.",
+                     "overview":  "Data table components with striped rows, compact density, column sorting, row selection, and responsive horizontal scroll — all with proper thead/th semantics and aria-sort.",
+                     "highlights":  [
+                                        "Column sorting with aria-sort",
+                                        "Row selection with checkboxes",
+                                        "Responsive horizontal scroll",
+                                        "Striped, compact, and bordered variants"
+                                    ]
+                 },
+    "ui-charts":  {
+                      "title":  "Charts Components",
+                      "description":  "10 chart designs: bar, line, donut, sparkline, heatmap, radar, area, waterfall, bubble, and treemap.",
+                      "overview":  "Chart components rendered with pure CSS/SVG — bar, line, donut, sparkline, heatmap, radar, area, waterfall, bubble, and treemap — all with interactive hover states and data controls.",
+                      "highlights":  [
+                                         "Zero-dependency SVG/CSS charts",
+                                         "Interactive hover tooltips",
+                                         "Data controls that update values",
+                                         "Accessible with aria-label descriptions"
+                                     ]
+                  },
+    "ui-modal":  {
+                     "title":  "Modal Components",
+                     "description":  "10 modal designs: centered, bottom-sheet, full-screen, glass overlay, confirmation, and form modals.",
+                     "overview":  "Modal dialog components with centered, bottom-sheet, full-screen, and glass overlay variants — supporting open/close via click, Escape key, and overlay dismissal with focus trap.",
+                     "highlights":  [
+                                        "Centered, bottom-sheet, and full-screen layouts",
+                                        "Escape key and overlay click dismissal",
+                                        "Focus trap and aria-modal=\"true\"",
+                                        "Glass morphism overlay variants"
+                                    ]
+                 },
+    "ui-toast":  {
+                     "title":  "Toast Components",
+                     "description":  "10 toast designs: slide-in, stacked, snackbar, success/error/info variants, and auto-dismiss.",
+                     "overview":  "Toast notification components with slide-in, stacked, and snackbar layouts — supporting success/error/info states, auto-dismiss timers, and manual close buttons.",
+                     "highlights":  [
+                                        "Slide-in and stacked animations",
+                                        "Success, error, and info color coding",
+                                        "Auto-dismiss with progress indicator",
+                                        "Manual close and pause-on-hover"
+                                    ]
+                 },
+    "ui-progress-bar":  {
+                            "title":  "Progress Bar Components",
+                            "description":  "10 progress bar designs: determinate, indeterminate, gradient, striped, animated shimmer, and milestone.",
+                            "overview":  "Progress bar components with determinate, indeterminate, gradient, striped, and shimmer animation variants — reflecting real percentage values with milestone markers.",
+                            "highlights":  [
+                                               "Determinate and indeterminate modes",
+                                               "Gradient, striped, and shimmer styles",
+                                               "Milestone markers at 25%, 50%, 75%",
+                                               "Color change on completion"
+                                           ]
+                        },
+    "ui-tooltip":  {
+                       "title":  "Tooltip Components",
+                       "description":  "10 tooltip designs: hover, focus, click-triggered, rich content, arrow, and animated variants.",
+                       "overview":  "Tooltip components with hover, focus, and click triggers — supporting rich content, arrow pointers, 300ms delay, and smooth fade/slide animations.",
+                       "highlights":  [
+                                          "Hover, focus, and click trigger modes",
+                                          "Rich content with images and links",
+                                          "Arrow pointer positioning",
+                                          "300ms delay and smooth animation"
+                                      ]
+                   },
+    "ui-hero":  {
+                    "title":  "Hero Components",
+                    "description":  "10 hero section designs: gradient, video background, parallax, minimal, split-screen, and typewriter.",
+                    "overview":  "Hero section components with gradient, parallax, minimal, split-screen, and typewriter effect variants — each with CTA buttons and responsive full-width layouts.",
+                    "highlights":  [
+                                       "Gradient and parallax background effects",
+                                       "Split-screen and minimal layouts",
+                                       "Typewriter text animation",
+                                       "CTA buttons with hover states"
+                                   ]
+                },
+    "ui-footer":  {
+                      "title":  "Footer Components",
+                      "description":  "10 footer designs: minimal, multi-column, newsletter, social, sitemap, and dark glass.",
+                      "overview":  "Footer components with minimal, multi-column, newsletter signup, social links, sitemap, and dark glass variants — all clickable with current year display.",
+                      "highlights":  [
+                                         "Multi-column and minimal layouts",
+                                         "Newsletter signup form",
+                                         "Social media icon links",
+                                         "Dynamic current year display"
+                                     ]
+                  },
+    "ui-accordion":  {
+                         "title":  "Accordion Components",
+                         "description":  "10 accordion designs: default, bordered, flush, icon-trigger, animated, and nested variants.",
+                         "overview":  "Accordion components with default, bordered, flush, icon-trigger, and animated expand/collapse variants — supporting aria-expanded and smooth height transitions.",
+                         "highlights":  [
+                                            "Default, bordered, and flush layouts",
+                                            "Icon-trigger and animated expand",
+                                            "aria-expanded and role=\"region\"",
+                                            "Nested accordion support"
+                                        ]
+                     },
+    "ui-carousel":  {
+                        "title":  "Carousel Components",
+                        "description":  "10 carousel designs: auto-play, manual, carousel, thumbnail, 3D, and infinite loop.",
+                        "overview":  "Carousel components with auto-play, manual navigation, thumbnail previews, 3D perspective, and infinite loop — supporting prev/next buttons and dot indicators.",
+                        "highlights":  [
+                                           "Auto-play with pause on hover",
+                                           "Manual prev/next and dot navigation",
+                                           "Thumbnail preview strip",
+                                           "3D perspective and infinite loop"
+                                       ]
+                    },
+    "ui-search-bar":  {
+                          "title":  "Search Bar Components",
+                          "description":  "10 search bar designs: minimal, expanded, voice, filter, autocomplete, and command palette.",
+                          "overview":  "Search bar components with minimal, expanded, voice input, filter chips, autocomplete dropdown, and command palette variants — all with real-time filtering and keyboard shortcuts.",
+                          "highlights":  [
+                                             "Minimal and expanded input modes",
+                                             "Autocomplete dropdown results",
+                                             "Filter chips and voice input",
+                                             "Keyboard shortcut (Ctrl+K) activation"
+                                         ]
+                      },
+    "ui-date-picker":  {
+                           "title":  "Date Picker Components",
+                           "description":  "10 date picker designs: calendar grid, compact, dual-month, terminal, and inline variants.",
+                           "overview":  "Date picker components with calendar grid, compact input+popover, dual-month, terminal-style, and inline display — all navigating months and selecting days with keyboard support.",
+                           "highlights":  [
+                                              "Calendar grid with month navigation",
+                                              "Dual-month side-by-side view",
+                                              "Compact input with popover calendar",
+                                              "Keyboard arrow key day navigation"
+                                          ]
+                       },
+    "ui-spinner":  {
+                       "title":  "Spinner Components",
+                       "description":  "10 spinner designs: ring, dots, bar, pulse, orbit, skeleton, and progress variants.",
+                       "overview":  "Spinner loading components with ring, dots, bar, pulse, orbit, and skeleton shimmer variants — each with CSS-only animations and accessible role=\"status\" with aria-label.",
+                       "highlights":  [
+                                          "Ring, dots, bar, and pulse animations",
+                                          "Skeleton shimmer loading states",
+                                          "CSS-only (no JavaScript required)",
+                                          "role=\"status\" and aria-label=\"Loading\""
+                                      ]
+                   }
 }
