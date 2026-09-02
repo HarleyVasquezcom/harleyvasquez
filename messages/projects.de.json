@@ -877,5 +877,16 @@
                                           "CSS-only (no JavaScript required)",
                                           "role=\"status\" and aria-label=\"Loading\""
                                       ]
-                   }
+                   },
+    "ui-badge":  {
+                     "title":  "Badge Components",
+                     "description":  "10 badge designs: pulse, minimal, terminal, glass, gradient, pill, and neon variants.",
+                     "overview":  "Badge components with pulse, minimal, terminal, glass, gradient, pill, and neon styles — each with dynamic counters and status indicators.",
+                     "highlights":  [
+                                        "Pulse and neon animated variants",
+                                        "Minimal and glass morphism styles",
+                                        "Dynamic counter updates",
+                                        "Status dot and outline variants"
+                                    ]
+                 }
 }
