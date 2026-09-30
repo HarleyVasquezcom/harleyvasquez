@@ -79,43 +79,11 @@ export function Contact() {
     }
 
     setErrors({});
-    setStatus('submitting');
-    submittingRef.current = true;
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(trimmed),
-      });
-
-      const data = (await response.json().catch(() => null)) as {
-        ok?: boolean;
-        errors?: Array<{ field: ContactField; code: ContactErrorCode }>;
-      } | null;
-
-      if (response.ok && data?.ok) {
-        setStatus('success');
-        setValues({ name: '', email: '', message: '' });
-      } else if (response.status === 400 && Array.isArray(data?.errors)) {
-        const errorMap: FieldErrors = {};
-        for (const err of data.errors) {
-          if (err?.field && err?.code) {
-            errorMap[err.field] = messageFor(err.code);
-          }
-        }
-        setErrors(errorMap);
-        setStatus('idle');
-      } else {
-        setServerError(t('messages.serverError'));
-        setStatus('idle');
-      }
-    } catch {
-      setServerError(t('messages.networkError'));
-      setStatus('idle');
-    } finally {
-      submittingRef.current = false;
-    }
+    setStatus('success');
+    setValues({ name: '', email: '', message: '' });
+    const subject = encodeURIComponent(`Portfolio contact from ${trimmed.name} <${trimmed.email}>`);
+    const body = encodeURIComponent(trimmed.message);
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
   };
 
   return (
