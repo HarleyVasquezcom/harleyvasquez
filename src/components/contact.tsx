@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, AtSign, CircleAlert, CircleCheck, Send } from 'lucide-react';
+import { ArrowUpRight, CircleAlert, CircleCheck, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/lib/config';
 import { validateContact, type ContactErrorCode, type ContactField } from '@/lib/validation';
@@ -29,7 +29,7 @@ export function Contact() {
   const heading = t('heading');
   const kicker = t('kicker');
 
-  const { email, linkedin, github, codepen, whatsapp } = siteConfig.contact;
+  const { linkedin, github, codepen, whatsapp } = siteConfig.contact;
 
   const [values, setValues] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState<FieldErrors>({});
@@ -258,17 +258,7 @@ export function Contact() {
             <div className="card p-6">
               <p className="mb-4 text-sm font-medium text-fg">{form.directLabel}</p>
               <ul className="space-y-3">
-                <li>
-                  <a
-                    href={`mailto:${email}`}
-                    className="group flex items-center gap-3 rounded-lg px-2 py-2 text-fg-muted transition-colors hover:text-fg"
-                  >
-                    <span className="flex h-9 w-9 items-center justify-center rounded-lg glass text-accent">
-                      <AtSign className="h-4 w-4" aria-hidden="true" />
-                    </span>
-                    <span className="text-sm font-medium">{form.emailChannelLabel}</span>
-                  </a>
-                </li>
+                
                 <li>
                   <a
                     href={linkedin}

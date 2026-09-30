@@ -5,6 +5,10 @@ const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${encodeURIComponent(sit
 
 export async function POST(request: Request) {
   try {
+    // No destination inbox configured: refuse delivery instead of posting nowhere.
+    if (!siteConfig.contact.email) {
+      return Response.json({ ok: false, errors: [] }, { status: 500 });
+    }
     let raw: unknown;
     try {
       raw = await request.json();
