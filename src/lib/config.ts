@@ -130,14 +130,14 @@ export const siteConfig: SiteConfig = {
       "> loading config...",
       "> compiling assets...",
       "> optimizing...",
-      "> ready ✓",
+      "> ready âœ“",
       "> welcome to my portfolio",
     ],
     scrollHint: "Scroll to explore",
   },
   about: {
     heading: "About",
-    kicker: "01 · Who I am",
+    kicker: "01 Â· Who I am",
     bio: [
       "I'm a software engineer passionate about building elegant, performant web applications. With a focus on clean architecture and delightful user experiences, I bridge the gap between design and engineering.",
       "When I'm not coding, you'll find me exploring new technologies, contributing to open source, or refining my craft through side projects.",
@@ -157,7 +157,7 @@ export const siteConfig: SiteConfig = {
   },
   projects: {
     heading: "Projects",
-    kicker: "02 · Selected work",
+    kicker: "02 Â· Selected work",
     featuredLabel: "Featured",
     emptyState: "No projects match this category yet.",
     filterLabel: "Filter projects by category",
@@ -175,7 +175,7 @@ export const siteConfig: SiteConfig = {
       "webApp",
       "seguridad",
       "productividad",
-      "gestionPestañas",
+      "gestionPestaÃ±as",
       "personalizacion",
     ],
     labels: {
@@ -201,7 +201,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: true,
         overview:
-          "Aurora Sky is a canvas-driven procedural landscape that renders a convincing aurora borealis — layered light bands, twinkling starfield and slow parallax. Everything runs client-side with no external dependencies.",
+          "Aurora Sky is a canvas-driven procedural landscape that renders a convincing aurora borealis â€” layered light bands, twinkling starfield and slow parallax. Everything runs client-side with no external dependencies.",
         highlights: [
           "Fully procedural aurora bands driven by noise-based displacement",
           "Multi-layer light blending for iridescent color shifts",
@@ -264,7 +264,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "Neural Glow simulates hundreds of particles as nodes with proximity-based glowing links — the cursor acts as an attractor for a playful, organic interactive field.",
+          "Neural Glow simulates hundreds of particles as nodes with proximity-based glowing links â€” the cursor acts as an attractor for a playful, organic interactive field.",
         highlights: [
           "Proximity-linked glow lines with distance culling",
           "Pointer attraction with smooth easing",
@@ -403,7 +403,7 @@ export const siteConfig: SiteConfig = {
         slug: "audio-spectrum",
         title: "Audio Spectrum",
         description:
-          "A live Web Audio visualizer — bars, wave and orb modes from your mic or a demo tone.",
+          "A live Web Audio visualizer â€” bars, wave and orb modes from your mic or a demo tone.",
         tone: "cyan",
         tags: ["JavaScript", "Web Audio", "Canvas"],
         category: "creative",
@@ -411,7 +411,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "Audio Spectrum captures your microphone and paints real-time FFT bars, an oscilloscope wave or a radial orb on canvas — with a built-in demo tone so it works with no permission, plus a sensitivity slider.",
+          "Audio Spectrum captures your microphone and paints real-time FFT bars, an oscilloscope wave or a radial orb on canvas â€” with a built-in demo tone so it works with no permission, plus a sensitivity slider.",
         highlights: [
           "Three canvas modes: BARS, WAVE, ORB (radial ring)",
           "Microphone capture with demo-tone fallback",
@@ -487,7 +487,7 @@ export const siteConfig: SiteConfig = {
         slug: "corporate-site",
         title: "Nexora Solutions",
         description:
-          "A full corporate website for an IT services firm — services, stats counters, testimonials and a validated contact form.",
+          "A full corporate website for an IT services firm â€” services, stats counters, testimonials and a validated contact form.",
         tone: "cyan",
         tags: ["JavaScript", "Corporate", "Single-file"],
         category: "corporateSite",
@@ -495,7 +495,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: true,
         overview:
-          "Nexora Solutions is a corporate website for an IT services & consulting company: sticky scrollspy nav, animated stat counters, services grid, testimonials carousel and a fully validated contact form — all in a single self-contained file.",
+          "Nexora Solutions is a corporate website for an IT services & consulting company: sticky scrollspy nav, animated stat counters, services grid, testimonials carousel and a fully validated contact form â€” all in a single self-contained file.",
         highlights: [
           "Scrollspy navigation and animated stat counters",
           "Services grid with modal-style detail sections",
@@ -508,7 +508,7 @@ export const siteConfig: SiteConfig = {
         slug: "online-store",
         title: "Voltgear",
         description:
-          "A working e-commerce store — searchable catalog, cart drawer with free-shipping progress and a Luhn-validated checkout.",
+          "A working e-commerce store â€” searchable catalog, cart drawer with free-shipping progress and a Luhn-validated checkout.",
         tone: "emerald",
         tags: ["JavaScript", "E-commerce", "Checkout"],
         category: "ecommerce",
@@ -537,7 +537,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "Byte Post is an editorial tech blog: 10 embedded articles in a searchable, filterable grid that open in an SPA reading view — with a reading-progress bar, a hand-rolled markdown renderer, related articles and a validated newsletter form.",
+          "Byte Post is an editorial tech blog: 10 embedded articles in a searchable, filterable grid that open in an SPA reading view â€” with a reading-progress bar, a hand-rolled markdown renderer, related articles and a validated newsletter form.",
         highlights: [
           "SPA article view with reading-progress bar and related posts",
           "Inline markdown renderer (fenced code, lists, blockquotes)",
@@ -571,7 +571,7 @@ export const siteConfig: SiteConfig = {
         slug: "landing-page",
         title: "LaunchKit",
         description:
-          "A product launch landing page — pricing toggle, FAQ accordion and validated lead-capture forms.",
+          "A product launch landing page â€” pricing toggle, FAQ accordion and validated lead-capture forms.",
         tone: "cyan",
         tags: ["JavaScript", "Landing Page", "Conversion"],
         category: "landingPage",
@@ -592,7 +592,7 @@ export const siteConfig: SiteConfig = {
         slug: "microsite",
         title: "CodeFest 2026",
         description:
-          "A conference microsite — live countdown, tabbed agenda, speaker cards, venue map and a ticket flow.",
+          "A conference microsite â€” live countdown, tabbed agenda, speaker cards, venue map and a ticket flow.",
         tone: "metal",
         tags: ["JavaScript", "Microsite", "Event"],
         category: "microsite",
@@ -613,7 +613,7 @@ export const siteConfig: SiteConfig = {
         slug: "web-app",
         title: "TaskFlow",
         description:
-          "A terminal-styled project manager — projects, boards, columns and tasks with full CRUD, drag & drop and search.",
+          "A terminal-styled project manager â€” projects, boards, columns and tasks with full CRUD, drag & drop and search.",
         tone: "cyan",
         tags: ["JavaScript", "Web App", "CRUD"],
         category: "webApp",
@@ -621,7 +621,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          'TaskFlow is a dark-terminal project manager: organize work as projects → boards → columns → tasks with full CRUD, native drag & drop plus keyboard moves, live search with a "/" shortcut, priority chips and a stats HUD — all persisted to localStorage.',
+          'TaskFlow is a dark-terminal project manager: organize work as projects â†’ boards â†’ columns â†’ tasks with full CRUD, native drag & drop plus keyboard moves, live search with a "/" shortcut, priority chips and a stats HUD â€” all persisted to localStorage.',
         highlights: [
           "Hierarchical CRUD (projects, boards, columns, tasks)",
           "Native drag & drop with keyboard fallback",
@@ -634,7 +634,7 @@ export const siteConfig: SiteConfig = {
         slug: "sentinel-systems",
         title: "Sentinel Systems",
         description:
-          "Sitio corporativo de una empresa de cámaras de seguridad — venta, instalación, soporte, reparación, asesoría y monitoreo.",
+          "Sitio corporativo de una empresa de cÃ¡maras de seguridad â€” venta, instalaciÃ³n, soporte, reparaciÃ³n, asesorÃ­a y monitoreo.",
         tone: "cyan",
         tags: ["JavaScript", "Corporate", "Seguridad"],
         category: "corporateSite",
@@ -642,11 +642,11 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: true,
         overview:
-          'Sentinel Systems es un sitio corporativo completo para una empresa de videovigilancia: hero con panel de "live feed" simulado (REC, scanlines, reloj UTC), 6 servicios (venta, instalación, soporte, reparación, asesoría, monitoreo), contadores animados, garantías con SLA de 4h, testimonios y formulario de contacto validado — todo en un solo archivo.',
+          'Sentinel Systems es un sitio corporativo completo para una empresa de videovigilancia: hero con panel de "live feed" simulado (REC, scanlines, reloj UTC), 6 servicios (venta, instalaciÃ³n, soporte, reparaciÃ³n, asesorÃ­a, monitoreo), contadores animados, garantÃ­as con SLA de 4h, testimonios y formulario de contacto validado â€” todo en un solo archivo.',
         highlights: [
           "Panel de live feed simulado con reloj UTC y scanlines",
-          "6 tarjetas de servicio en español + contadores animados",
-          "Formulario de contacto validado con toasts de éxito/error",
+          "6 tarjetas de servicio en espaÃ±ol + contadores animados",
+          "Formulario de contacto validado con toasts de Ã©xito/error",
         ],
         year: "2026",
       },
@@ -655,7 +655,7 @@ export const siteConfig: SiteConfig = {
         slug: "vigil-store",
         title: "VigilStore",
         description:
-          "Tienda virtual de cámaras de seguridad — 14 productos con arte SVG, carrito con envío gratis y checkout validado con Luhn.",
+          "Tienda virtual de cÃ¡maras de seguridad â€” 14 productos con arte SVG, carrito con envÃ­o gratis y checkout validado con Luhn.",
         tone: "emerald",
         tags: ["JavaScript", "E-commerce", "Checkout"],
         category: "ecommerce",
@@ -663,11 +663,11 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "VigilStore es una tienda de videovigilancia en un solo archivo: 14 productos (cámaras, grabadoras, accesorios) con arte SVG único, filtro por categoría (Cámaras/Grabadoras/Accesorios) + búsqueda en vivo, modal de detalle con specs adaptadas por tipo, carrito con barra de envío gratis ($200) y checkout simulado con validación Luhn.",
+          "VigilStore es una tienda de videovigilancia en un solo archivo: 14 productos (cÃ¡maras, grabadoras, accesorios) con arte SVG Ãºnico, filtro por categorÃ­a (CÃ¡maras/Grabadoras/Accesorios) + bÃºsqueda en vivo, modal de detalle con specs adaptadas por tipo, carrito con barra de envÃ­o gratis ($200) y checkout simulado con validaciÃ³n Luhn.",
         highlights: [
-          "14 productos con arte SVG inline único y specs por tipo",
-          "Carrito con barra de envío gratis y persistencia localStorage",
-          "Checkout simulado con validación Luhn y pantalla de éxito",
+          "14 productos con arte SVG inline Ãºnico y specs por tipo",
+          "Carrito con barra de envÃ­o gratis y persistencia localStorage",
+          "Checkout simulado con validaciÃ³n Luhn y pantalla de Ã©xito",
         ],
         year: "2026",
       },
@@ -676,7 +676,7 @@ export const siteConfig: SiteConfig = {
         slug: "cctv-blog",
         title: "CCTV Insights",
         description:
-          "Blog en español del nicho videovigilancia — 10 artículos, lector SPA con markdown, búsqueda en vivo y categorías.",
+          "Blog en espaÃ±ol del nicho videovigilancia â€” 10 artÃ­culos, lector SPA con markdown, bÃºsqueda en vivo y categorÃ­as.",
         tone: "emerald",
         tags: ["JavaScript", "Blog", "Markdown"],
         category: "blog",
@@ -684,11 +684,11 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "CCTV Insights es un blog editorial de videovigilancia: 10 artículos en español (instalación, equipos, seguridad, mantenimiento, legal) con covers SVG por categoría, búsqueda con debounce, y lector SPA con barra de progreso, renderizador markdown propio y artículos relacionados.",
+          "CCTV Insights es un blog editorial de videovigilancia: 10 artÃ­culos en espaÃ±ol (instalaciÃ³n, equipos, seguridad, mantenimiento, legal) con covers SVG por categorÃ­a, bÃºsqueda con debounce, y lector SPA con barra de progreso, renderizador markdown propio y artÃ­culos relacionados.",
         highlights: [
           "Lector SPA con barra de progreso y renderizador markdown",
-          "Búsqueda en vivo + chips de categoría con empty state",
-          "Newsletter validado con estados de éxito/error",
+          "BÃºsqueda en vivo + chips de categorÃ­a con empty state",
+          "Newsletter validado con estados de Ã©xito/error",
         ],
         year: "2026",
       },
@@ -697,7 +697,7 @@ export const siteConfig: SiteConfig = {
         slug: "cams-portfolio",
         title: "CamCraft Installs",
         description:
-          "Portafolio de instalaciones de videovigilancia — 16 obras SVG procedimentales, lightbox con foco y filtros por categoría.",
+          "Portafolio de instalaciones de videovigilancia â€” 16 obras SVG procedimentales, lightbox con foco y filtros por categorÃ­a.",
         tone: "metal",
         tags: ["JavaScript", "Portfolio", "Lightbox"],
         category: "portfolio",
@@ -705,10 +705,10 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "CamCraft Installs es el portafolio de un instalador profesional: 16 escenas SVG generadas procedimentalmente (residencial, comercial, industrial, exteriores), galería filtrable, lightbox con foco y navegación por teclado, contadores de estadísticas y formulario de contacto validado.",
+          "CamCraft Installs es el portafolio de un instalador profesional: 16 escenas SVG generadas procedimentalmente (residencial, comercial, industrial, exteriores), galerÃ­a filtrable, lightbox con foco y navegaciÃ³n por teclado, contadores de estadÃ­sticas y formulario de contacto validado.",
         highlights: [
-          "16 escenas de instalación SVG únicas en 4 categorías",
-          "Lightbox con focus trap, teclado y descripción del proyecto",
+          "16 escenas de instalaciÃ³n SVG Ãºnicas en 4 categorÃ­as",
+          "Lightbox con focus trap, teclado y descripciÃ³n del proyecto",
           "Contadores animados + banda de servicios",
         ],
         year: "2026",
@@ -718,7 +718,7 @@ export const siteConfig: SiteConfig = {
         slug: "security-audit",
         title: "Guardia360",
         description:
-          "Landing page en español para captar leads — evaluación de seguridad gratis, paquetes con toggle y countdown de urgencia.",
+          "Landing page en espaÃ±ol para captar leads â€” evaluaciÃ³n de seguridad gratis, paquetes con toggle y countdown de urgencia.",
         tone: "cyan",
         tags: ["JavaScript", "Landing Page", "Leads"],
         category: "landingPage",
@@ -726,9 +726,9 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "Guardia360 es una landing de conversión enfocada en una oferta concreta: evaluación de seguridad gratuita para casa o negocio. Formulario de leads validado en el hero, 6 tarjetas de pain points, proceso en 4 pasos, 3 paquetes de cámaras con toggle (Solo equipo / Kit completo), FAQ y countdown de urgencia a fin de mes.",
+          "Guardia360 es una landing de conversiÃ³n enfocada en una oferta concreta: evaluaciÃ³n de seguridad gratuita para casa o negocio. Formulario de leads validado en el hero, 6 tarjetas de pain points, proceso en 4 pasos, 3 paquetes de cÃ¡maras con toggle (Solo equipo / Kit completo), FAQ y countdown de urgencia a fin de mes.",
         highlights: [
-          "Formulario de leads validado con confirmación",
+          "Formulario de leads validado con confirmaciÃ³n",
           "Toggle de paquetes Solo equipo / Kit completo",
           "Urgency: countdown a fin de mes + cupos restantes",
         ],
@@ -737,9 +737,9 @@ export const siteConfig: SiteConfig = {
       {
         id: "cam-launch",
         slug: "cam-launch",
-        title: "Semana de la Cámara",
+        title: "Semana de la CÃ¡mara",
         description:
-          'Micrositio del evento "Semana de la Cámara 2026" — countdown, agenda de 7 días reservable, mapa con .ics y registro.',
+          'Micrositio del evento "Semana de la CÃ¡mara 2026" â€” countdown, agenda de 7 dÃ­as reservable, mapa con .ics y registro.',
         tone: "metal",
         tags: ["JavaScript", "Microsite", "Evento"],
         category: "microsite",
@@ -747,10 +747,10 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "Semana de la Cámara es el micrositio de una expo de videovigilancia: countdown en vivo al 7 sep 2026, agenda tabulada de 7 días con sesiones reservables, 6 highlights, mapa SVG con zoom y descarga real de .ics, y registro validado con código de confirmación falso.",
+          "Semana de la CÃ¡mara es el micrositio de una expo de videovigilancia: countdown en vivo al 7 sep 2026, agenda tabulada de 7 dÃ­as con sesiones reservables, 6 highlights, mapa SVG con zoom y descarga real de .ics, y registro validado con cÃ³digo de confirmaciÃ³n falso.",
         highlights: [
           'Countdown en vivo con estados "happening now" y finalizado',
-          "Agenda de 7 días con reservas desde cada fila",
+          "Agenda de 7 dÃ­as con reservas desde cada fila",
           "Mapa SVG con zoom + descarga .ics real",
         ],
         year: "2026",
@@ -760,7 +760,7 @@ export const siteConfig: SiteConfig = {
         slug: "cam-command",
         title: "CamCommand",
         description:
-          "Sala de monitoreo en el navegador — feeds animados SVG, control PTZ, snapshots, log de eventos y HUD de estado.",
+          "Sala de monitoreo en el navegador â€” feeds animados SVG, control PTZ, snapshots, log de eventos y HUD de estado.",
         tone: "cyan",
         tags: ["JavaScript", "Web App", "Monitoreo"],
         category: "webApp",
@@ -768,7 +768,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "CamCommand es una sala de control de videovigilancia: grid de cámaras con feeds animados (escenas SVG en movimiento), vista enfocada con controles PTZ que mueven la escena, snapshot que captura miniaturas con timestamp, log de alertas de movimiento filtrable y HUD con estadísticas — todo persiste en localStorage.",
+          "CamCommand es una sala de control de videovigilancia: grid de cÃ¡maras con feeds animados (escenas SVG en movimiento), vista enfocada con controles PTZ que mueven la escena, snapshot que captura miniaturas con timestamp, log de alertas de movimiento filtrable y HUD con estadÃ­sticas â€” todo persiste en localStorage.",
         highlights: [
           "Feeds simulados con escenas SVG animadas y estados online/offline",
           "Controles PTZ funcionales (pan/tilt/zoom sobre la escena)",
@@ -781,7 +781,7 @@ export const siteConfig: SiteConfig = {
         slug: "barker-modern",
         title: "Barker Modern",
         description:
-          "Sitio corporativo de gabinetes RTA modernos — catálogo Kitchen/Bath/Closet, 14 tipos de gabinete, ofertas por volumen y specs Blum Movento, con el sistema de diseño ámbar/navy del sitio local de referencia.",
+          "Sitio corporativo de gabinetes RTA modernos â€” catÃ¡logo Kitchen/Bath/Closet, 14 tipos de gabinete, ofertas por volumen y specs Blum Movento, con el sistema de diseÃ±o Ã¡mbar/navy del sitio local de referencia.",
         tone: "metal",
         tags: ["HTML", "CSS", "JavaScript", "E-commerce"],
         category: "corporateSite",
@@ -789,11 +789,11 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "Barker Modern es un sitio corporativo de una sola página para una marca real de gabinetes RTA (Ready to Assemble) fabricados en USA: hero con slider crossfade y contadores animados, catálogo Kitchen/Bath/Closet, 14 tipos de gabinetes, planes de ofertas por volumen (free shipping sobre $4k y descuentos escalonados hasta 10%), galería marquee de proyectos, testimonios, guías de design/assembly/samples y CTA band — todo replicando el sistema de diseño ámbar/navy (Sora + Inter, esquinas rectas) de la web local de referencia.",
+          "Barker Modern es un sitio corporativo de una sola pÃ¡gina para una marca real de gabinetes RTA (Ready to Assemble) fabricados en USA: hero con slider crossfade y contadores animados, catÃ¡logo Kitchen/Bath/Closet, 14 tipos de gabinetes, planes de ofertas por volumen (free shipping sobre $4k y descuentos escalonados hasta 10%), galerÃ­a marquee de proyectos, testimonios, guÃ­as de design/assembly/samples y CTA band â€” todo replicando el sistema de diseÃ±o Ã¡mbar/navy (Sora + Inter, esquinas rectas) de la web local de referencia.",
         highlights: [
-          "Sistema de diseño ámbar/navy replicado del sitio de referencia",
-          "Hero slider crossfade + títulos rotativos + stats con contador",
-          "Catálogo completo con 14 tipos de gabinetes y ofertas reales",
+          "Sistema de diseÃ±o Ã¡mbar/navy replicado del sitio de referencia",
+          "Hero slider crossfade + tÃ­tulos rotativos + stats con contador",
+          "CatÃ¡logo completo con 14 tipos de gabinetes y ofertas reales",
         ],
         year: "2026",
       },
@@ -802,7 +802,7 @@ export const siteConfig: SiteConfig = {
         slug: "vettaz",
         title: "VETTAZ",
         description:
-          "Sitio corporativo de cocinas de diseño a medida en Bogotá — 20 proyectos reales de cocina, contract para constructoras, proceso de 4 fases y formulario de cita, con el sistema de diseño zinc/cian del demo corporate-site.",
+          "Sitio corporativo de cocinas de diseÃ±o a medida en BogotÃ¡ â€” 20 proyectos reales de cocina, contract para constructoras, proceso de 4 fases y formulario de cita, con el sistema de diseÃ±o zinc/cian del demo corporate-site.",
         tone: "metal",
         tags: ["HTML", "CSS", "JavaScript", "E-commerce"],
         category: "corporateSite",
@@ -810,9 +810,9 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "VETTAZ es un sitio corporativo de una sola página para una marca de cocinas de diseño a medida en Bogotá: hero full-screen con glows animados y grid, galería de 20 proyectos reales de cocina (grid 3×3 + carrusel), 6 proyectos contract con número de unidades para constructoras, historia desde 1984 con ISO 9001 y stats con contadores, proceso de 4 fases, blog, testimonios y formulario de cita validado con toast — replicando el sistema de diseño zinc oscuro + acento cian (tipografía mono, bordes redondeados) del demo corporate-site.",
+          "VETTAZ es un sitio corporativo de una sola pÃ¡gina para una marca de cocinas de diseÃ±o a medida en BogotÃ¡: hero full-screen con glows animados y grid, galerÃ­a de 20 proyectos reales de cocina (grid 3Ã—3 + carrusel), 6 proyectos contract con nÃºmero de unidades para constructoras, historia desde 1984 con ISO 9001 y stats con contadores, proceso de 4 fases, blog, testimonios y formulario de cita validado con toast â€” replicando el sistema de diseÃ±o zinc oscuro + acento cian (tipografÃ­a mono, bordes redondeados) del demo corporate-site.",
         highlights: [
-          "Diseño zinc/cian replicado del demo corporate-site (Nexora)",
+          "DiseÃ±o zinc/cian replicado del demo corporate-site (Nexora)",
           "20 proyectos de cocina con sus descripciones reales adaptadas a Colombia",
           "Hero con glows animados, stats contadores y formulario validado con toast",
         ],
@@ -835,7 +835,7 @@ export const siteConfig: SiteConfig = {
         highlights: [
           "6-char codes from a custom charset, generated locally",
           "History table with click stats and JSON export",
-          "Zero network dependencies — runs fully offline",
+          "Zero network dependencies â€” runs fully offline",
         ],
         year: "2026",
       },
@@ -928,7 +928,7 @@ export const siteConfig: SiteConfig = {
         slug: "format-converter",
         title: "FormatZen",
         description:
-          "A Swiss-minimal format converter: JSON ↔ CSV ↔ XML ↔ YAML-subset, fully offline with live error feedback.",
+          "A Swiss-minimal format converter: JSON â†” CSV â†” XML â†” YAML-subset, fully offline with live error feedback.",
         tone: "cyan",
         tags: ["JavaScript", "Data", "Tool"],
         category: "tools",
@@ -936,7 +936,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "FormatZen converts data between JSON, CSV, XML and a YAML subset entirely in the browser: JSON→CSV, CSV→JSON with delimiter choice, XML→JSON, JSON→XML and JSON→YAML, with sample inputs, prettify, swap, copy, download and a 10-step conversion history.",
+          "FormatZen converts data between JSON, CSV, XML and a YAML subset entirely in the browser: JSONâ†’CSV, CSVâ†’JSON with delimiter choice, XMLâ†’JSON, JSONâ†’XML and JSONâ†’YAML, with sample inputs, prettify, swap, copy, download and a 10-step conversion history.",
         highlights: [
           "Five conversion directions with delimiter options",
           "Bilingual parse errors instead of silent failures",
@@ -978,7 +978,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "MortgageSim models a mortgage on ruled ledger paper: price, down payment as % or amount, interest rate, term, optional property tax and insurance feed a monthly-breakdown stacked bar, a full amortization table with month search, and an LTV card — in USD, EUR or COP.",
+          "MortgageSim models a mortgage on ruled ledger paper: price, down payment as % or amount, interest rate, term, optional property tax and insurance feed a monthly-breakdown stacked bar, a full amortization table with month search, and an LTV card â€” in USD, EUR or COP.",
         highlights: [
           "Full amortization schedule with month search",
           "Stacked principal/interest/tax/insurance breakdown on canvas",
@@ -999,7 +999,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "DoneDeck manages tasks on a green-felt card table: cards live in Backlog, Doing and Done, move via arrow buttons or pointer drag & drop, and carry priority suits (spade/heart/club), notes and due dates with overdue badges — with search, sort, stats and full persistence.",
+          "DoneDeck manages tasks on a green-felt card table: cards live in Backlog, Doing and Done, move via arrow buttons or pointer drag & drop, and carry priority suits (spade/heart/club), notes and due dates with overdue badges â€” with search, sort, stats and full persistence.",
         highlights: [
           "Pointer drag & drop plus button fallbacks",
           "Priority suits, due dates and overdue badges",
@@ -1083,10 +1083,10 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "NameForge scribbles developer, project and product names on a chalk whiteboard: pick a vibe (Web, AI, CLI, Game, Data, Cloud, Minimal or Español), slide a numeric seed so the same seed always yields the same names, mint 10 at once, and keep favorites locally.",
+          "NameForge scribbles developer, project and product names on a chalk whiteboard: pick a vibe (Web, AI, CLI, Game, Data, Cloud, Minimal or EspaÃ±ol), slide a numeric seed so the same seed always yields the same names, mint 10 at once, and keep favorites locally.",
         highlights: [
           "Deterministic names driven by a numeric seed",
-          "Vibe chips with an Español word bank",
+          "Vibe chips with an EspaÃ±ol word bank",
           "10-name bulk generation with copy-on-click favorites",
         ],
         year: "2026",
@@ -1104,7 +1104,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "Nowcast is a sky-blue weather console: geolocation (or city search) drives Open-Meteo current conditions — temperature, feels-like, humidity, wind, pressure and WMO codes with bilingual descriptions — plus a 24-hour bar chart, 7-day cards with sunrise/sunset, and a pannable OpenStreetMap centered on the pin.",
+          "Nowcast is a sky-blue weather console: geolocation (or city search) drives Open-Meteo current conditions â€” temperature, feels-like, humidity, wind, pressure and WMO codes with bilingual descriptions â€” plus a 24-hour bar chart, 7-day cards with sunrise/sunset, and a pannable OpenStreetMap centered on the pin.",
         highlights: [
           "Keyless Open-Meteo forecast with bilingual condition codes",
           "24h temperature/precipitation chart on canvas",
@@ -1125,7 +1125,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/portfolio-demos",
         featured: false,
         overview:
-          "WordScale weighs your text on index-card styling: live words, characters with and without spaces, sentences, paragraphs, unique words, estimated syllables, reading and speaking time, an approximate readability score, top keyword bars and a sentence-length chart — all exportable as TXT.",
+          "WordScale weighs your text on index-card styling: live words, characters with and without spaces, sentences, paragraphs, unique words, estimated syllables, reading and speaking time, an approximate readability score, top keyword bars and a sentence-length chart â€” all exportable as TXT.",
         highlights: [
           "Ten live metrics including reading/speaking time",
           "Keyword frequency and sentence-length charts",
@@ -1133,7 +1133,7 @@ export const siteConfig: SiteConfig = {
         ],
         year: "2026",
       },
-      /* Chrome extensions — autobuild S01-S05, 20/20 gated-green */ {
+      /* Chrome extensions â€” autobuild S01-S05, 20/20 gated-green */ {
         id: "shieldblock",
         slug: "shieldblock",
         title: "ShieldBlock",
@@ -1147,12 +1147,12 @@ export const siteConfig: SiteConfig = {
         screenshot: "/extensions/shieldblock.png",
         featured: false,
         overview:
-          "ShieldBlock is a Manifest V3 Chrome extension that blocks ads and trackers using Chrome's declarativeNetRequest engine with a hand-curated local ruleset (~84 rules). Everything runs in your browser — no servers, no accounts, no telemetry.",
+          "ShieldBlock is a Manifest V3 Chrome extension that blocks ads and trackers using Chrome's declarativeNetRequest engine with a hand-curated local ruleset (~84 rules). Everything runs in your browser â€” no servers, no accounts, no telemetry.",
         highlights: [
           "84+ curated declarativeNetRequest rules for known ad/tracker domains",
           "Live blocked-request counters persisted in chrome.storage.local",
           "On/off pause toggle with i18n across 6 languages (EN, ES, FR, PT, IT, DE)",
-          "No host permissions — no data leaves the browser",
+          "No host permissions â€” no data leaves the browser",
         ],
         year: "2026",
       },
@@ -1169,12 +1169,12 @@ export const siteConfig: SiteConfig = {
         screenshot: "/extensions/adpause.png",
         featured: false,
         overview:
-          "AdPause blocks ads on a per-site basis with allowlists and blocklists, a global pause toggle, and a live counter — everything local in the browser with no telemetry.",
+          "AdPause blocks ads on a per-site basis with allowlists and blocklists, a global pause toggle, and a live counter â€” everything local in the browser with no telemetry.",
         highlights: [
           "Per-site allowlist and blocklist rules",
           "Global pause/resume toggle persisted across restarts",
           "Live blocked-request counter in the popup",
-          "No host permissions — no data leaves the browser",
+          "No host permissions â€” no data leaves the browser",
         ],
         year: "2026",
       },
@@ -1191,7 +1191,7 @@ export const siteConfig: SiteConfig = {
         screenshot: "/extensions/keyvault.png",
         featured: false,
         overview:
-          "KeyVault keeps passwords encrypted locally with WebCrypto (PBKDF2 + AES-GCM): a customizable generator, autofill with wrong-master-key rejection, and no accounts or sync — your master key never leaves the browser.",
+          "KeyVault keeps passwords encrypted locally with WebCrypto (PBKDF2 + AES-GCM): a customizable generator, autofill with wrong-master-key rejection, and no accounts or sync â€” your master key never leaves the browser.",
         highlights: [
           "PBKDF2 + AES-GCM encryption entirely in the browser",
           "Password generator with customizable charset and length",
@@ -1213,7 +1213,7 @@ export const siteConfig: SiteConfig = {
         screenshot: "/extensions/openvault.png",
         featured: false,
         overview:
-          "OpenVault is the open, portable vault: passwords encrypted locally with WebCrypto (PBKDF2 + AES-GCM), import/export as an encrypted JSON blob. No accounts, no sync — your vault travels with you as a file.",
+          "OpenVault is the open, portable vault: passwords encrypted locally with WebCrypto (PBKDF2 + AES-GCM), import/export as an encrypted JSON blob. No accounts, no sync â€” your vault travels with you as a file.",
         highlights: [
           "Encrypted JSON vault with import/export round-trip",
           "PBKDF2 + AES-GCM client-side encryption",
@@ -1227,7 +1227,7 @@ export const siteConfig: SiteConfig = {
         slug: "tapvpn",
         title: "TapVpn",
         description:
-          "Simulated VPN console: toggles a fake protected tunnel, swaps demo location, and paints a status banner. Demo only — no real routing.",
+          "Simulated VPN console: toggles a fake protected tunnel, swaps demo location, and paints a status banner. Demo only â€” no real routing.",
         tone: "cyan",
         tags: ["Chrome Extension", "MV3", "VPN", "Demo"],
         category: "seguridad",
@@ -1235,12 +1235,12 @@ export const siteConfig: SiteConfig = {
         screenshot: "/extensions/tapvpn.png",
         featured: false,
         overview:
-          "TapVpn is a simulated VPN console: toggles a fake protected tunnel, swaps your demo location, and paints a status banner over the active page. Demo only — it does not route, proxy or encrypt any traffic.",
+          "TapVpn is a simulated VPN console: toggles a fake protected tunnel, swaps your demo location, and paints a status banner over the active page. Demo only â€” it does not route, proxy or encrypt any traffic.",
         highlights: [
           "Simulated protected-tunnel toggle with status banner",
           "Demo location swapping (geo banner on active page)",
           "Connection/disconnect state persistence",
-          "No real traffic routing — demo only",
+          "No real traffic routing â€” demo only",
         ],
         year: "2026",
       },
@@ -1260,7 +1260,7 @@ export const siteConfig: SiteConfig = {
           "DarkVeil darkens pages with a real WebKit CSS filter (invert + hue-rotate + sepia + brightness adjustments), applied only to sites you whitelist. No eye-scalding flashes, no forced dark on every page.",
         highlights: [
           "WebKitCSSFilter: invert, hue-rotate, sepia, brightness adjustments",
-          "Per-site whitelist control — choose where it applies",
+          "Per-site whitelist control â€” choose where it applies",
           "No forced dark on every page",
           "Real CSS filter, not a stylesheet overlay",
         ],
@@ -1284,7 +1284,7 @@ export const siteConfig: SiteConfig = {
           "Local EN/ES dictionary with in-page misspell underline",
           "One-click fix suggestions in the popup",
           "Personal dictionary with your added words",
-          "No network calls — nothing leaves the browser",
+          "No network calls â€” nothing leaves the browser",
         ],
         year: "2026",
       },
@@ -1328,7 +1328,7 @@ export const siteConfig: SiteConfig = {
           "getDisplayMedia + MediaRecorder recording to .webm",
           "Red REC indicator on every page while recording",
           "Clip cards with thumbnail, length and format metadata",
-          "Downloads locally — never uploaded",
+          "Downloads locally â€” never uploaded",
         ],
         year: "2026",
       },
@@ -1337,7 +1337,7 @@ export const siteConfig: SiteConfig = {
         slug: "clipdeck",
         title: "ClipDeck",
         description:
-          "Captures the page — title, URL, main text and main image — into a searchable, taggable deck of cards. Export as Markdown or JSON.",
+          "Captures the page â€” title, URL, main text and main image â€” into a searchable, taggable deck of cards. Export as Markdown or JSON.",
         tone: "cyan",
         tags: ["Chrome Extension", "MV3", "Clipping", "Productivity"],
         category: "productividad",
@@ -1345,12 +1345,12 @@ export const siteConfig: SiteConfig = {
         screenshot: "/extensions/clipdeck.png",
         featured: false,
         overview:
-          "ClipDeck captures the page you are reading — title, URL, main text and main image — into a local deck of cards you can search, tag and export as Markdown or JSON. Everything stays in chrome.storage.local.",
+          "ClipDeck captures the page you are reading â€” title, URL, main text and main image â€” into a local deck of cards you can search, tag and export as Markdown or JSON. Everything stays in chrome.storage.local.",
         highlights: [
           "Extracts title, URL, main text and main image with a local heuristic",
           "Searchable, taggable cards in a local deck",
           "Export deck as Markdown or JSON",
-          "All storage local — no accounts, no servers",
+          "All storage local â€” no accounts, no servers",
         ],
         year: "2026",
       },
@@ -1359,7 +1359,7 @@ export const siteConfig: SiteConfig = {
         slug: "readstack",
         title: "ReadStack",
         description:
-          "Save the current page with its readable text into a private stack — search, archive, 200-item cap, JSON export.",
+          "Save the current page with its readable text into a private stack â€” search, archive, 200-item cap, JSON export.",
         tone: "emerald",
         tags: ["Chrome Extension", "MV3", "Reading", "Storage"],
         category: "productividad",
@@ -1394,7 +1394,7 @@ export const siteConfig: SiteConfig = {
           "Saves page title, URL and readable text plus your own note",
           "Search across all clipped notes",
           "JSON and Markdown export",
-          "No host permissions — page content read only on click",
+          "No host permissions â€” page content read only on click",
         ],
         year: "2026",
       },
@@ -1403,7 +1403,7 @@ export const siteConfig: SiteConfig = {
         slug: "assistai",
         title: "AssistAI",
         description:
-          "Tiny local page assistant: deterministic offline NLU — summary, keywords, entities, conversation history.",
+          "Tiny local page assistant: deterministic offline NLU â€” summary, keywords, entities, conversation history.",
         tone: "cyan",
         tags: ["Chrome Extension", "MV3", "AI", "Offline"],
         category: "personalizacion",
@@ -1411,7 +1411,7 @@ export const siteConfig: SiteConfig = {
         screenshot: "/extensions/assistai.png",
         featured: false,
         overview:
-          "assistai is a tiny local page assistant (MV3): deterministic, offline NLU over the page you are reading — summary by word density, keywords with counts, entities via regex — plus persistent conversation history.",
+          "assistai is a tiny local page assistant (MV3): deterministic, offline NLU over the page you are reading â€” summary by word density, keywords with counts, entities via regex â€” plus persistent conversation history.",
         highlights: [
           "Summary by word density over the page DOM",
           "Keywords with counts and entities via regex",
@@ -1428,7 +1428,7 @@ export const siteConfig: SiteConfig = {
           "Window session manager: save snapshots of open tabs and groups, search, restore, auto-save on interval.",
         tone: "cyan",
         tags: ["Chrome Extension", "MV3", "Sessions", "Tabs"],
-        category: "gestionPestañas",
+        category: "gestionPestaÃ±as",
         link: "https://sessionsaver.vercel.app",
         screenshot: "/extensions/sessionsaver.png",
         featured: false,
@@ -1450,7 +1450,7 @@ export const siteConfig: SiteConfig = {
           "Hive the window, keep the pages: close every tab into a named nest with estimated memory savings, restore anytime.",
         tone: "emerald",
         tags: ["Chrome Extension", "MV3", "Tabs", "Groups"],
-        category: "gestionPestañas",
+        category: "gestionPestaÃ±as",
         link: "https://tabnest-jade.vercel.app",
         screenshot: "/extensions/tabnest.png",
         featured: false,
@@ -1469,10 +1469,10 @@ export const siteConfig: SiteConfig = {
         slug: "tabsnooze",
         title: "TabSnooze",
         description:
-          "Background tabs automatically discarded after a configurable idle time — Chrome frees memory, with per-domain exceptions.",
+          "Background tabs automatically discarded after a configurable idle time â€” Chrome frees memory, with per-domain exceptions.",
         tone: "metal",
         tags: ["Chrome Extension", "MV3", "Tabs", "Memory"],
-        category: "gestionPestañas",
+        category: "gestionPestaÃ±as",
         link: "https://tabsnooze.vercel.app",
         screenshot: "/extensions/tabsnooze.png",
         featured: false,
@@ -1481,7 +1481,7 @@ export const siteConfig: SiteConfig = {
         highlights: [
           "Auto-discards idle background tabs via Chrome native discard",
           "Per-domain whitelist (pinned and active tab exempt)",
-          "Configurable idle timeout (1–60 min, default 10)",
+          "Configurable idle timeout (1â€“60 min, default 10)",
           "Wake sleeping tabs instantly with one click",
         ],
         year: "2026",
@@ -1504,7 +1504,7 @@ export const siteConfig: SiteConfig = {
         highlights: [
           "Built-in ~200-term EN-ES-FR dictionary",
           "Word-under-cursor tooltip with copy button",
-          "Phrase translation in the popup with EN↔ES and EN↔FR",
+          "Phrase translation in the popup with ENâ†”ES and ENâ†”FR",
           "Page-wide translation with one-click restore",
         ],
         year: "2026",
@@ -1537,7 +1537,7 @@ export const siteConfig: SiteConfig = {
         slug: "seopulse",
         title: "SeoPulse",
         description:
-          "Local on-page SEO check: title, meta, headings, alt text, broken links, text/HTML ratio, keyword density — traffic light scoring.",
+          "Local on-page SEO check: title, meta, headings, alt text, broken links, text/HTML ratio, keyword density â€” traffic light scoring.",
         tone: "cyan",
         tags: ["Chrome Extension", "MV3", "SEO", "Analysis"],
         category: "personalizacion",
@@ -1569,7 +1569,7 @@ export const siteConfig: SiteConfig = {
         screenshot: "/extensions/stackscope.png",
         featured: false,
         overview:
-          "StackScope is a local technology detector for pages served from http://127.0.0.1: meta generator, known script srcs and inline markers, plus data-* attributes — with match confidence and JSON export. Everything runs locally on the page DOM.",
+          "StackScope is a local technology detector for pages served from http://127.0.0.1: meta generator, known script srcs and inline markers, plus data-* attributes â€” with match confidence and JSON export. Everything runs locally on the page DOM.",
         highlights: [
           "Detects meta generator, script srcs, inline JS and data-* attributes",
           "Confidence scoring per detected signature",
@@ -1591,7 +1591,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: true,
         overview:
-          "A collection of 10 self-contained, zero-dependency button components showcasing glass, neumorphism, brutalist, terminal, gradient, editorial, and other distinct visual styles — all fully interactive with hover, focus-visible, and responsive design.",
+          "A collection of 10 self-contained, zero-dependency button components showcasing glass, neumorphism, brutalist, terminal, gradient, editorial, and other distinct visual styles â€” all fully interactive with hover, focus-visible, and responsive design.",
         highlights: [
           "10 visually distinct styles per component",
           "Zero external dependencies (pure HTML/CSS/JS)",
@@ -1613,7 +1613,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          "Self-contained text field components featuring floating labels, real-time validation, terminal-style prompts, and glass morphism — each with distinct visual identity and full keyboard accessibility.",
+          "Self-contained text field components featuring floating labels, real-time validation, terminal-style prompts, and glass morphism â€” each with distinct visual identity and full keyboard accessibility.",
         highlights: [
           "Floating label animation on focus",
           "Real-time email/required validation",
@@ -1657,7 +1657,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: true,
         overview:
-          "Navigation bar components featuring sticky scroll behavior, mega menu dropdowns, glass morphism blur, and responsive hamburger collapse — all with active state management and keyboard support.",
+          "Navigation bar components featuring sticky scroll behavior, mega menu dropdowns, glass morphism blur, and responsive hamburger collapse â€” all with active state management and keyboard support.",
         highlights: [
           "Sticky scroll with background transition",
           "Mega menu and glass morphism variants",
@@ -1679,7 +1679,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          'Tab components with underline, pill, card, vertical, and animated indicator styles — each switching visible panels on click with proper aria-selected and role="tablist" semantics.',
+          'Tab components with underline, pill, card, vertical, and animated indicator styles â€” each switching visible panels on click with proper aria-selected and role="tablist" semantics.',
         highlights: [
           "Underline, pill, card, and vertical layouts",
           "Animated active indicator",
@@ -1701,7 +1701,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: true,
         overview:
-          "Card components spanning glass morphism, gradient backgrounds, hover-lift effects, media layouts, pricing tables, and editorial styles — each with dynamic content and interactive states.",
+          "Card components spanning glass morphism, gradient backgrounds, hover-lift effects, media layouts, pricing tables, and editorial styles â€” each with dynamic content and interactive states.",
         highlights: [
           "10 distinct visual treatments",
           "Hover lift and glass morphism effects",
@@ -1723,7 +1723,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          "Data table components with striped rows, compact density, column sorting, row selection, and responsive horizontal scroll — all with proper thead/th semantics and aria-sort.",
+          "Data table components with striped rows, compact density, column sorting, row selection, and responsive horizontal scroll â€” all with proper thead/th semantics and aria-sort.",
         highlights: [
           "Column sorting with aria-sort",
           "Row selection with checkboxes",
@@ -1745,7 +1745,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          "Chart components rendered with pure CSS/SVG — bar, line, donut, sparkline, heatmap, radar, area, waterfall, bubble, and treemap — all with interactive hover states and data controls.",
+          "Chart components rendered with pure CSS/SVG â€” bar, line, donut, sparkline, heatmap, radar, area, waterfall, bubble, and treemap â€” all with interactive hover states and data controls.",
         highlights: [
           "Zero-dependency SVG/CSS charts",
           "Interactive hover tooltips",
@@ -1767,7 +1767,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          "Modal dialog components with centered, bottom-sheet, full-screen, and glass overlay variants — supporting open/close via click, Escape key, and overlay dismissal with focus trap.",
+          "Modal dialog components with centered, bottom-sheet, full-screen, and glass overlay variants â€” supporting open/close via click, Escape key, and overlay dismissal with focus trap.",
         highlights: [
           "Centered, bottom-sheet, and full-screen layouts",
           "Escape key and overlay click dismissal",
@@ -1789,7 +1789,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          "Toast notification components with slide-in, stacked, and snackbar layouts — supporting success/error/info states, auto-dismiss timers, and manual close buttons.",
+          "Toast notification components with slide-in, stacked, and snackbar layouts â€” supporting success/error/info states, auto-dismiss timers, and manual close buttons.",
         highlights: [
           "Slide-in and stacked animations",
           "Success, error, and info color coding",
@@ -1811,7 +1811,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          "Progress bar components with determinate, indeterminate, gradient, striped, and shimmer animation variants — reflecting real percentage values with milestone markers.",
+          "Progress bar components with determinate, indeterminate, gradient, striped, and shimmer animation variants â€” reflecting real percentage values with milestone markers.",
         highlights: [
           "Determinate and indeterminate modes",
           "Gradient, striped, and shimmer styles",
@@ -1833,7 +1833,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          "Tooltip components with hover, focus, and click triggers — supporting rich content, arrow pointers, 300ms delay, and smooth fade/slide animations.",
+          "Tooltip components with hover, focus, and click triggers â€” supporting rich content, arrow pointers, 300ms delay, and smooth fade/slide animations.",
         highlights: [
           "Hover, focus, and click trigger modes",
           "Rich content with images and links",
@@ -1855,7 +1855,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: true,
         overview:
-          "Hero section components with gradient, parallax, minimal, split-screen, and typewriter effect variants — each with CTA buttons and responsive full-width layouts.",
+          "Hero section components with gradient, parallax, minimal, split-screen, and typewriter effect variants â€” each with CTA buttons and responsive full-width layouts.",
         highlights: [
           "Gradient and parallax background effects",
           "Split-screen and minimal layouts",
@@ -1877,7 +1877,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          "Footer components with minimal, multi-column, newsletter signup, social links, sitemap, and dark glass variants — all clickable with current year display.",
+          "Footer components with minimal, multi-column, newsletter signup, social links, sitemap, and dark glass variants â€” all clickable with current year display.",
         highlights: [
           "Multi-column and minimal layouts",
           "Newsletter signup form",
@@ -1899,7 +1899,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          "Accordion components with default, bordered, flush, icon-trigger, and animated expand/collapse variants — supporting aria-expanded and smooth height transitions.",
+          "Accordion components with default, bordered, flush, icon-trigger, and animated expand/collapse variants â€” supporting aria-expanded and smooth height transitions.",
         highlights: [
           "Default, bordered, and flush layouts",
           "Icon-trigger and animated expand",
@@ -1921,7 +1921,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          "Carousel components with auto-play, manual navigation, thumbnail previews, 3D perspective, and infinite loop — supporting prev/next buttons and dot indicators.",
+          "Carousel components with auto-play, manual navigation, thumbnail previews, 3D perspective, and infinite loop â€” supporting prev/next buttons and dot indicators.",
         highlights: [
           "Auto-play with pause on hover",
           "Manual prev/next and dot navigation",
@@ -1943,7 +1943,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          "Search bar components with minimal, expanded, voice input, filter chips, autocomplete dropdown, and command palette variants — all with real-time filtering and keyboard shortcuts.",
+          "Search bar components with minimal, expanded, voice input, filter chips, autocomplete dropdown, and command palette variants â€” all with real-time filtering and keyboard shortcuts.",
         highlights: [
           "Minimal and expanded input modes",
           "Autocomplete dropdown results",
@@ -1965,7 +1965,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          "Date picker components with calendar grid, compact input+popover, dual-month, terminal-style, and inline display — all navigating months and selecting days with keyboard support.",
+          "Date picker components with calendar grid, compact input+popover, dual-month, terminal-style, and inline display â€” all navigating months and selecting days with keyboard support.",
         highlights: [
           "Calendar grid with month navigation",
           "Dual-month side-by-side view",
@@ -1987,7 +1987,7 @@ export const siteConfig: SiteConfig = {
         github: "https://github.com/HarleyVasquezcom/ui-components",
         featured: false,
         overview:
-          'Spinner loading components with ring, dots, bar, pulse, orbit, and skeleton shimmer variants — each with CSS-only animations and accessible role="status" with aria-label.',
+          'Spinner loading components with ring, dots, bar, pulse, orbit, and skeleton shimmer variants â€” each with CSS-only animations and accessible role="status" with aria-label.',
         highlights: [
           "Ring, dots, bar, and pulse animations",
           "Skeleton shimmer loading states",
@@ -2022,13 +2022,13 @@ export const siteConfig: SiteConfig = {
   },
   experience: {
     heading: "Experience",
-    kicker: "03 · Professional history",
+    kicker: "03 Â· Professional history",
     items: [
       {
         id: "exp-1",
         role: "Senior Software Engineer",
         company: "TechCorp Inc.",
-        period: "2022 — Present",
+        period: "2022 â€” Present",
         location: "San Francisco, CA (Remote)",
         description: [
           "Lead frontend architecture for flagship SaaS product serving 100k+ users",
@@ -2048,7 +2048,7 @@ export const siteConfig: SiteConfig = {
         id: "exp-2",
         role: "Software Engineer",
         company: "StartupXYZ",
-        period: "2020 — 2022",
+        period: "2020 â€” 2022",
         location: "New York, NY",
         description: [
           "Built and maintained customer-facing web applications",
@@ -2068,7 +2068,7 @@ export const siteConfig: SiteConfig = {
         id: "exp-3",
         role: "Junior Developer",
         company: "Digital Agency",
-        period: "2018 — 2020",
+        period: "2018 â€” 2020",
         location: "Austin, TX",
         description: [
           "Developed responsive websites and web applications for diverse clients",
@@ -2088,8 +2088,8 @@ export const siteConfig: SiteConfig = {
   },
   contact: {
     heading: "Contact",
-    kicker: "04 · Let's connect",
-    email: "harleyvasquez@icloud.com",
+    kicker: "04 Â· Let's connect",
+    email: "harleyvasquez@gmail.com",
     linkedin: "https://www.linkedin.com/in/harleyvasquez",
     github: "https://github.com/HarleyVasquezcom",
     codepen: "https://codepen.io/HarleyVasquezcom",
@@ -2152,10 +2152,11 @@ export const siteConfig: SiteConfig = {
       },
       {
         label: "Email",
-        href: "mailto:harleyvasquez@icloud.com",
+        href: "mailto:harleyvasquez@gmail.com",
         icon: "mail",
       },
     ],
     copyright: "Built with precision and care.",
   },
 };
+

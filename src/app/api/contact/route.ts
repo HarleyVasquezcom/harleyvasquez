@@ -1,4 +1,7 @@
 import { validateContact } from '@/lib/validation';
+import { siteConfig } from '@/lib/config';
+
+const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${encodeURIComponent(siteConfig.contact.email)}`;
 
 export async function POST(request: Request) {
   try {
@@ -35,6 +38,24 @@ export async function POST(request: Request) {
     const errors = validateContact(payload);
     if (errors.length > 0) {
       return Response.json({ ok: false, errors }, { status: 400 });
+    }
+
+    // Forward the validated message to FormSubmit (delivers to the inbox).
+    const delivered = await fetch(FORMSUBMIT_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        name: payload.name,
+        email: payload.email,
+        message: payload.message,
+        _subject: `Portfolio contact from ${payload.name}`,
+        _template: 'table',
+        _captcha: 'false',
+      }),
+    }).then((res) => res.ok, () => false);
+
+    if (!delivered) {
+      return Response.json({ ok: false, errors: [] }, { status: 500 });
     }
 
     return Response.json({ ok: true }, { status: 200 });
