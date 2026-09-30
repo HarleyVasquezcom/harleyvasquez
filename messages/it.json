@@ -138,7 +138,9 @@
       "messageLabel": "Messaggio",
       "messagePlaceholder": "Parlami del tuo progetto o ruolo...",
       "submitLabel": "Invia messaggio",
-      "submittingLabel": "Invio..."
+      "submittingLabel": "Invio...",
+      "codepenChannelLabel": "CodePen",
+      "whatsappChannelLabel": "WhatsApp"
     },
     "messages": {
       "nameRequired": "Per favore inserisci il tuo nome.",
@@ -160,7 +162,9 @@
     "social": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "email": "Email"
+      "email": "Email",
+      "codepen": "CodePen",
+      "whatsapp": "WhatsApp"
     }
   },
   "notFound": {

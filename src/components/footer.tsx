@@ -3,13 +3,15 @@
 import type { ComponentType } from 'react';
 import { Mail, ArrowUpRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { Github, Linkedin } from '@/components/icons';
+import { Github, Linkedin, Codepen, Whatsapp } from '@/components/icons';
 import { siteConfig } from '@/lib/config';
 import { Link, usePathname } from '@/i18n/navigation';
 
 const iconMap: Record<string, ComponentType<{ className?: string }>> = {
   github: Github,
   linkedin: Linkedin,
+  codepen: Codepen,
+  whatsapp: Whatsapp,
   mail: Mail,
 };
 

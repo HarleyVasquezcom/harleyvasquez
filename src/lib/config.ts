@@ -69,11 +69,15 @@ export interface SiteConfig {
     email: string;
     linkedin: string;
     github: string;
+    codepen: string;
+    whatsapp: string;
     form: {
       directLabel: string;
       emailChannelLabel: string;
       linkedinChannelLabel: string;
       githubChannelLabel: string;
+      codepenChannelLabel: string;
+      whatsappChannelLabel: string;
       nameLabel: string;
       namePlaceholder: string;
       emailLabel: string;
@@ -2085,14 +2089,18 @@ export const siteConfig: SiteConfig = {
   contact: {
     heading: "Contact",
     kicker: "04 · Let's connect",
-    email: "YOUR_EMAIL@example.com",
-    linkedin: "https://linkedin.com/in/YOUR_USERNAME",
+    email: "harleyvasquez@icloud.com",
+    linkedin: "https://www.linkedin.com/in/harleyvasquez",
     github: "https://github.com/HarleyVasquezcom",
+    codepen: "https://codepen.io/HarleyVasquezcom",
+    whatsapp: "https://wa.me/573182020729",
     form: {
       directLabel: "Or reach me directly",
       emailChannelLabel: "Email",
       linkedinChannelLabel: "LinkedIn",
       githubChannelLabel: "GitHub",
+      codepenChannelLabel: "CodePen",
+      whatsappChannelLabel: "WhatsApp",
       nameLabel: "Name",
       namePlaceholder: "Your name",
       emailLabel: "Email",
@@ -2129,10 +2137,24 @@ export const siteConfig: SiteConfig = {
       },
       {
         label: "LinkedIn",
-        href: "https://linkedin.com/in/YOUR_USERNAME",
+        href: "https://www.linkedin.com/in/harleyvasquez",
         icon: "linkedin",
       },
-      { label: "Email", href: "mailto:YOUR_EMAIL@example.com", icon: "mail" },
+      {
+        label: "CodePen",
+        href: "https://codepen.io/HarleyVasquezcom",
+        icon: "codepen",
+      },
+      {
+        label: "WhatsApp",
+        href: "https://wa.me/573182020729",
+        icon: "whatsapp",
+      },
+      {
+        label: "Email",
+        href: "mailto:harleyvasquez@icloud.com",
+        icon: "mail",
+      },
     ],
     copyright: "Built with precision and care.",
   },

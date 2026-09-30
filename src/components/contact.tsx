@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/lib/config';
 import { validateContact, type ContactErrorCode, type ContactField } from '@/lib/validation';
 import { SectionHeading } from './section-heading';
-import { Github, Linkedin } from './icons';
+import { Github, Linkedin, Codepen, Whatsapp } from './icons';
 
 type Status = 'idle' | 'submitting' | 'success';
 
@@ -29,7 +29,7 @@ export function Contact() {
   const heading = t('heading');
   const kicker = t('kicker');
 
-  const { email, linkedin, github } = siteConfig.contact;
+  const { email, linkedin, github, codepen, whatsapp } = siteConfig.contact;
 
   const [values, setValues] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState<FieldErrors>({});
@@ -294,6 +294,34 @@ export function Contact() {
                       <Github className="h-4 w-4" aria-hidden="true" />
                     </span>
                     <span className="text-sm font-medium">{form.githubChannelLabel}</span>
+                    <ArrowUpRight className="ml-auto h-3.5 w-3.5 opacity-50" aria-hidden="true" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={codepen}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-3 rounded-lg px-2 py-2 text-fg-muted transition-colors hover:text-fg"
+                  >
+                    <span className="flex h-9 w-9 items-center justify-center rounded-lg glass text-fg">
+                      <Codepen className="h-4 w-4" aria-hidden="true" />
+                    </span>
+                    <span className="text-sm font-medium">{form.codepenChannelLabel}</span>
+                    <ArrowUpRight className="ml-auto h-3.5 w-3.5 opacity-50" aria-hidden="true" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-3 rounded-lg px-2 py-2 text-fg-muted transition-colors hover:text-fg"
+                  >
+                    <span className="flex h-9 w-9 items-center justify-center rounded-lg glass text-accent">
+                      <Whatsapp className="h-4 w-4" aria-hidden="true" />
+                    </span>
+                    <span className="text-sm font-medium">{form.whatsappChannelLabel}</span>
                     <ArrowUpRight className="ml-auto h-3.5 w-3.5 opacity-50" aria-hidden="true" />
                   </a>
                 </li>
