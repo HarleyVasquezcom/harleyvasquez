@@ -83,7 +83,7 @@ export function Contact() {
     submittingRef.current = true;
 
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${email}`, {
+      const response = await fetch(`https://unpkg.com/@formspree/ajax@1`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
