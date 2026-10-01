@@ -79,11 +79,39 @@ export function Contact() {
     }
 
     setErrors({});
-    setStatus('success');
-    setValues({ name: '', email: '', message: '' });
-    const subject = encodeURIComponent(`Portfolio contact from ${trimmed.name} <${trimmed.email}>`);
-    const body = encodeURIComponent(trimmed.message);
-    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    setStatus('submitting');
+    submittingRef.current = true;
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: trimmed.name,
+          email: trimmed.email,
+          message: trimmed.message,
+          _subject: `Portfolio contact from ${trimmed.name}`,
+          _captcha: 'false',
+        }),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setValues({ name: '', email: '', message: '' });
+      } else {
+        const data = await response.json().catch(() => ({}));
+        setServerError(data.message || t('messages.serverError'));
+        setStatus('idle');
+      }
+    } catch {
+      setServerError(t('messages.networkError'));
+      setStatus('idle');
+    } finally {
+      submittingRef.current = false;
+    }
   };
 
   return (
