@@ -2089,7 +2089,7 @@ export const siteConfig: SiteConfig = {
   contact: {
     heading: "Contact",
     kicker: "04 Â· Let's connect",
-    email: "harleyvasquez@gmail.com",
+    email: "harleyvasquez@icloud.com",
     linkedin: "https://www.linkedin.com/in/harleyvasquez",
     github: "https://github.com/HarleyVasquezcom",
     codepen: "https://codepen.io/HarleyVasquezcom",
@@ -2152,7 +2152,7 @@ export const siteConfig: SiteConfig = {
       },
       {
         label: "Email",
-        href: "mailto:harleyvasquez@gmail.com",
+        href: "mailto:harleyvasquez@icloud.com",
         icon: "mail",
       },
     ],
